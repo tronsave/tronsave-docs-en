@@ -2,7 +2,7 @@
 description: How to withdraw TRX from your TronSave internal account through support.
 ---
 
-# Internal withdrawal guide
+# Internal Withdrawal Guide
 
 To **withdraw TRX from your TronSave internal account**, follow the steps below. The process is handled through TronSave support, which verifies ownership before releasing funds.
 
@@ -37,7 +37,7 @@ Once verification is complete, TronSave asks you to provide the wallet address w
 After receiving a valid wallet address, TronSave transfers the TRX to that address.
 
 {% hint style="info" %}
-Keep your `API Key` available — the last 12 characters are required to verify that you own the internal account. See [Authentication](../../developers/authentication.md) for how API keys are issued and managed.
+Keep your **`API Key`** available — the last 12 characters are required to verify that you own the internal account. See [Authentication](../../developers/authentication.md) for how API keys are issued and managed.
 {% endhint %}
 
 ## Related

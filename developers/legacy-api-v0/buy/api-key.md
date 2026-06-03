@@ -1,11 +1,14 @@
 ---
-description: Legacy v0 REST endpoints for buying Energy with an API key — account info, order book, TRX estimate, create order, order details, order history, and wallet activation.
+description: >-
+  Legacy v0 REST endpoints for buying Energy with an API key — account info,
+  order book, TRX estimate, create order, order details, order history, and
+  wallet activation.
 ---
 
-# Buy with API Key (v0)
+# Buy — API Key
 
 {% hint style="warning" %}
-This page documents the **legacy v0 API**. New integrations should use the current API. See [Buy with API Key](../../api-reference/buy-resources/api-key/README.md) for the supported endpoints. The v0 endpoints below remain available for existing integrations.
+This page documents the **legacy v0 API**. New integrations should use the current API. See [Buy with API Key](../../api-reference/buy-resources/api-key/) for the supported endpoints. The v0 endpoints below remain available for existing integrations.
 {% endhint %}
 
 All endpoints on this page authenticate with an **API key** sent in the `apikey` header. The key is tied to your TronSave [internal account](../../authentication.md), and orders are paid from that account's balance. See [Authentication](../../authentication.md) to get a key.
@@ -25,7 +28,7 @@ All endpoints on this page authenticate with an **API key** sent in the `apikey`
 
 Every endpoint below is rate limited to **15** requests per **1** second.
 
----
+***
 
 ## Get Internal Account Info
 
@@ -39,30 +42,13 @@ Rate limit: **15** requests per **1** second.
 
 ### Headers
 
-<table>
-<thead>
-<tr><th width="150">Name</th><th width="110">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="150">Name</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<sub>\* Required.</sub>
 
 ### Response
 
-<table>
-<thead>
-<tr><th width="220">Field</th><th width="110">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>id</code></td><td>string</td><td>Internal account id.</td></tr>
-<tr><td><code>balance</code></td><td>string</td><td>Internal account balance in SUN.</td></tr>
-<tr><td><code>represent_address</code></td><td>string</td><td>Represents the internal account as the requester of the order.</td></tr>
-<tr><td><code>deposit_address</code></td><td>string</td><td>Deposit address of the internal account.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="220">Field</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>id</code></td><td>string</td><td>Internal account id.</td></tr><tr><td><code>balance</code></td><td>string</td><td>Internal account balance in SUN.</td></tr><tr><td><code>represent_address</code></td><td>string</td><td>Represents the internal account as the requester of the order.</td></tr><tr><td><code>deposit_address</code></td><td>string</td><td>Deposit address of the internal account.</td></tr></tbody></table>
 
 ```json
 {
@@ -180,7 +166,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 {% endtab %}
 {% endtabs %}
 
----
+***
 
 ## Get Order Book
 
@@ -194,29 +180,13 @@ Rate limit: **15** requests per **1** second.
 
 ### Headers
 
-<table>
-<thead>
-<tr><th width="150">Name</th><th width="110">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="150">Name</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<sub><mark style="color:red;">\*<mark style="color:red;"></sub> <sub></sub><sub>Required.</sub>
 
 ### Query parameters
 
-<table>
-<thead>
-<tr><th width="220">Name</th><th width="108">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>address</code></td><td>string</td><td>Energy receiver address.</td></tr>
-<tr><td><code>min_delegate_amount</code></td><td>number</td><td>The minimum amount of Energy delegated from one provider.</td></tr>
-<tr><td><code>duration_sec</code></td><td>number</td><td>Order duration in seconds.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="220">Name</th><th width="108">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>address</code></td><td>string</td><td>Energy receiver address.</td></tr><tr><td><code>min_delegate_amount</code></td><td>number</td><td>The minimum amount of Energy delegated from one provider.</td></tr><tr><td><code>duration_sec</code></td><td>number</td><td>Order duration in seconds.</td></tr></tbody></table>
 
 ### Response
 
@@ -365,7 +335,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 {% endtab %}
 {% endtabs %}
 
----
+***
 
 ## Estimate TRX
 
@@ -379,32 +349,13 @@ Rate limit: **15** requests per **1** second.
 
 ### Headers
 
-<table>
-<thead>
-<tr><th width="150">Name</th><th width="110">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="150">Name</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<sub>\* Required.</sub>
 
 ### Request body
 
-<table>
-<thead>
-<tr><th width="180">Field</th><th width="95">Position</th><th width="120">Type</th><th width="101">Required</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>amount</code></td><td>body</td><td>number</td><td>true</td><td>The number of resources.</td></tr>
-<tr><td><code>buy_energy_type</code></td><td>body</td><td>string, number</td><td>true</td><td><p><code>"FAST"</code>, <code>"MEDIUM"</code>, <code>"SLOW"</code>, or a number:</p><p><br>- <strong>FAST</strong>: If the market is ready to fill = 100%, FAST = MEDIUM. If the market is ready to fill &#x3C; 100%, FAST = MEDIUM + 10. If market ready to fill = 0%, FAST = SLOW + 20.</p><p>- <strong>MEDIUM</strong>: The lowest price for the maximum market fill for this order. If market ready to fill = 0%, MEDIUM = SLOW + 10.</p><p>- <strong>SLOW</strong>: The lowest price that can be set for this order.</p><p>- If the price is a number, the price unit is SUN.</p></td></tr>
-<tr><td><code>duration_millisec</code></td><td>body</td><td>number</td><td>true</td><td>The duration of the bought resource, in milliseconds.</td></tr>
-<tr><td><code>request_address</code></td><td>body</td><td>string</td><td>false</td><td>The address of the requester.</td></tr>
-<tr><td><code>target_address</code></td><td>body</td><td>string</td><td>false</td><td>The address of the resource receiver.</td></tr>
-<tr><td><code>is_partial</code></td><td>body</td><td>boolean</td><td>false</td><td>Allow the order to be filled partially or not.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="180">Field</th><th width="95">Position</th><th width="120">Type</th><th width="101">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>amount</code></td><td>body</td><td>number</td><td>true</td><td>The number of resources.</td></tr><tr><td><code>buy_energy_type</code></td><td>body</td><td>string, number</td><td>true</td><td><p><code>"FAST"</code>, <code>"MEDIUM"</code>, <code>"SLOW"</code>, or a number:</p><p><br>- <strong>FAST</strong>: If the market is ready to fill = 100%, FAST = MEDIUM. If the market is ready to fill &#x3C; 100%, FAST = MEDIUM + 10. If market ready to fill = 0%, FAST = SLOW + 20.</p><p>- <strong>MEDIUM</strong>: The lowest price for the maximum market fill for this order. If market ready to fill = 0%, MEDIUM = SLOW + 10.</p><p>- <strong>SLOW</strong>: The lowest price that can be set for this order.</p><p>- If the price is a number, the price unit is SUN.</p></td></tr><tr><td><code>duration_millisec</code></td><td>body</td><td>number</td><td>true</td><td>The duration of the bought resource, in milliseconds.</td></tr><tr><td><code>request_address</code></td><td>body</td><td>string</td><td>false</td><td>The address of the requester.</td></tr><tr><td><code>target_address</code></td><td>body</td><td>string</td><td>false</td><td>The address of the resource receiver.</td></tr><tr><td><code>is_partial</code></td><td>body</td><td>boolean</td><td>false</td><td>Allow the order to be filled partially or not.</td></tr></tbody></table>
 
 #### Request body example
 
@@ -418,17 +369,7 @@ Rate limit: **15** requests per **1** second.
 
 ### Response
 
-<table>
-<thead>
-<tr><th width="185">Field</th><th width="130">Type</th><th width="110">Required</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>unit_price</code></td><td>number</td><td>true</td><td>Price in SUN of Energy that fits your <code>buy_energy_type</code>.</td></tr>
-<tr><td><code>duration_millisec</code></td><td>number</td><td>true</td><td>Duration in milliseconds.</td></tr>
-<tr><td><code>available_energy</code></td><td>number</td><td>true</td><td>Total available Energy on the TronSave market that matches <code>unit_price</code>.</td></tr>
-<tr><td><code>estimate_trx</code></td><td>number</td><td>true</td><td>Estimated total TRX value to pay for all <code>available_energy</code> at <code>unit_price</code> over <code>duration_millisec</code>.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="185">Field</th><th width="130">Type</th><th width="110">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>unit_price</code></td><td>number</td><td>true</td><td>Price in SUN of Energy that fits your <code>buy_energy_type</code>.</td></tr><tr><td><code>duration_millisec</code></td><td>number</td><td>true</td><td>Duration in milliseconds.</td></tr><tr><td><code>available_energy</code></td><td>number</td><td>true</td><td>Total available Energy on the TronSave market that matches <code>unit_price</code>.</td></tr><tr><td><code>estimate_trx</code></td><td>number</td><td>true</td><td>Estimated total TRX value to pay for all <code>available_energy</code> at <code>unit_price</code> over <code>duration_millisec</code>.</td></tr></tbody></table>
 
 ```json
 {
@@ -593,7 +534,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 {% endtab %}
 {% endtabs %}
 
----
+***
 
 ## Buy Energy (Create Order)
 
@@ -607,38 +548,15 @@ Rate limit: **15** requests per **1** second.
 
 ### Headers
 
-<table>
-<thead>
-<tr><th width="150">Name</th><th width="140">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="150">Name</th><th width="140">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<sub>\* Required.</sub>
 
 ### Request body
 
-<table>
-<thead>
-<tr><th width="270">Name</th><th width="93">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>resource_type</code><mark style="color:red;">*</mark></td><td>String</td><td><code>"ENERGY"</code>.</td></tr>
-<tr><td><code>buy_energy_type</code><mark style="color:red;">*</mark></td><td>String</td><td><p>- <strong>FAST</strong>: If the market is ready to fill = 100%, FAST = MEDIUM. If the market is ready to fill &#x3C; 100%, FAST = MEDIUM + 10. If market ready to fill = 0%, FAST = SLOW + 20.</p><p>- <strong>MEDIUM</strong>: The lowest price for the maximum market fill for this order. If market ready to fill = 0%, MEDIUM = SLOW + 10.</p><p>- <strong>SLOW</strong>: The lowest price that can be set for this order.</p><p>- If the price is a number, the price unit is SUN.</p></td></tr>
-<tr><td><code>amount</code><mark style="color:red;">*</mark></td><td>Number</td><td>Amount of resource to buy.</td></tr>
-<tr><td><code>allow_partial_fill</code><mark style="color:red;">*</mark></td><td>Boolean</td><td>If <code>true</code>, the order can be filled from many delegators, making it easier to fill than when <code>false</code>. Amounts greater than 200k Energy can set this parameter.</td></tr>
-<tr><td><code>target_address</code><mark style="color:red;">*</mark></td><td>String</td><td>The address that receives the resource.</td></tr>
-<tr><td><code>duration_millisec</code></td><td>Number</td><td>Order duration in milliseconds. Default: 259200000 (3 days).</td></tr>
-<tr><td><code>sponsor</code></td><td>String</td><td>Sponsor code.</td></tr>
-<tr><td><code>only_create_when_fulfilled</code></td><td>Boolean</td><td><p><code>true</code> => order only creates when it can be fulfilled.</p><p><code>false</code> => order will create even if it cannot be fulfilled.</p><p>Default value: <code>false</code>.</p></td></tr>
-<tr><td><code>max_price_accepted</code></td><td>Number</td><td>Only create an order when the estimated price is less than this value.</td></tr>
-<tr><td><code>add_order_incomplete</code></td><td>Boolean</td><td><p><code>true</code> => order only creates when there is no incomplete order with the same parameters in the order list.</p><p><code>false</code> => order will create even when there is no incomplete order with the same parameters in the order list.</p><p>Default value: <code>false</code>.</p></td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="270">Name</th><th width="93">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>resource_type</code><mark style="color:red;">*</mark></td><td>String</td><td><code>"ENERGY"</code>.</td></tr><tr><td><code>buy_energy_type</code><mark style="color:red;">*</mark></td><td>String</td><td><p>- <strong>FAST</strong>: If the market is ready to fill = 100%, FAST = MEDIUM. If the market is ready to fill &#x3C; 100%, FAST = MEDIUM + 10. If market ready to fill = 0%, FAST = SLOW + 20.</p><p>- <strong>MEDIUM</strong>: The lowest price for the maximum market fill for this order. If market ready to fill = 0%, MEDIUM = SLOW + 10.</p><p>- <strong>SLOW</strong>: The lowest price that can be set for this order.</p><p>- If the price is a number, the price unit is SUN.</p></td></tr><tr><td><code>amount</code><mark style="color:red;">*</mark></td><td>Number</td><td>Amount of resource to buy.</td></tr><tr><td><code>allow_partial_fill</code><mark style="color:red;">*</mark></td><td>Boolean</td><td>If <code>true</code>, the order can be filled from many delegators, making it easier to fill than when <code>false</code>. Amounts greater than 200k Energy can set this parameter.</td></tr><tr><td><code>target_address</code><mark style="color:red;">*</mark></td><td>String</td><td>The address that receives the resource.</td></tr><tr><td><code>duration_millisec</code></td><td>Number</td><td>Order duration in milliseconds. Default: 259200000 (3 days).</td></tr><tr><td><code>sponsor</code></td><td>String</td><td>Sponsor code.</td></tr><tr><td><code>only_create_when_fulfilled</code></td><td>Boolean</td><td><p><code>true</code> => order only creates when it can be fulfilled.</p><p><code>false</code> => order will create even if it cannot be fulfilled.</p><p>Default value: <code>false</code>.</p></td></tr><tr><td><code>max_price_accepted</code></td><td>Number</td><td>Only create an order when the estimated price is less than this value.</td></tr><tr><td><code>add_order_incomplete</code></td><td>Boolean</td><td><p><code>true</code> => order only creates when there is no incomplete order with the same parameters in the order list.</p><p><code>false</code> => order will create even when there is no incomplete order with the same parameters in the order list.</p><p>Default value: <code>false</code>.</p></td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<sub>\* Required.</sub>
 
 #### Request body example
 
@@ -901,7 +819,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 {% endtab %}
 {% endtabs %}
 
----
+***
 
 ## Get One Order Details
 
@@ -915,16 +833,9 @@ Rate limit: **15** requests per **1** second.
 
 ### Headers
 
-<table>
-<thead>
-<tr><th width="150">Name</th><th width="110">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="150">Name</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<sub>\* Required.</sub>
 
 ### Response
 
@@ -1088,7 +999,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 {% endtab %}
 {% endtabs %}
 
----
+***
 
 ## Get Internal Account Order History
 
@@ -1102,28 +1013,13 @@ Rate limit: **15** requests per **1** second.
 
 ### Headers
 
-<table>
-<thead>
-<tr><th width="150">Name</th><th width="110">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="150">Name</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<sub>\* Required.</sub>
 
 ### Query parameters
 
-<table>
-<thead>
-<tr><th width="192">Name</th><th width="182">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>page</code></td><td>Integer</td><td>Starts from 0. Default: 0.</td></tr>
-<tr><td><code>pageSize</code></td><td>Integer</td><td>Default: 10.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="192">Name</th><th width="182">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>page</code></td><td>Integer</td><td>Starts from 0. Default: 0.</td></tr><tr><td><code>pageSize</code></td><td>Integer</td><td>Default: 10.</td></tr></tbody></table>
 
 ### Response
 
@@ -1309,7 +1205,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 {% endtab %}
 {% endtabs %}
 
----
+***
 
 ## Activate Wallet Address
 
@@ -1323,14 +1219,7 @@ Check the activation status of one or more TRON wallet addresses.
 
 #### Request body
 
-<table>
-<thead>
-<tr><th width="140">Field</th><th width="150">Type</th><th width="110">Required</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>addresses</code></td><td>array&#x3C;string></td><td>true</td><td>List of TRON wallet addresses to check.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="140">Field</th><th width="150">Type</th><th width="110">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>addresses</code></td><td>array&#x3C;string></td><td>true</td><td>List of TRON wallet addresses to check.</td></tr></tbody></table>
 
 ```json
 {
@@ -1346,18 +1235,7 @@ Check the activation status of one or more TRON wallet addresses.
 
 Returns an integer array where each value corresponds to the address at the same index in the request.
 
-<table>
-<thead>
-<tr><th width="100">Value</th><th width="150">Status</th><th>Description</th><th>Action</th></tr>
-</thead>
-<tbody>
-<tr><td>0</td><td>Inactive</td><td>The address exists but has never been activated.</td><td>Proceed to Step 2 to activate.</td></tr>
-<tr><td>1</td><td>Contract</td><td>The address is a smart contract.</td><td>Skip — activation is not applicable.</td></tr>
-<tr><td>2</td><td>Active</td><td>The address is already activated.</td><td>Skip — no action needed.</td></tr>
-<tr><td>3</td><td>Fetch failed</td><td>Could not retrieve the status from the network.</td><td>Retry later or check connectivity.</td></tr>
-<tr><td>4</td><td>Invalid address</td><td>The address format is not valid.</td><td>Verify and correct the address.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="100">Value</th><th width="150">Status</th><th>Description</th><th>Action</th></tr></thead><tbody><tr><td>0</td><td>Inactive</td><td>The address exists but has never been activated.</td><td>Proceed to Step 2 to activate.</td></tr><tr><td>1</td><td>Contract</td><td>The address is a smart contract.</td><td>Skip — activation is not applicable.</td></tr><tr><td>2</td><td>Active</td><td>The address is already activated.</td><td>Skip — no action needed.</td></tr><tr><td>3</td><td>Fetch failed</td><td>Could not retrieve the status from the network.</td><td>Retry later or check connectivity.</td></tr><tr><td>4</td><td>Invalid address</td><td>The address format is not valid.</td><td>Verify and correct the address.</td></tr></tbody></table>
 
 {% hint style="info" %}
 Filter the result array and collect all addresses where the corresponding status value equals `0`. Those addresses are used in **Step 2**.
@@ -1401,29 +1279,15 @@ Submit a batch of **inactive** addresses for activation. This endpoint creates a
 
 #### Headers
 
-<table>
-<thead>
-<tr><th width="150">Name</th><th width="140">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="150">Name</th><th width="140">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<sub>\* Required.</sub>
 
 #### Request body
 
 Only include addresses with status `0` from Step 1.
 
-<table>
-<thead>
-<tr><th width="130">Field</th><th width="130">Type</th><th width="106">Required</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>addresses</code></td><td>array&#x3C;string></td><td>true</td><td>List of not-active TRON addresses to activate.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="130">Field</th><th width="130">Type</th><th width="106">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>addresses</code></td><td>array&#x3C;string></td><td>true</td><td>List of not-active TRON addresses to activate.</td></tr></tbody></table>
 
 ```json
 {
@@ -1437,14 +1301,7 @@ Only include addresses with status `0` from Step 1.
 
 #### Response
 
-<table>
-<thead>
-<tr><th width="121">Field</th><th width="129">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>message</code></td><td>string</td><td>Confirmation message indicating how many activation requests were created.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="121">Field</th><th width="129">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>message</code></td><td>string</td><td>Confirmation message indicating how many activation requests were created.</td></tr></tbody></table>
 
 ```json
 {
@@ -1620,6 +1477,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 ## Next steps
 
-* Migrate to the current API: [Buy with API Key](../../api-reference/buy-resources/api-key/README.md).
+* Migrate to the current API: [Buy with API Key](../../api-reference/buy-resources/api-key/).
 * Learn about [Authentication](../../authentication.md) and how to get an API key.
 * Review [Order Types](../../../concepts/order-types.md) before placing orders.

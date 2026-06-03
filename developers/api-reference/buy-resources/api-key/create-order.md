@@ -1,8 +1,10 @@
 ---
-description: Create an Energy or Bandwidth purchase order with an API key, paid from your TronSave internal account, and receive an orderId to track its status.
+description: >-
+  Create an Energy or Bandwidth purchase order with an API key, paid from your
+  TronSave internal account, and receive an orderId to track its status.
 ---
 
-# Buy Energy (Create Order)
+# Create Order
 
 Create an Energy or Bandwidth purchase order using an API key. The order is paid from your prefunded [internal account](../../../authentication.md), so no per-order on-chain signing is required. On success the endpoint returns an `orderId` you can use to track the order status.
 
@@ -14,40 +16,15 @@ Rate limit: **15** requests per **1** second.
 
 ## Headers
 
-<table>
-<thead>
-<tr><th width="140">Name</th><th width="110">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key tied to your internal account. See <a href="../../../authentication.md">Authentication</a> to get your API key.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="140">Name</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key tied to your internal account. See <a href="../../../authentication.md">Authentication</a> to get your API key.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<sub><mark style="color:red;">\*<mark style="color:red;"></sub> <sub></sub><sub>Required.</sub>
 
 ## Request body
 
-<table>
-<thead>
-<tr><th width="290">Field</th><th width="140">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>resourceType</code></td><td>String</td><td><code>"ENERGY"</code> or <code>"BANDWIDTH"</code>. Default: <code>ENERGY</code>.</td></tr>
-<tr><td><code>unitPrice</code></td><td>Number, String</td><td><p><code>"FAST"</code>, <code>"MEDIUM"</code>, <code>"SLOW"</code>, or a number. <strong>Default: <code>"MEDIUM"</code></strong>.</p><p><br>- <strong>FAST</strong>: If the market is ready to fill = 100%, FAST = MEDIUM. If the market is ready to fill &#x3C; 100%, FAST = MEDIUM + 10. If market ready to fill = 0%, FAST = SLOW + 20.</p><p>- <strong>MEDIUM</strong>: The lowest price for the maximum market fill for this order. If market is ready to fill = 0%, MEDIUM = SLOW + 10.</p><p>- <strong>SLOW</strong>: The lowest price that can be set for this order.</p><p>- If the price is a number, the price unit is SUN.</p></td></tr>
-<tr><td><code>resourceAmount</code><mark style="color:red;">*</mark></td><td>Number</td><td>The number of resources.</td></tr>
-<tr><td><code>receiver</code><mark style="color:red;">*</mark></td><td>String</td><td>Resource receiving address.</td></tr>
-<tr><td><code>durationSec</code></td><td>Number</td><td>The duration of the bought resource, in seconds. <strong>Default:</strong> 259200 (3 days).</td></tr>
-<tr><td><code>sponsor</code></td><td>String</td><td>Sponsor code.</td></tr>
-<tr><td><code>options</code></td><td>Object</td><td>Optional.</td></tr>
-<tr><td><code>options.allowPartialFill</code></td><td>Boolean</td><td>Allow the order to be filled partially or not.</td></tr>
-<tr><td><code>options.onlyCreateWhenFulfilled</code></td><td>Boolean</td><td><p><code>true</code> => order only creates when it can be fulfilled.</p><p><code>false</code> => order will create even if it cannot be fulfilled.</p><p>Default value: <code>false</code>.</p></td></tr>
-<tr><td><code>options.maxPriceAccepted</code></td><td>Number</td><td>Only create the order when the estimated price is less than this value.</td></tr>
-<tr><td><code>options.preventDuplicateIncompleteOrders</code></td><td>Boolean</td><td><p><code>true</code> => only create if no <strong>uncompleted order</strong> with the same parameters exists.</p><p><code>false</code> => always create a new order, regardless of existing unfinished ones.</p><p>Default value: <strong><code>false</code></strong>.</p></td></tr>
-<tr><td><code>options.minResourceDelegateRequiredAmount</code></td><td>Number</td><td>The minimum resource amount delegated by a single provider.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="239">Field</th><th width="140">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>resourceType</code></td><td>String</td><td><code>"ENERGY"</code> or <code>"BANDWIDTH"</code>. Default: <code>ENERGY</code>.</td></tr><tr><td><code>unitPrice</code></td><td>Number, String</td><td><p><code>"FAST"</code>, <code>"MEDIUM"</code>, <code>"SLOW"</code>, or a number. <strong>Default: <code>"MEDIUM"</code></strong>.</p><p><br>- <strong>FAST</strong>: If the market is ready to fill = 100%, FAST = MEDIUM. If the market is ready to fill &#x3C; 100%, FAST = MEDIUM + 10. If market ready to fill = 0%, FAST = SLOW + 20.</p><p>- <strong>MEDIUM</strong>: The lowest price for the maximum market fill for this order. If market is ready to fill = 0%, MEDIUM = SLOW + 10.</p><p>- <strong>SLOW</strong>: The lowest price that can be set for this order.</p><p>- If the price is a number, the price unit is SUN.</p></td></tr><tr><td><code>resourceAmount</code><mark style="color:red;">*</mark></td><td>Number</td><td>The number of resources.</td></tr><tr><td><code>receiver</code><mark style="color:red;">*</mark></td><td>String</td><td>Resource receiving address.</td></tr><tr><td><code>durationSec</code></td><td>Number</td><td>The duration of the bought resource, in seconds. <strong>Default:</strong> 259200 (3 days).</td></tr><tr><td><code>sponsor</code></td><td>String</td><td>Sponsor code.</td></tr><tr><td><code>options</code></td><td>Object</td><td>Optional.</td></tr><tr><td><code>options.allowPartialFill</code></td><td>Boolean</td><td>Allow the order to be filled partially or not.</td></tr><tr><td><code>options.onlyCreateWhenFulfilled</code></td><td>Boolean</td><td><p><code>true</code> => order only creates when it can be fulfilled.</p><p><code>false</code> => order will create even if it cannot be fulfilled.</p><p>Default value: <code>false</code>.</p></td></tr><tr><td><code>options.maxPriceAccepted</code></td><td>Number</td><td>Only create the order when the estimated price is less than this value.</td></tr><tr><td><code>options.preventDuplicateIncompleteOrders</code></td><td>Boolean</td><td><p><code>true</code> => only create if no <strong>uncompleted order</strong> with the same parameters exists.</p><p><code>false</code> => always create a new order, regardless of existing unfinished ones.</p><p>Default value: <strong><code>false</code></strong>.</p></td></tr><tr><td><code>options.minResourceDelegateRequiredAmount</code></td><td>Number</td><td>The minimum resource amount delegated by a single provider.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<sub><mark style="color:red;">\*<mark style="color:red;"></sub> <sub></sub><sub>Required.</sub>
 
 ### Request body example
 

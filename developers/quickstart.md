@@ -1,5 +1,7 @@
 ---
-description: Make your first TronSave API call — get a key, estimate, buy, and confirm an Energy order in about 10 minutes.
+description: >-
+  Make your first TronSave API call — get a key, estimate, buy, and confirm an
+  Energy order in about 10 minutes.
 ---
 
 # Developer Quickstart
@@ -10,15 +12,10 @@ This guide walks you through your first TronSave API call — from getting an AP
 
 TronSave supports **two authentication methods** for API calls. Choose the one that fits your use case:
 
-|                  | API Key (Internal Account)                                                   | Signed Transaction                                           |
-| ---------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| **Best for**     | Automated bots, backend services                                             | When you prefer not to hold TRX in TronSave                  |
-| **How it works** | Deposit TRX into your internal account; TronSave deducts costs automatically | Sign a TRX transaction from your own wallet on each purchase |
-| **Complexity**   | Simpler                                                                       | Requires TronWeb integration                                 |
-| **Recommended**  | For most use cases                                                            | When you need full custody                                   |
+<table><thead><tr><th width="166"></th><th>API Key (Internal Account)</th><th>Signed Transaction</th></tr></thead><tbody><tr><td><strong>Best for</strong></td><td>Automated bots, backend services</td><td>When you prefer not to hold TRX in TronSave</td></tr><tr><td><strong>How it works</strong></td><td>Deposit TRX into your internal account; TronSave deducts costs automatically</td><td>Sign a TRX transaction from your own wallet on each purchase</td></tr><tr><td><strong>Complexity</strong></td><td>Simpler</td><td>Requires TronWeb integration</td></tr><tr><td><strong>Recommended</strong></td><td>For most use cases</td><td>When you need full custody</td></tr></tbody></table>
 
 {% hint style="info" %}
-**This guide uses the API Key method.** If you want to use Signed Transaction instead, see [Buy Resources → Signed Transaction](api-reference/buy-resources/signed-tx/README.md). For a deeper comparison, see [Authentication](authentication.md).
+**This guide uses the API Key method.** If you want to use Signed Transaction instead, see [Buy Resources → Signed Transaction](api-reference/buy-resources/signed-tx/). For a deeper comparison, see [Authentication](authentication.md).
 {% endhint %}
 
 ## Step 1 — Get an API key and deposit TRX
@@ -30,7 +27,7 @@ TronSave supports **two authentication methods** for API calls. Choose the one t
 3. Your API key and deposit address will be displayed — copy and save them.
 
 {% hint style="info" %}
-**Testing?** Use the Nile testnet at [testnet.tronsave.io](https://testnet.tronsave.io/) — everything works the same way but uses no real TRX. See the [Test Environment](#test-environment-nile-testnet) table below.
+**Testing?** Use the Nile testnet at [testnet.tronsave.io](https://testnet.tronsave.io/) — everything works the same way but uses no real TRX. See the [Test Environment](quickstart.md#test-environment-nile-testnet) table below.
 {% endhint %}
 
 ### 1.2 Deposit TRX into your internal account
@@ -40,7 +37,7 @@ Click **Top Up** to get your deposit address, then send TRX to that address from
 A few things to note:
 
 * Minimum deposit is **10 TRX** per transaction.
-* Your first deposit requires an extra ~1 TRX to activate the new address.
+* Your first deposit requires an extra \~1 TRX to activate the new address.
 * You get 2 free deposits per day; each additional deposit costs 0.3 TRX.
 * Your balance updates automatically in about 3 seconds.
 
@@ -83,21 +80,11 @@ Content-Type: application/json
 
 **Request fields:**
 
-| Field            | Example       | Description                                                                   |
-| ---------------- | ------------- | ----------------------------------------------------------------------------- |
-| `receiver`       | `"TFwUFW..."` | The TRON address that will receive the Energy                                 |
-| `resourceAmount` | `32000`       | Amount of Energy to buy (a single USDT TRC-20 transfer costs ~32,000 Energy)  |
-| `durationSec`    | `259200`      | Rental duration in seconds — `259200` = 3 days                                |
-| `unitPrice`      | `"MEDIUM"`    | See the pricing table below                                                   |
+<table><thead><tr><th width="174">Field</th><th width="168">Example</th><th>Description</th></tr></thead><tbody><tr><td><code>receiver</code></td><td><code>"TFwUFW..."</code></td><td>The TRON address that will receive the Energy</td></tr><tr><td><code>resourceAmount</code></td><td><code>32000</code></td><td>Amount of Energy to buy (a single USDT TRC-20 transfer costs ~32,000 Energy)</td></tr><tr><td><code>durationSec</code></td><td><code>259200</code></td><td>Rental duration in seconds — <code>259200</code> = 3 days</td></tr><tr><td><code>unitPrice</code></td><td><code>"MEDIUM"</code></td><td>See the pricing table below</td></tr></tbody></table>
 
 **Choosing `unitPrice`:**
 
-| Value          | When to use                            | Price level |
-| -------------- | -------------------------------------- | ----------- |
-| `"MEDIUM"`     | Default — suitable for most cases      | Moderate    |
-| `"FAST"`       | Need the order filled immediately      | Higher      |
-| `"SLOW"`       | Not time-sensitive, prioritize savings | Lowest      |
-| `number` (SUN) | Full price control, e.g. `80`          | Custom      |
+<table><thead><tr><th width="177">Value</th><th>When to use</th><th>Price level</th></tr></thead><tbody><tr><td><code>"MEDIUM"</code></td><td>Default — suitable for most cases</td><td>Moderate</td></tr><tr><td><code>"FAST"</code></td><td>Need the order filled immediately</td><td>Higher</td></tr><tr><td><code>"SLOW"</code></td><td>Not time-sensitive, prioritize savings</td><td>Lowest</td></tr><tr><td><code>number</code> (SUN)</td><td>Full price control, e.g. <code>80</code></td><td>Custom</td></tr></tbody></table>
 
 **Response:**
 
@@ -114,7 +101,7 @@ Content-Type: application/json
 ```
 
 {% hint style="warning" %}
-If `availableResource` is less than your requested `resourceAmount`, the market currently does not have enough Energy available to fully fill the order. See `options.allowPartialFill` in the next step.
+If **`availableResource`** If it is less than your requested **`resourceAmount`**, the market currently does not have enough Energy available to fill the order fully. See **`options.allowPartialFill`** in the next step.
 {% endhint %}
 
 ## Step 3 — Create a buy order
@@ -169,12 +156,12 @@ Content-Type: application/json
 }
 ```
 
-Save the `orderId` — you'll need it in the next step.
+Save the `orderId` — You'll need it in the next step.
 
 ## Step 4 — Check order status
 
 ```http
-GET https://api.tronsave.io/v2/order/6818426a65fa8ea36d119d2c
+GET https://api.tronsave.io/v2/order/6818426a65fa8ea36d119999
 Headers: { "apikey": "YOUR_API_KEY" }
 ```
 
@@ -182,7 +169,7 @@ Headers: { "apikey": "YOUR_API_KEY" }
 {
   "error": false,
   "data": {
-    "id": "6818426a65fa8ea36d119d2c",
+    "id": "6818426a65fa8ea36d119999",
     "resourceAmount": 65000,
     "resourceType": "ENERGY",
     "fulfilledPercent": 100,   // 100 = order fully matched
@@ -203,11 +190,7 @@ Headers: { "apikey": "YOUR_API_KEY" }
 
 **Reading `fulfilledPercent`:**
 
-| Value  | Meaning                                                           |
-| ------ | ----------------------------------------------------------------- |
-| `100`  | Order fully matched — Energy has been delegated                   |
-| `1–99` | Partially matched (only possible when `allowPartialFill: true`)   |
-| `0`    | Pending — waiting for a provider to match                         |
+<table><thead><tr><th width="164">Value</th><th>Meaning</th></tr></thead><tbody><tr><td><code>100</code></td><td>Order fully matched — Energy has been delegated</td></tr><tr><td><code>1–99</code></td><td>Partially matched (only possible when <code>allowPartialFill: true</code>)</td></tr><tr><td><code>0</code></td><td>Pending — waiting for a provider to match</td></tr></tbody></table>
 
 {% hint style="success" %}
 Energy is typically delegated within **a few seconds to a few minutes** after the order is matched.
@@ -295,7 +278,7 @@ This installs the TypeScript package; see the [SDK](sdk.md) page for the other l
 
 Replace the base URL when testing:
 
-<table><thead><tr><th width="124"></th><th width="268">Production</th><th>Testnet</th></tr></thead><tbody><tr><td><strong>Website</strong></td><td><code>tronsave.io</code></td><td><code>https://testnet.tronsave.io</code></td></tr><tr><td><strong>API</strong></td><td><code>https://api.tronsave.io</code></td><td><code>https://api-dev.tronsave.io</code></td></tr></tbody></table>
+<table><thead><tr><th width="124"></th><th width="268">Production</th><th>Testnet</th></tr></thead><tbody><tr><td><strong>Website</strong></td><td><code>https://tronsave.io</code></td><td><code>https://testnet.tronsave.io</code></td></tr><tr><td><strong>API</strong></td><td><code>https://api.tronsave.io</code></td><td><code>https://api-dev.tronsave.io</code></td></tr></tbody></table>
 
 All endpoint paths remain the same — only the domain changes. See [Environments & Networks](environments.md) for details.
 
@@ -303,10 +286,10 @@ All endpoint paths remain the same — only the domain changes. See [Environment
 
 Now that you've placed your first order, you can:
 
-* [**Extend an order**](api-reference/extend-orders/README.md) — Renew the rental duration before it expires without creating a new order.
+* [**Extend an order**](api-reference/extend-orders/) — Renew the rental duration before it expires without creating a new order.
 * [**View order history**](api-reference/buy-resources/api-key/order-history.md) — Track all orders under your account.
-* [**Buy with Signed Transaction**](api-reference/buy-resources/signed-tx/README.md) — If you prefer not to hold TRX inside TronSave.
-* [**Full code examples**](code-examples/README.md) — Complete working examples in JS, PHP, and Python.
+* [**Buy with Signed Transaction**](api-reference/buy-resources/signed-tx/) — If you prefer not to hold TRX inside TronSave.
+* [**Full code examples**](code-examples/) — Complete working examples in JS, PHP, and Python.
 
 ***
 

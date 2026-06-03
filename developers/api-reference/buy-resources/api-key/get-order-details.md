@@ -1,5 +1,7 @@
 ---
-description: Retrieve detailed information and the current status of a specific order using its orderId.
+description: >-
+  Retrieve detailed information and the current status of a specific order using
+  its orderId.
 ---
 
 # Get Order Details
@@ -18,27 +20,13 @@ The `:id` path segment is the `orderId` returned when the order was created.
 
 ## Headers
 
-<table>
-<thead>
-<tr><th width="120">Name</th><th width="100">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents the internal account. See <a href="../../../authentication.md">Authentication</a> to get your API key.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="120">Name</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents the internal account. See <a href="../../../authentication.md">Authentication</a> to get your API key.</td></tr></tbody></table>
 
-<mark style="color:red;">*</mark> Required.
+<mark style="color:red;">\*</mark> Required.
 
 ## Path parameters
 
-<table>
-<thead>
-<tr><th width="120">Name</th><th width="100">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>id</code><mark style="color:red;">*</mark></td><td>String</td><td>The <code>orderId</code> of the order to retrieve.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="120">Name</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>id</code><mark style="color:red;">*</mark></td><td>String</td><td>The <code>orderId</code> of the order to retrieve.</td></tr></tbody></table>
 
 ## Request body
 
@@ -48,29 +36,7 @@ This endpoint takes no request body — pass the `apikey` header and the order `
 
 A successful response returns `error: false` and the order details in `data`.
 
-<table>
-<thead>
-<tr><th width="220">Field</th><th width="110">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>data.id</code></td><td>String</td><td>ID of the order.</td></tr>
-<tr><td><code>data.requester</code></td><td>String</td><td>The address that represents the order owner.</td></tr>
-<tr><td><code>data.receiver</code></td><td>String</td><td>The address that receives the resource.</td></tr>
-<tr><td><code>data.resourceAmount</code></td><td>Number</td><td>The amount of resource.</td></tr>
-<tr><td><code>data.resourceType</code></td><td>String</td><td>The resource type, either <code>ENERGY</code> or <code>BANDWIDTH</code>.</td></tr>
-<tr><td><code>data.remainAmount</code></td><td>Number</td><td>The remaining amount that can still be matched by the system.</td></tr>
-<tr><td><code>data.price</code></td><td>Number</td><td>Price, in SUN.</td></tr>
-<tr><td><code>data.durationSec</code></td><td>Number</td><td>Rent duration, in seconds.</td></tr>
-<tr><td><code>data.orderType</code></td><td>String</td><td>Type of order, either <code>NORMAL</code> or <code>EXTEND</code>.</td></tr>
-<tr><td><code>data.allowPartialFill</code></td><td>Boolean</td><td>Whether the order may be filled partially.</td></tr>
-<tr><td><code>data.payoutAmount</code></td><td>Number</td><td>Total payout of this order.</td></tr>
-<tr><td><code>data.fulfilledPercent</code></td><td>Number</td><td>The fill progress as a percentage, 0–100.</td></tr>
-<tr><td><code>data.delegates</code></td><td>Array</td><td>All matched delegates for this order.</td></tr>
-<tr><td><code>data.delegates[].delegator</code></td><td>String</td><td>The address that delegates the resource to the target address.</td></tr>
-<tr><td><code>data.delegates[].amount</code></td><td>Number</td><td>The amount of resource that was delegated.</td></tr>
-<tr><td><code>data.delegates[].txid</code></td><td>String</td><td>The on-chain transaction ID.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="220">Field</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>data.id</code></td><td>String</td><td>ID of the order.</td></tr><tr><td><code>data.requester</code></td><td>String</td><td>The address that represents the order owner.</td></tr><tr><td><code>data.receiver</code></td><td>String</td><td>The address that receives the resource.</td></tr><tr><td><code>data.resourceAmount</code></td><td>Number</td><td>The amount of resource.</td></tr><tr><td><code>data.resourceType</code></td><td>String</td><td>The resource type, either <code>ENERGY</code> or <code>BANDWIDTH</code>.</td></tr><tr><td><code>data.remainAmount</code></td><td>Number</td><td>The remaining amount that can still be matched by the system.</td></tr><tr><td><code>data.price</code></td><td>Number</td><td>Price, in SUN.</td></tr><tr><td><code>data.durationSec</code></td><td>Number</td><td>Rent duration, in seconds.</td></tr><tr><td><code>data.orderType</code></td><td>String</td><td>Type of order, either <code>NORMAL</code> or <code>EXTEND</code>.</td></tr><tr><td><code>data.allowPartialFill</code></td><td>Boolean</td><td>Whether the order may be filled partially.</td></tr><tr><td><code>data.payoutAmount</code></td><td>Number</td><td>Total payout of this order.</td></tr><tr><td><code>data.fulfilledPercent</code></td><td>Number</td><td>The fill progress as a percentage, 0–100.</td></tr><tr><td><code>data.delegates</code></td><td>Array</td><td>All matched delegates for this order.</td></tr><tr><td><code>data.delegates[].delegator</code></td><td>String</td><td>The address that delegates the resource to the target address.</td></tr><tr><td><code>data.delegates[].amount</code></td><td>Number</td><td>The amount of resource that was delegated.</td></tr><tr><td><code>data.delegates[].txid</code></td><td>String</td><td>The on-chain transaction ID.</td></tr></tbody></table>
 
 ### 200: OK
 
@@ -156,6 +122,16 @@ This endpoint authenticates with the `apikey` header. Missing or invalid keys re
 }
 ```
 
+**400 Bad Request - Invalid orderId**
+
+```json
+{
+    "error": true,
+    "message": "TSAS:408 INVALID_PARAMS Invalid orderId",
+    "data": null
+}
+```
+
 **404 Not Found — wrong route/path**
 
 ```json
@@ -165,8 +141,6 @@ This endpoint authenticates with the `apikey` header. Missing or invalid keys re
     "statusCode": 404
 }
 ```
-
-<!-- [NEEDS CONFIRMATION: the exact response body returned when the orderId does not match an existing order is not documented; the order-not-found business message could not be confirmed against the live testnet] -->
 
 ## Request examples
 

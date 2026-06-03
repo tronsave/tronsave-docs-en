@@ -1,10 +1,13 @@
 ---
-description: Join the TronSave Exclusive Provider program to earn a higher APY by delegating resources and reclaim permissions to TronSave only.
+description: >-
+  Join the TronSave Exclusive Provider program to earn a higher APY by
+  delegating resources and reclaim permissions to TronSave only.
+hidden: true
 ---
 
 # Exclusive Provider Program
 
-The Exclusive Provider program is built for [Providers](README.md) who delegate exclusively through TronSave. It is designed to maximize returns with a higher [APY](../../concepts/pricing-and-apy.md) than standard sellers, plus real-time profit tracking in a dedicated management interface.
+The Exclusive Provider program is built for [Providers](./) who delegate exclusively through TronSave. It is designed to maximize returns with a higher [APY](../../concepts/pricing-and-apy.md) than standard sellers, plus real-time profit tracking in a dedicated management interface.
 
 ## Benefits
 
@@ -48,5 +51,5 @@ Your account is now enrolled in the Exclusive Provider program. Track your profi
 
 ## Next steps
 
-* [Permission](permission.md) · [Get Energy by Staking 2.0](staking-2.0.md) · [Sell / Provider guide](README.md)
+* [Permission](permission.md) · [Get Energy by Staking 2.0](staking-2.0.md) · [Sell / Provider guide](./)
 * [Pricing & APY](../../concepts/pricing-and-apy.md) · [Staking 2.0](../../concepts/staking-2.0.md)

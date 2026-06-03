@@ -1,5 +1,7 @@
 ---
-description: Where to check TronSave service status, how to report incidents, and what to know about uptime expectations.
+description: >-
+  Where to check TronSave service status, how to report incidents, and what to
+  know about uptime expectations.
 ---
 
 # Status & SLA
@@ -9,7 +11,7 @@ This page tells you where to check whether TronSave is up, how to report a probl
 ## Service status
 
 {% hint style="info" %}
-TronSave does not publish a dedicated status/uptime page. To check whether the service is up, test the relevant environment directly (see below) or ask in the community channel ([t.me/tronsave](https://t.me/tronsave)).
+TronSave does not publish a dedicated status/uptime page. To check whether the service is up, test the relevant environment directly (see below) or ask in the community channel ([TronSave | Energy Service Group](https://t.me/tronsaveofficial)).
 {% endhint %}
 
 Without a status page, you can confirm whether a specific environment is reachable with a lightweight request against a read endpoint:
@@ -44,7 +46,7 @@ A `200` confirms the API is reachable and your key is valid. A `5xx` or a connec
 
 TronSave has several independently operated surfaces. An issue on one does not necessarily mean the others are affected:
 
-<table><thead><tr><th>Surface</th><th>Endpoint / URL</th><th>What it serves</th></tr></thead><tbody><tr><td><strong>Website (Mainnet)</strong></td><td><code>https://tronsave.io</code></td><td>Buy/sell UI, account dashboard</td></tr><tr><td><strong>Website (Nile)</strong></td><td><code>https://testnet.tronsave.io</code></td><td>Testnet UI</td></tr><tr><td><strong>API (Mainnet)</strong></td><td><code>https://api.tronsave.io</code></td><td>Production API</td></tr><tr><td><strong>API (Nile)</strong></td><td><code>https://api-dev.tronsave.io</code></td><td>Testnet API</td></tr><tr><td><strong>TRON network</strong></td><td>Mainnet / Nile</td><td>On-chain delegation &amp; settlement</td></tr></tbody></table>
+<table><thead><tr><th width="213">Surface</th><th>Endpoint / URL</th><th>What it serves</th></tr></thead><tbody><tr><td><strong>Website (Mainnet)</strong></td><td><code>https://tronsave.io</code></td><td>Buy/sell UI, account dashboard</td></tr><tr><td><strong>Website (Nile)</strong></td><td><code>https://testnet.tronsave.io</code></td><td>Testnet UI</td></tr><tr><td><strong>API (Mainnet)</strong></td><td><code>https://api.tronsave.io</code></td><td>Production API</td></tr><tr><td><strong>API (Nile)</strong></td><td><code>https://api-dev.tronsave.io</code></td><td>Testnet API</td></tr><tr><td><strong>TRON network</strong></td><td>Mainnet / Nile</td><td>On-chain delegation &#x26; settlement</td></tr></tbody></table>
 
 {% hint style="warning" %}
 Order fulfilment and delegation ultimately depend on the **TRON network** itself. If the underlying chain is congested or experiencing issues, orders may settle slowly even when TronSave's own services are fully operational.
@@ -58,9 +60,9 @@ If you believe TronSave is down or degraded:
 
 1. **Confirm the scope** — test the affected surface using the request above and note the HTTP status code or error message.
 2. **Capture details** — record the timestamp, environment (Mainnet or Nile), affected endpoint or page, and any `requestId`/order ID returned.
-3. **Report it** through an official support channel — Support/refunds: [t.me/wantingtrx](https://t.me/wantingtrx); Community: [t.me/tronsave](https://t.me/tronsave).
+3. **Report it** through an official support channel — Support/refunds: [t.me/wantingtrx](https://t.me/wantingtrx); Community: [TronSave | Energy Service Group](https://t.me/tronsaveofficial).
 
-For non-outage problems (a stuck order, a failed transfer, an unexpected error), start with [Troubleshooting](troubleshooting.md) and [Transfer Recovery](transfer-recovery/README.md) before reporting an incident.
+For non-outage problems (a stuck order, a failed transfer, an unexpected error), start with [Troubleshooting](troubleshooting.md) and [Transfer Recovery](transfer-recovery/) before reporting an incident.
 
 ## Service level expectations
 
@@ -77,7 +79,7 @@ Whether or not a formal SLA applies, treat the API as a remote dependency and de
 * **Retry with backoff** on `5xx` and timeout responses; do not retry on `4xx`. See [Errors & Rate Limits](../developers/errors-and-rate-limits.md).
 * **Make order creation idempotent** where possible so a retried request does not place a duplicate order.
 * **Poll order status** rather than assuming a request succeeded — confirm `fulfilledPercent` before relying on the delegation.
-* **Have a fallback** for time-critical transactions (e.g. let TRX burn) if an order cannot be filled in time.
+* **Have a fallback** for time-critical transactions (e.g., let TRX burn) if an order cannot be filled in time.
 
 ## Next steps
 

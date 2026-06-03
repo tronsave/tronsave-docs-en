@@ -1,5 +1,7 @@
 ---
-description: Official TronSave SDKs for buying and managing Energy and Bandwidth on TRON — available for TypeScript, Rust, Python, Java, and PHP.
+description: >-
+  Official TronSave SDKs for buying and managing Energy and Bandwidth on TRON —
+  available for TypeScript, Rust, Python, Java, and PHP.
 ---
 
 # SDK
@@ -7,20 +9,20 @@ description: Official TronSave SDKs for buying and managing Energy and Bandwidth
 The **TronSave SDKs** let you interact with the TronSave API to manage resources (Energy and Bandwidth) on the TRON blockchain. Each SDK exposes strongly-typed functions for estimating costs, buying resources, extending orders, and tracking order status, and integrates cleanly into backend services.
 
 {% hint style="info" %}
-Prefer to call the HTTP API directly? See the [API Reference](api-reference/README.md). The SDKs wrap the same endpoints documented there.
+Prefer to call the HTTP API directly? See the [API Reference](api-reference/). The SDKs wrap the same endpoints documented there.
 {% endhint %}
 
 ## Available SDKs
 
 All SDKs target the **v2 API**.
 
-| Language | Package | Registry | Latest |
-| --- | --- | --- | --- |
-| TypeScript / JS | `tronsave-sdk` | [npm](https://www.npmjs.com/package/tronsave-sdk) | — |
-| Rust | `tronsave` | [crates.io](https://crates.io/crates/tronsave) | 2.0.0 |
-| Python | `tronsave` | [PyPI](https://pypi.org/project/tronsave/) | 2.0.0 |
-| Java | `io.tronsave:sdk` | [Maven Central](https://central.sonatype.com/artifact/io.tronsave/sdk) | 2.0.0 |
-| PHP | `tronsave/sdk` | [Packagist](https://packagist.org/packages/tronsave/sdk) | 2.0.0 |
+| Language        | Package           | Registry                                                               | Latest |
+| --------------- | ----------------- | ---------------------------------------------------------------------- | ------ |
+| TypeScript / JS | `tronsave-sdk`    | [npm](https://www.npmjs.com/package/tronsave-sdk)                      | —      |
+| Rust            | `tronsave`        | [crates.io](https://crates.io/crates/tronsave)                         | 2.0.0  |
+| Python          | `tronsave`        | [PyPI](https://pypi.org/project/tronsave/)                             | 2.0.0  |
+| Java            | `io.tronsave:sdk` | [Maven Central](https://central.sonatype.com/artifact/io.tronsave/sdk) | 2.0.0  |
+| PHP             | `tronsave/sdk`    | [Packagist](https://packagist.org/packages/tronsave/sdk)               | 2.0.0  |
 
 ## Install
 
@@ -129,7 +131,7 @@ main();
 {% endtabs %}
 
 {% hint style="warning" %}
-Set `network: "mainnet"` for production. The example uses `"testnet"` (Nile), where everything works the same way but uses no real TRX. See [Environments & Networks](environments.md).
+Set **`network: "mainnet"`** for production. The example uses **`"testnet"`** (Nile), where everything works the same way but uses no real TRX. See [Environments & Networks](environments.md).
 {% endhint %}
 
 ## Features

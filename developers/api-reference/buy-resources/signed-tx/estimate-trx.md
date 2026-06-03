@@ -1,5 +1,7 @@
 ---
-description: Estimate the TRX required to buy Energy or Bandwidth for a given amount and rental duration before creating a signed-transaction order.
+description: >-
+  Estimate the TRX required to buy Energy or Bandwidth for a given amount and
+  rental duration before creating a signed-transaction order.
 ---
 
 # Estimate TRX
@@ -18,17 +20,15 @@ Testnet base URL: `https://api-dev.tronsave.io`. See [Environments](../../../env
 
 ## Headers
 
-| Header | Value | Required |
-| --- | --- | --- |
-| `Content-Type` | `application/json` | Yes |
-
-This endpoint is part of the signed-transaction flow and does **not** require an `apikey` header. Authentication for the buy step is handled by the signed transaction itself, not by an API key.
+| Header         | Value              | Required |
+| -------------- | ------------------ | -------- |
+| `Content-Type` | `application/json` | Yes      |
 
 ## Request params
 
-<table><thead><tr><th width="206.33333333333331">Field</th><th width="95">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>resourceAmount</code><mark style="color:red;">*</mark></td><td>Number</td><td>The number of resources.</td></tr><tr><td><code>unitPrice</code></td><td>String, Number</td><td><p><strong>"FAST", "MEDIUM", "SLOW", or number</strong>:</p><p><br>-"FAST": If the market is ready to fill = 100%, FAST = MEDIUM. If the market is ready to fill &#x3C; 100%, FAST = MEDIUM + 10. If market ready to fill = 0%, FAST = SLOW + 20.</p><p></p><p>-"MEDIUM": The lowest price for the maximum market fill for this order. If market is ready to fill = 0%, MEDIUM = SLOW + 10.</p><p></p><p>-"SLOW": The lowest price that can be set for this order.</p><p></p><p>-If the price is a number, the price unit is equal to SUN</p></td></tr><tr><td><code>durationSec</code></td><td>Number</td><td>The duration of the bought resource, time unit, is in seconds. Default 3d</td></tr><tr><td><code>requester</code></td><td>String</td><td>The address of requester.</td></tr><tr><td><code>receiver</code></td><td>String</td><td>The address of receiver resource.</td></tr><tr><td><code>resourceType</code></td><td>String</td><td>"ENERGY" or "BANDWIDTH", default: "ENERGY"</td></tr><tr><td><code>options</code></td><td>Object</td><td>optional</td></tr><tr><td><code>options.allowPartialFill</code></td><td>Boolean</td><td>Allow the order to be filled partially or not</td></tr><tr><td><code>options.minResourceDelegateRequiredAmount</code></td><td>Number</td><td>The minimum resource amount delegated by a single provider.</td></tr></tbody></table>
+<table><thead><tr><th width="206.33333333333331">Field</th><th width="95">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>resourceAmount</code><mark style="color:red;">*</mark></td><td>Number</td><td>The number of resources.</td></tr><tr><td><code>unitPrice</code></td><td>String, Number</td><td><p><strong>"FAST", "MEDIUM", "SLOW", or number</strong>:</p><p><br>-"FAST": If the market is ready to fill = 100%, FAST = MEDIUM. If the market is ready to fill &#x3C; 100%, FAST = MEDIUM + 10. If market ready to fill = 0%, FAST = SLOW + 20.</p><p>-"MEDIUM": The lowest price for the maximum market fill for this order. If market is ready to fill = 0%, MEDIUM = SLOW + 10.</p><p>-"SLOW": The lowest price that can be set for this order.</p><p>-If the price is a number, the price unit is equal to SUN</p></td></tr><tr><td><code>durationSec</code></td><td>Number</td><td>The duration of the bought resource, time unit, is in seconds. Default 3d</td></tr><tr><td><code>requester</code></td><td>String</td><td>The address of requester.</td></tr><tr><td><code>receiver</code></td><td>String</td><td>The address of receiver resource.</td></tr><tr><td><code>resourceType</code></td><td>String</td><td>"ENERGY" or "BANDWIDTH", default: "ENERGY"</td></tr><tr><td><code>options</code></td><td>Object</td><td>optional</td></tr><tr><td><code>options.allowPartialFill</code></td><td>Boolean</td><td>Allow the order to be filled partially or not</td></tr><tr><td><code>options.minResourceDelegateRequiredAmount</code></td><td>Number</td><td>The minimum resource amount delegated by a single provider.</td></tr></tbody></table>
 
-## Request body example
+### Request body example
 
 ```json
 {
@@ -65,7 +65,7 @@ The `estimateTrx` value is returned in SUN (1 TRX = 1,000,000 SUN). `unitPrice` 
 
 ### Error
 
-Because this endpoint authenticates via the signed transaction (not an API key), it does not return a `401` for missing credentials. The most common error is schema validation when a required field is missing or invalid. The `message` names the offending field.
+Because this endpoint authenticates via the signed transaction (not an API key), it does not return a `401` response for missing credentials. The most common error is schema validation when a required field is missing or invalid. The `message` names of the offending field.
 
 **400 Bad Request — validation (missing required `resourceAmount`):**
 
@@ -288,4 +288,4 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 * [Get Signed Transaction](get-signed-transaction.md)
 * [Create Order](create-order.md)
-* Back to [Buy with Signed Transaction](README.md)
+* Back to [Buy with Signed Transaction](./)

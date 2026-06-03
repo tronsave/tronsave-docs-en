@@ -1,8 +1,10 @@
 ---
-description: TronSave's two API environments — Mainnet and the Nile testnet — and how to switch between them.
+description: >-
+  TronSave's two API environments — Mainnet and the Nile testnet — and how to
+  switch between them.
 ---
 
-# Environments
+# Environments & Networks
 
 TronSave runs on two networks: **Mainnet** for real orders, and the **Nile testnet** for development and testing. The API surface is identical across both — only the base domain changes.
 
@@ -11,7 +13,8 @@ TronSave runs on two networks: **Mainnet** for real orders, and the **Nile testn
 <table><thead><tr><th width="124"></th><th>Mainnet (Production)</th><th>Nile (Testnet)</th></tr></thead><tbody><tr><td><strong>Website</strong></td><td><code>https://tronsave.io</code></td><td><code>https://testnet.tronsave.io</code></td></tr><tr><td><strong>API base</strong></td><td><code>https://api.tronsave.io</code></td><td><code>https://api-dev.tronsave.io</code></td></tr><tr><td><strong>TRON network</strong></td><td>Mainnet</td><td>Nile testnet</td></tr><tr><td><strong>TRX</strong></td><td>Real TRX</td><td>Test TRX (no real value)</td></tr></tbody></table>
 
 {% hint style="info" %}
-**All endpoint paths are identical** across environments. To target the testnet, swap only the base domain — for example `https://api.tronsave.io/v2/user-info` becomes `https://api-dev.tronsave.io/v2/user-info`.
+**All endpoint paths are identical** across environments. To target the testnet, swap only the base domain — for example **`https://api.tronsave.io/v2/user-info`** becomes \
+&#xNAN;**`https://api-dev.tronsave.io/v2/user-info`**.
 {% endhint %}
 
 ## Switching environments

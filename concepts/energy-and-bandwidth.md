@@ -1,5 +1,7 @@
 ---
-description: The two resources every TRON transaction consumes — and why renting them saves money.
+description: >-
+  The two resources every TRON transaction consumes — and why renting them saves
+  money.
 ---
 
 # Energy & Bandwidth
@@ -12,7 +14,7 @@ Every action on the TRON network consumes two resources. Understanding them is t
 * **How you get it:** by **staking TRX** (Stake 2.0), or by **renting** it on TronSave.
 * **If you don't have enough:** the network **burns TRX** to cover the shortfall — this is what makes contract calls expensive.
 
-> A single **USDT TRC‑20 transfer** costs roughly **~64,400–167,000 Energy** depending on the receiver's state (e.g. whether the receiver already holds USDT).
+> A single **USDT TRC‑20 transfer** costs roughly **\~64,400–167,000 Energy** depending on the receiver's state (e.g. whether the receiver already holds USDT).
 
 ## Bandwidth
 
@@ -22,13 +24,13 @@ Every action on the TRON network consumes two resources. Understanding them is t
 
 ## Why rent instead of burn?
 
-When you lack staked resources, TRON burns TRX at the protocol rate. On TronSave you instead pay the **market rental rate**, which is typically **far cheaper** — up to **~92%** savings for frequent operations like USDT transfers.
+When you lack staked resources, TRON burns TRX at the protocol rate. On TronSave you instead pay the **market rental rate**, which is typically **far cheaper** — up to **\~70%** savings for frequent operations like USDT transfers.
 
-| | Burn TRX (no resources) | Rent on TronSave |
-| --- | --- | --- |
-| Cost basis | Protocol burn rate | Market rate (often much lower) |
-| Setup | None | Place an order / hold a small balance |
-| Best for | One‑off, tiny usage | Frequent transfers, bots, dApps |
+|            | Burn TRX (no resources) | Rent on TronSave                      |
+| ---------- | ----------------------- | ------------------------------------- |
+| Cost basis | Protocol burn rate      | Market rate (often much lower)        |
+| Setup      | None                    | Place an order / hold a small balance |
+| Best for   | One‑off, tiny usage     | Frequent transfers, bots, dApps       |
 
 ## Units
 

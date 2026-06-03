@@ -1,5 +1,8 @@
 ---
-description: Fixes for the most common problems when buying Energy or integrating with TronSave — orders not filling, low balance, rate limits, ZapBuy delivery, and wrong network.
+description: >-
+  Fixes for the most common problems when buying Energy or integrating with
+  TronSave — orders not filling, low balance, rate limits, ZapBuy delivery, and
+  wrong network.
 ---
 
 # Troubleshooting
@@ -96,15 +99,15 @@ A key issued on Testnet will not work against Mainnet and vice versa. Make sure 
 
 With [ZapBuy](../guides/buy/zapbuy.md), you send TRX to the TronSave bot address and a 1-hour Energy rental is created automatically for the sending wallet. If no Energy arrives, check each of the following:
 
-* **You sent at least the minimum.** ZapBuy requires renting **at least 65,000 Energy**. Requests below that are **ignored** and no order is created.
+* **You sent at least the minimum.** ZapBuy requires renting **at least 65,000 Energy**. Requests below that are **ignored,** and no order is created.
 * **You sent from a regular wallet.** Energy is delegated back to the sending address, which must be a normal wallet — **not a smart contract or exchange wallet**.
 * **The transaction confirmed.** It must be successfully confirmed on the TRON blockchain.
 * **The order could be matched immediately.** ZapBuy only fills when Energy is available right now. If no match is found, you won't receive Energy.
-* **You sent the correct token to the correct address.** ZapBuy accepts **TRX only**, sent to the TronSave bot address:
+*   **You sent the correct token to the correct address.** ZapBuy accepts **TRX only**, sent to the TronSave bot address:
 
-  ```ini
-  TLx8h8fjv5pyuxCu292ZgjbU14XZSiLGg4
-  ```
+    ```ini
+    TLx8h8fjv5pyuxCu292ZgjbU14XZSiLGg4
+    ```
 
 If you've met all of the above and still didn't receive Energy, contact TronSave **immediately** with your transaction details to request help or a refund: [https://t.me/wantingtrx](https://t.me/wantingtrx).
 
@@ -112,29 +115,16 @@ If you've met all of the above and still didn't receive Energy, contact TronSave
 
 Sending to the wrong network is the most common source of "lost" funds and undelivered Energy.
 
-* **TRX sent on a non-TRON network.** ZapBuy and Internal Account deposits only accept native **TRX on the TRON network**. Funds sent via another chain (or a wrapped/bridged token) will not be credited. <!-- [NEEDS CONFIRMATION: recovery procedure / whether cross-network deposits can be recovered] -->
+* **TRX sent on a non-TRON network.** ZapBuy and Internal Account deposits only accept native **TRX on the TRON network**. Funds sent via another chain (or a wrapped/bridged token) will not be credited.
 * **API calls hitting the wrong environment.** Testnet and Mainnet have separate base URLs and separate API keys. Calling Mainnet with a Testnet key (or URL) produces `INVALID_API_KEY` or unexpected empty results. Verify your base URL and key against [Environments](../developers/environments.md).
 
 {% hint style="warning" %}
-Always double-check the **target address** you're delegating Energy to. A discrepancy in the target address can also explain a price difference between a bot purchase and the website. <!-- [NEEDS CONFIRMATION: exact recovery path when Energy is delegated to an unintended target address] -->
+Always double-check the **target address** you're delegating Energy to. A discrepancy in the target address can also explain a price difference between a bot purchase and the website.
 {% endhint %}
 
 ## Quick reference
 
-<table>
-  <thead>
-    <tr><th width="120">HTTP</th><th width="320">Code</th><th>Fix</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>400</td><td><code>CANNOT_FULFILLED</code></td><td>Allow partial fill, adjust price, or use a Smart/Pending order.</td></tr>
-    <tr><td>400</td><td><code>PRICE_EXCEED_MAX_PRICE_REQUIRED</code></td><td>Re-estimate and raise <code>options.maxPriceAccepted</code>.</td></tr>
-    <tr><td>400</td><td><code>MUST_BE_WAIT_PREVIOUS_ORDER_FILLED</code></td><td>Wait for the existing order, or change a parameter.</td></tr>
-    <tr><td>400</td><td><code>INTERNAL_BALANCE_ACCOUNT_TOO_LOW</code></td><td>Top up your Internal Account.</td></tr>
-    <tr><td>400</td><td><code>INTERNAL_ACCOUNT_NOT_FOUND</code></td><td>Create/fund the Internal Account first.</td></tr>
-    <tr><td>401</td><td><code>API_KEY_REQUIRED</code> / <code>INVALID_API_KEY</code></td><td>Set a valid <code>apikey</code> header for the right environment.</td></tr>
-    <tr><td>429</td><td><code>RATE_LIMIT</code></td><td>Back off and retry with exponential backoff.</td></tr>
-  </tbody>
-</table>
+<table><thead><tr><th width="120">HTTP</th><th width="320">Code</th><th>Fix</th></tr></thead><tbody><tr><td>400</td><td><code>CANNOT_FULFILLED</code></td><td>Allow partial fill, adjust price, or use a Smart/Pending order.</td></tr><tr><td>400</td><td><code>PRICE_EXCEED_MAX_PRICE_REQUIRED</code></td><td>Re-estimate and raise <code>options.maxPriceAccepted</code>.</td></tr><tr><td>400</td><td><code>MUST_BE_WAIT_PREVIOUS_ORDER_FILLED</code></td><td>Wait for the existing order, or change a parameter.</td></tr><tr><td>400</td><td><code>INTERNAL_BALANCE_ACCOUNT_TOO_LOW</code></td><td>Top up your Internal Account.</td></tr><tr><td>400</td><td><code>INTERNAL_ACCOUNT_NOT_FOUND</code></td><td>Create/fund the Internal Account first.</td></tr><tr><td>401</td><td><code>API_KEY_REQUIRED</code> / <code>INVALID_API_KEY</code></td><td>Set a valid <code>apikey</code> header for the right environment.</td></tr><tr><td>429</td><td><code>RATE_LIMIT</code></td><td>Back off and retry with exponential backoff.</td></tr></tbody></table>
 
 ## Next steps
 

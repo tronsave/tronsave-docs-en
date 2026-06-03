@@ -1,5 +1,9 @@
 ---
-description: Buy Energy for many addresses in one flow — estimate cost, create orders, track matching, then confirm to reclaim unused Energy and refund the difference.
+description: >-
+  Buy Energy for many addresses in one flow — estimate cost, create orders,
+  track matching, then confirm to reclaim unused Energy and refund the
+  difference.
+hidden: true
 ---
 
 # Fast Charge
@@ -14,19 +18,7 @@ Fast Charge is an API-key feature — every call is authenticated against a pref
 
 The Fast Charge API follows a predictable lifecycle. Each step maps to one endpoint:
 
-<table>
-  <thead>
-    <tr><th width="170">Step</th><th>Endpoint</th><th>What it does</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><strong>1. Estimate</strong></td><td><a href="get-an-estimate-trx.md">Get an Estimate TRX</a></td><td>Given your maximum acceptable price and the number of orders, estimate the TRX required. Check it against your internal account balance.</td></tr>
-    <tr><td><strong>2. Create</strong></td><td><a href="create-fast-charge-orders.md">Create Fast Charge Orders</a></td><td>Submit the order with a max price, rental duration, and the list of addresses to receive Energy.</td></tr>
-    <tr><td><strong>3. Track</strong></td><td><a href="tracking-fast-charge-order.md">Tracking Fast Charge Order</a></td><td>Monitor each order's status — <code>Pending</code> (waiting to match) or <code>Matched</code>.</td></tr>
-    <tr><td><strong>4. Confirm</strong></td><td><a href="confirm-request.md">Confirm Request</a></td><td>After using the Energy, confirm orders to end the rental, reclaim unused Energy, and trigger the TRX refund.</td></tr>
-    <tr><td><strong>Cancel</strong></td><td><a href="cancel-order.md">Cancel Order</a></td><td>Cancel a <code>Pending</code> order for a full TRX refund.</td></tr>
-    <tr><td><strong>History</strong></td><td><a href="get-history.md">Get History</a></td><td>Look up the details of completed rents and orders.</td></tr>
-  </tbody>
-</table>
+<table><thead><tr><th width="170">Step</th><th>Endpoint</th><th>What it does</th></tr></thead><tbody><tr><td><strong>1. Estimate</strong></td><td>Get an Estimate TRX</td><td>Given your maximum acceptable price and the number of orders, estimate the TRX required. Check it against your internal account balance.</td></tr><tr><td><strong>2. Create</strong></td><td>Create Fast Charge Orders</td><td>Submit the order with a max price, rental duration, and the list of addresses to receive Energy.</td></tr><tr><td><strong>3. Track</strong></td><td>Tracking Fast Charge Order</td><td>Monitor each order's status — <code>Pending</code> (waiting to match) or <code>Matched</code>.</td></tr><tr><td><strong>4. Confirm</strong></td><td><a href="confirm-request.md">Confirm Request</a></td><td>After using the Energy, confirm orders to end the rental, reclaim unused Energy, and trigger the TRX refund.</td></tr><tr><td><strong>Cancel</strong></td><td><a href="cancel-order.md">Cancel Order</a></td><td>Cancel a <code>Pending</code> order for a full TRX refund.</td></tr><tr><td><strong>History</strong></td><td><a href="get-history.md">Get History</a></td><td>Look up the details of completed rents and orders.</td></tr></tbody></table>
 
 ## Step 1 — Estimate TRX payout
 
