@@ -2,7 +2,7 @@
 description: Maximize and prolong active Energy on TronSave without fear of reclamation.
 ---
 
-# Extend
+# Extend Orders
 
 Extend lets you get more out of Energy you've already rented or are about to rent. Use it to:
 
@@ -12,21 +12,14 @@ Extend lets you get more out of Energy you've already rented or are about to ren
 
 TronSave offers two ways to do this:
 
-<table>
-<thead>
-<tr><th>Method</th><th>What it does</th></tr>
-</thead>
-<tbody>
-<tr><td><a href="quick-extend.md">Quick Extend</a></td><td>Fast top-up that extends an active Energy block in a few steps.</td></tr>
-<tr><td><a href="advance.md">Advance</a></td><td>Fine-grained control for repeated purchases from the same delegate address.</td></tr>
-</tbody>
-</table>
+| Method                          | What it does                                                                |
+| ------------------------------- | --------------------------------------------------------------------------- |
+| [Quick Extend](quick-extend.md) | Fast top-up that extends an active Energy block in a few steps.             |
+| [Advanced Extend](advance.md)   | Fine-grained control for repeated purchases from the same delegate address. |
 
-{% hint style="info" %}
-Both methods build on the standard rental flow. If you haven't rented Energy yet, start with [How to buy Energy & Bandwidth](../buy/README.md).
-</hint>
+Both methods build on the standard rental flow. If you haven't rented Energy yet, start with \[How to buy Energy & Bandwidth]\(../buy/README.md).
 
 ## Next steps
 
 * [Quick Extend](quick-extend.md)
-* [Advance](advance.md)
+* [Advanced Extend](advance.md)
