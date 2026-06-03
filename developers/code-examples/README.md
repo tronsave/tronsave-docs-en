@@ -54,4 +54,4 @@ These are legacy v0 examples, kept for reference only. For new integrations use 
 
 * [Quickstart](../quickstart.md) — the shortest path to your first order.
 * [API Reference](../api-reference/README.md) — every endpoint these examples call.
-* SDK — a typed TypeScript wrapper if you prefer not to call the HTTP API directly.
+* [SDK](../sdk.md) (TypeScript, Rust, Python, Java, PHP) — a typed wrapper if you prefer not to call the HTTP API directly.

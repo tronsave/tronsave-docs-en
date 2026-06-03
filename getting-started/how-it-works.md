@@ -40,7 +40,7 @@ See [Authentication](../developers/authentication.md) for both methods.
 
 * **Website** — [tronsave.io](https://tronsave.io) (full UI, all order types and tools)
 * **Telegram** — the [TronSave bot](../guides/buy/on-telegram/README.md)
-* **API / SDK** — [REST API](../developers/api-reference/README.md) and TypeScript SDK
+* **API / SDK** — [REST API](../developers/api-reference/README.md) and the [SDK](../developers/sdk.md) (TypeScript, Rust, Python, Java, PHP)
 
 ## Next steps
 
