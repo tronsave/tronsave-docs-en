@@ -20,7 +20,7 @@ Built on TRON **Stake 2.0**. Top 3 — TRON Hackathon S4 · 1st‑place Builder 
 ## What you can do with TronSave
 
 * **Buy resources** on the website, on Telegram, or via the API — with [Normal, Pending, Smart, ZapBuy, Auto Buy and Fast Charge](concepts/order-types.md) order types.
-* **Integrate** energy purchasing into your dApp or backend with the [REST API](developers/api-reference/README.md) or the [TypeScript SDK](developers/sdk/README.md).
+* **Integrate** energy purchasing into your dApp or backend with the [REST API](developers/api-reference/README.md) or the TypeScript SDK.
 * **Sell / provide** Energy from your staked TRX and [earn APY](concepts/pricing-and-apy.md).
 * **Manage** orders, extend rentals, and run bulk operations from the [Tools](guides/tools/README.md).
 
