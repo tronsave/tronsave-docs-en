@@ -1,5 +1,7 @@
 # Table of contents
 
+* [README](README.md)
+
 ## Getting Started
 
 * [What is TronSave?](getting-started/what-is-tronsave.md)
