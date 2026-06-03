@@ -288,7 +288,7 @@ buyEnergy();
 npm install tronsave-sdk
 ```
 
-See the [SDK documentation](sdk/README.md).
+See the SDK documentation.
 {% endhint %}
 
 ## Test environment (Nile testnet)

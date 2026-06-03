@@ -9,7 +9,7 @@ description: The concrete benefits of TronSave for buyers and providers.
 * **Save up to ~92%** on TRON transaction fees by renting Energy instead of burning TRX.
 * **Rent in seconds** — individuals and projects alike get a simple flow on web, Telegram, and API.
 * **Pay only for what you need** — choose the [amount, duration, and price tier](../concepts/order-types.md) per order.
-* **Automate it** — integrate the [API](../developers/quickstart.md) or [SDK](../developers/sdk/README.md) so your app tops up resources programmatically.
+* **Automate it** — integrate the [API](../developers/quickstart.md) or SDK so your app tops up resources programmatically.
 
 ## For providers (sellers)
 

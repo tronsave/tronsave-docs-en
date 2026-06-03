@@ -25,7 +25,7 @@ description: Standardized terminology used across the TronSave docs.
 | **`requester`** | The address placing/representing the order (the `representAddress` of your internal account). |
 | **`fulfilledPercent`** | Order fill status: `0` pending, `1–99` partial, `100` complete. |
 | **APR / APY** | Provider returns. See [Pricing & APY](pricing-and-apy.md) for formulas. |
-| **WTRX** | Wrapped TRX, used in some [SDK](../developers/sdk/wtrx.md) payment flows. |
+| **WTRX** | Wrapped TRX, used in some SDK payment flows. |
 | **ZapBuy** | Buy Energy by sending TRX directly to a bot address; fixed 1‑hour rental. |
 | **Fast Charge** | API flow for rapid Energy charging (estimate → create → track → confirm). |
 | **Nile** | The TRON testnet TronSave uses (`api-dev.tronsave.io`). |
