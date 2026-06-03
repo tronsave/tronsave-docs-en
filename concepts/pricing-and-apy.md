@@ -9,7 +9,7 @@ description: How rental prices are set and how provider APY is calculated.
 Rental price is set per order via `unitPrice` (SUN per resource unit) — either a fixed number or a tier (`SLOW` / `MEDIUM` / `FAST`). The market's live order book determines what a given tier resolves to. See [The Rental Model](rental-model.md#the-price-tiers) for the exact tier rules.
 
 * **1 TRX = 1,000,000 SUN.**
-* Always [estimate](../developers/api-reference/buy-resources/estimate-trx.md) before ordering to see the current price and available supply.
+* Always [estimate](/broken/pages/qSPR7nGa8LyjgLyYINRR) before ordering to see the current price and available supply.
 
 ## How provider APY is calculated
 
@@ -19,18 +19,13 @@ $$
 APR_{tronsave} = \frac{AP \times FR}{1{,}000{,}000} \times PS \times 365
 $$
 
-| Symbol | Meaning |
-| --- | --- |
-| **AP** | Average Price of the 200 nearest matched orders (SUN) |
-| **FR** | Freeze Rate on the TRON network (SUN per staked TRX) — check at [tronstation.io](https://tronstation.io/calculator) |
-| **PS** | Profit Share of the provider on TronSave = **0.75** |
-| 1,000,000 | SUN per TRX |
+<table><thead><tr><th width="234">Symbol</th><th>Meaning</th></tr></thead><tbody><tr><td><strong>AP</strong></td><td>Average Price of the 200 nearest matched orders (SUN)</td></tr><tr><td><strong>FR</strong></td><td>Freeze Rate on the TRON network (SUN per staked TRX)</td></tr><tr><td><strong>PS</strong></td><td>Profit Share of the provider on TronSave = <strong>0.75</strong></td></tr><tr><td>1,000,000</td><td>SUN per TRX</td></tr></tbody></table>
 
 $$
 APY_{total} = \left(1 + \frac{APR_{tronsave}}{12}\right)^{12} - 1 + VR
 $$
 
-* **VR** (Vote Rate): potential voting reward, ~**4%** — check at [tronscan.org](https://tronscan.org/#/sr/votes).
+* **VR** (Vote Rate): potential voting reward, \~**4%** — check at [tronscan.org](https://tronscan.org/#/sr/votes).
 
 ### Worked example
 
@@ -50,4 +45,4 @@ AP, FR and VR all move with market conditions, so live APY varies. Use the formu
 
 ## Next steps
 
-* [Staking 2.0](staking-2.0.md) · [Sell / Provider](../guides/sell/README.md) · [Calculate APY (FAQ)](../resources/faq.md)
+* [Staking 2.0](staking-2.0.md) · [Sell / Provider](../guides/sell/) · [Calculate APY (FAQ)](../resources/faq.md)

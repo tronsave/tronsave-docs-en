@@ -1,15 +1,17 @@
 ---
-description: Submit an extend request for an existing TronSave order — pay with your API key (internal account) or with a signed transaction — and receive an orderId.
+description: >-
+  Submit an extend request for an existing TronSave order — pay with your API
+  key (internal account) or with a signed transaction — and receive an orderId.
 ---
 
-# Submit Extend Request
+# Extend Request
 
 Extend the delegates you selected in [Step 1: Get extendable delegates](get-extendable-delegates.md). Two payment methods are supported:
 
 * **Option 1 — API key:** authorize the extension with a TronSave API key on a prefunded [internal account](../../authentication.md); no per-order on-chain signing.
 * **Option 2 — Signed transaction:** sign the extension with your own private key and settle it on-chain.
 
-Both options use the same endpoint and return an `orderId` on success.
+Both options use the same endpoint and return  `orderId` on success.
 
 <mark style="color:orange;">**`POST`**</mark> **`https://api.tronsave.io/v2/extend-request`**
 
@@ -21,31 +23,15 @@ Rate limit: **15** requests per **1** second.
 
 ### Headers
 
-<table>
-<thead>
-<tr><th width="140">Name</th><th width="110">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key tied to your internal account. See <a href="../../authentication.md">Authentication</a> to get your API key.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="140">Name</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key tied to your internal account. See <a href="../../authentication.md">Authentication</a> to get your API key.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<mark style="color:red;">\*</mark> <sub>Required.</sub>
 
 ### Request body
 
-<table>
-<thead>
-<tr><th width="150">Field</th><th width="120">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>receiver</code><mark style="color:red;">*</mark></td><td>String</td><td>The address that receives the resource.</td></tr>
-<tr><td><code>extendData</code><mark style="color:red;">*</mark></td><td>Array</td><td>Array of extend data. Use the response from the estimate API — see <a href="step-1-get-extendable-delegates.md">Get extendable delegates</a>.</td></tr>
-<tr><td><code>resourceType</code></td><td>String</td><td><code>"ENERGY"</code> or <code>"BANDWIDTH"</code>. Default: <code>"ENERGY"</code>.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="150">Field</th><th width="120">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>receiver</code><mark style="color:red;">*</mark></td><td>String</td><td>The address that receives the resource.</td></tr><tr><td><code>extendData</code><mark style="color:red;">*</mark></td><td>Array</td><td>Array of extend data. Use the response from the estimate API — see Get extendable delegates.</td></tr><tr><td><code>resourceType</code></td><td>String</td><td><code>"ENERGY"</code> or <code>"BANDWIDTH"</code>. Default: <code>"ENERGY"</code>.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<mark style="color:red;">\*</mark> <sub>Required.</sub>
 
 ### Request body example
 
@@ -333,19 +319,9 @@ This option does not require an API key. Instead, you build and sign the payment
 
 ### Request body
 
-<table>
-<thead>
-<tr><th width="150">Field</th><th width="170">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>receiver</code><mark style="color:red;">*</mark></td><td>String</td><td>The address that receives the resource.</td></tr>
-<tr><td><code>extendData</code><mark style="color:red;">*</mark></td><td>Array</td><td>Array of extend data. Use the response from the estimate API — see <a href="step-1-get-extendable-delegates.md">Get extendable delegates</a>.</td></tr>
-<tr><td><code>resourceType</code></td><td>String</td><td><code>"ENERGY"</code> or <code>"BANDWIDTH"</code>. Default: <code>"ENERGY"</code>.</td></tr>
-<tr><td><code>signedTx</code></td><td>SignedTransaction</td><td>Signed transaction, as a JSON object (the <code>signedTx</code> from <a href="../buy-resources/signed-tx/get-signed-transaction.md">Get signed transaction</a>).</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="150">Field</th><th width="170">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>receiver</code><mark style="color:red;">*</mark></td><td>String</td><td>The address that receives the resource.</td></tr><tr><td><code>extendData</code><mark style="color:red;">*</mark></td><td>Array</td><td>Array of extend data. Use the response from the estimate API — see Get extendable delegates.</td></tr><tr><td><code>resourceType</code></td><td>String</td><td><code>"ENERGY"</code> or <code>"BANDWIDTH"</code>. Default: <code>"ENERGY"</code>.</td></tr><tr><td><code>signedTx</code></td><td>SignedTransaction</td><td>Signed transaction, as a JSON object (the <code>signedTx</code> from <a href="../buy-resources/signed-tx/get-signed-transaction.md">Get signed transaction</a>).</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<mark style="color:red;">\*</mark> <sub>Required.</sub>
 
 {% hint style="info" %}
 * To create a signed transaction, follow [Get signed transaction](../buy-resources/signed-tx/get-signed-transaction.md).

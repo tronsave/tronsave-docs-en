@@ -26,7 +26,6 @@
 * [Errors & Rate Limits](developers/errors-and-rate-limits.md)
 * [API Reference](developers/api-reference/README.md)
   * [Buy Resources](developers/api-reference/buy-resources/README.md)
-    * [Estimate TRX](developers/api-reference/buy-resources/estimate-trx.md)
     * [Signed Transaction](developers/api-reference/buy-resources/signed-tx/README.md)
       * [Estimate TRX](developers/api-reference/buy-resources/signed-tx/estimate-trx.md)
       * [Get Signed Transaction](developers/api-reference/buy-resources/signed-tx/get-signed-transaction.md)

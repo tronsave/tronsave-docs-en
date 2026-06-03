@@ -1,5 +1,8 @@
 ---
-description: Query an order to find which delegates are eligible for extension, how much TRX it will cost, and the extendData payload you pass to the extend request in step 2.
+description: >-
+  Query an order to find which delegates are eligible for extension, how much
+  TRX it will cost, and the extendData payload you pass to the extend request in
+  step 2.
 ---
 
 # Get Extendable Delegates
@@ -14,33 +17,15 @@ Rate limit: **1** request per **1** second.
 
 ## Headers
 
-<table>
-<thead>
-<tr><th width="140">Name</th><th width="110">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key tied to your internal account. See <a href="../../authentication.md">Authentication</a> to get your API key.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="140">Name</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key tied to your internal account. See <a href="../../authentication.md">Authentication</a> to get your API key.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<sub><mark style="color:red;">\*<mark style="color:red;"></sub> <sub></sub><sub>Required.</sub>
 
 ## Request body
 
-<table>
-<thead>
-<tr><th width="200">Field</th><th width="120">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>extendTo</code><mark style="color:red;">*</mark></td><td>String</td><td>Time in seconds you want to extend to.</td></tr>
-<tr><td><code>receiver</code><mark style="color:red;">*</mark></td><td>String</td><td>The address that received the resource delegate.</td></tr>
-<tr><td><code>requester</code></td><td>String</td><td>The address of the requester. If not provided, the requester is taken from the <strong>API key</strong>.</td></tr>
-<tr><td><code>resourceType</code></td><td>String</td><td><code>"ENERGY"</code> or <code>"BANDWIDTH"</code>. Default: <code>"ENERGY"</code>.</td></tr>
-<tr><td><code>maxPriceAccepted</code></td><td>Number</td><td>The maximum price you want to pay to extend.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="200">Field</th><th width="120">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>extendTo</code><mark style="color:red;">*</mark></td><td>String</td><td>Time in seconds you want to extend to.</td></tr><tr><td><code>receiver</code><mark style="color:red;">*</mark></td><td>String</td><td>The address that received the resource delegate.</td></tr><tr><td><code>requester</code></td><td>String</td><td>The address of the requester. If not provided, the requester is taken from the <strong>API key</strong>.</td></tr><tr><td><code>resourceType</code></td><td>String</td><td><code>"ENERGY"</code> or <code>"BANDWIDTH"</code>. Default: <code>"ENERGY"</code>.</td></tr><tr><td><code>maxPriceAccepted</code></td><td>Number</td><td>The maximum price you want to pay to extend.</td></tr></tbody></table>
 
-<sub>* Required.</sub>
+<sub><mark style="color:red;">\*<mark style="color:red;"></sub> <sub></sub><sub>Required.</sub>
 
 ### Request body example
 

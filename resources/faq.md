@@ -1,5 +1,7 @@
 ---
-description: Common questions about pricing, Energy & Bandwidth, and buying resources on TronSave.
+description: >-
+  Common questions about pricing, Energy & Bandwidth, and buying resources on
+  TronSave.
 ---
 
 # FAQ
@@ -14,10 +16,10 @@ There are two common explanations.
 
 **Case 2 — Different matching strategy.** The bot and the website use different purchasing flows:
 
-* On the **website**, you can set the lowest possible price — which means the order may not match 100%.
+* On the **website**, you can set the lowest possible price - which means the order may not match 100%.
 * On the **bot**, orders are always placed at the **`MEDIUM`** price to ensure every bot purchase matches 100%.
 
-In most cases the bot and website prices are the same. The bot's price is only higher than the website's when the system runs out of resources to match against.
+In most cases, the bot and website prices are the same. The bot's price is only higher than the website's when the system runs out of resources to match against.
 
 {% hint style="info" %}
 If you want full control over price (and accept the chance of a partial fill), buy on the website. If you want a guaranteed 100% match, use the bot.
@@ -30,17 +32,17 @@ Energy and Bandwidth are the two resources every TRON transaction consumes. They
 * **Bandwidth** is granted as a reward for freezing TRX and is required for the byte size of a transaction.
 * **Energy** is an exclusive TRON resource representing a unit of CPU consumption within the network. It can only be obtained by freezing TRX.
 
-Both resources are essential for creating and executing smart contracts. See [Energy & Bandwidth](../concepts/energy-and-bandwidth.md) for full detail.
+Both resources are essential for creating and executing smart contracts. See [Energy & Bandwidth](../concepts/energy-and-bandwidth.md) for full details.
 
 ## How do I get Energy?
 
 There are three ways to obtain Energy.
 
-### Method 1 — Burn TRX
+### Method 1 - Burn TRX
 
 If your account does not have enough Energy, TRX is **automatically burned** during a transfer to cover the Bandwidth and Energy the transfer requires. Compared with consuming staked Energy, burning TRX is **not cost-effective**.
 
-### Method 2 — Freeze (stake) TRX
+### Method 2 - Freeze (stake) TRX
 
 Open the TRON resource management interface ([https://tronscan.io/#/wallet/resources](https://tronscan.io/#/wallet/resources)), choose the resource type you want, and enter the amount of TRX to freeze.
 
@@ -56,7 +58,7 @@ This distributes the fixed network Energy evenly across all frozen TRX. Frozen T
 Staking locks your TRX for 14 days before it can be unfrozen and reclaimed. Plan accordingly if you need liquidity.
 {% endhint %}
 
-### Method 3 — Buy Energy on TronSave
+### Method 3 - Buy Energy on TronSave
 
 Renting Energy through [TronSave](https://tronsave.io) saves on fees. You don't need to freeze a large amount of TRX or burn extra TRX, and you can save up to **92%** of the handling fee.
 

@@ -1,8 +1,10 @@
 ---
-description: Full working example of buying Energy or Bandwidth via the TronSave v2 API by signing the payment transaction with a wallet private key.
+description: >-
+  Full working example of buying Energy or Bandwidth via the TronSave v2 API by
+  signing the payment transaction with a wallet private key.
 ---
 
-# Buy Resource by API Using a Private Key
+# v2 — Buy with Private Key
 
 This is a complete, runnable example of the **signed-transaction** buy flow: estimate the cost, build and sign a TRX payment transaction with your wallet's private key, then submit it to create the order. No prepaid TronSave balance is required — you pay per order directly from your wallet.
 
@@ -30,7 +32,11 @@ Read more in the [TronWeb 5.3.2 release notes](https://tronweb.network/docu/docs
 
 The example uses Mainnet values by default. To run against the Nile testnet, swap the values noted inline:
 
-<table><thead><tr><th>Constant</th><th>Mainnet</th><th>Nile testnet</th></tr></thead><tbody><tr><td><code>TRONSAVE_RECEIVER_ADDRESS</code></td><td><code>TWZEhq5JuUVvGtutNgnRBATbF8BnHGyn4S</code></td><td><code>TATT1UzHRikft98bRFqApFTsaSw73ycfoS</code></td></tr><tr><td><code>TRON_FULL_NODE</code></td><td><code>https://api.trongrid.io</code></td><td><code>https://api.nileex.io</code></td></tr><tr><td><code>TRONSAVE_API_URL</code></td><td><code>https://api.tronsave.io</code></td><td><code>https://api-dev.tronsave.io</code></td></tr></tbody></table>
+| Constant                    | Mainnet                              | Nile testnet                         |
+| --------------------------- | ------------------------------------ | ------------------------------------ |
+| `TRONSAVE_RECEIVER_ADDRESS` | `TWZEhq5JuUVvGtutNgnRBATbF8BnHGyn4S` | `TATT1UzHRikft98bRFqApFTsaSw73ycfoS` |
+| `TRON_FULL_NODE`            | `https://api.trongrid.io`            | `https://api.nileex.io`              |
+| `TRONSAVE_API_URL`          | `https://api.tronsave.io`            | `https://api-dev.tronsave.io`        |
 
 See [Environments](../../environments.md) for more on switching networks.
 
@@ -132,7 +138,7 @@ const CreateOrder = async (resourceAmount, signedTx, receiverAddress, unitPrice,
 };
 
 /**
- * Main function to buy resources using private key
+ * Main function to buy resources using the private key
  * @returns {Promise<void>}
  */
 const BuyResourceUsingPrivateKey = async () => {
@@ -711,20 +717,20 @@ Only the JavaScript example signs the transaction end-to-end (via TronWeb). For 
 
 ## How it works
 
-| Step | Endpoint | Purpose |
-| --- | --- | --- |
-| 1 | `POST /v2/estimate-buy-resource` | Returns `unitPrice`, `estimateTrx`, `durationSec`, and `availableResource`. |
-| 2 | (wallet / SDK) | Sign a `sendTrx` of `estimateTrx` SUN to `TRONSAVE_RECEIVER_ADDRESS`. |
-| 3 | `POST /v2/buy-resource` | Submits `signedTx` and creates the order; returns an `orderId`. |
+| Step | Endpoint                         | Purpose                                                                     |
+| ---- | -------------------------------- | --------------------------------------------------------------------------- |
+| 1    | `POST /v2/estimate-buy-resource` | Returns `unitPrice`, `estimateTrx`, `durationSec`, and `availableResource`. |
+| 2    | (wallet / SDK)                   | Sign a `sendTrx` of `estimateTrx` SUN to `TRONSAVE_RECEIVER_ADDRESS`.       |
+| 3    | `POST /v2/buy-resource`          | Submits `signedTx` and creates the order; returns an `orderId`.             |
 
 A few notes from the example:
 
 * `unitPrice: "MEDIUM"` in the estimate request selects a tier; the estimate response returns the concrete numeric `unitPrice` you pass to `/v2/buy-resource`.
-* `availableResource >= BUY_AMOUNT` means the order can be fully filled. With `allowPartialFill: true`, an order can still be created when less is available. <!-- [NEEDS CONFIRMATION: exact partial-fill behavior when availableResource < BUY_AMOUNT] -->
+* `availableResource >= BUY_AMOUNT` means the order can be fully filled. With `allowPartialFill: true`, an order can still be created when less is available.
 * `estimateTrx` is denominated in SUN (1 TRX = 1,000,000 SUN) and is the amount you sign in the payment transaction.
 
 ## Next steps
 
-* [Buy with Signed Transaction (API reference)](../../api-reference/buy-resources/signed-tx/README.md)
+* [Buy with Signed Transaction (API reference)](../../api-reference/buy-resources/signed-tx/)
 * [Estimate TRX](../../api-reference/buy-resources/signed-tx/estimate-trx.md) · [Get Signed Transaction](../../api-reference/buy-resources/signed-tx/get-signed-transaction.md) · [Create Order](../../api-reference/buy-resources/signed-tx/create-order.md)
 * [Environments](../../environments.md) · [Order Types](../../../concepts/order-types.md)

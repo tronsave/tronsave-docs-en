@@ -1,5 +1,7 @@
 ---
-description: Rate limits, HTTP status codes, and error payloads returned by the TronSave API.
+description: >-
+  Rate limits, HTTP status codes, and error payloads returned by the TronSave
+  API.
 ---
 
 # Errors & Rate Limits
@@ -26,7 +28,7 @@ When you exceed the limit, the API returns **HTTP 429**:
 ```
 
 {% hint style="info" %}
-Handle `429` by backing off and retrying. A simple exponential backoff (e.g. wait 1s, then 2s, then 4s) is usually sufficient to stay within the per-second budget.
+Handle `429` by backing off and retrying. A simple exponential backoff (e.g., wait 1s, then 2s, then 4s) is usually sufficient to stay within the per-second budget.
 {% endhint %}
 
 ## Response shape
@@ -68,24 +70,7 @@ Schema-validation failures are produced by the HTTP layer and use a different sh
 
 The table below lists the error codes observed across the API, grouped by HTTP status. Use the **code** (the JSON key) for programmatic handling — the **message** text may change.
 
-<table>
-  <thead>
-    <tr><th width="90">HTTP</th><th width="320">Code</th><th>Message</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>400</td><td><code>MISSING_PARAMS</code></td><td>Missing some params in body</td></tr>
-    <tr><td>400</td><td><code>INVALID_PARAMS</code></td><td>Some params are invalid</td></tr>
-    <tr><td>400</td><td><code>MIN_PRICE_INVALID</code></td><td>minPrice is less than the system's minimum price or not in the correct format.</td></tr>
-    <tr><td>400</td><td><code>INTERNAL_ACCOUNT_NOT_FOUND</code></td><td>internal account does not exist</td></tr>
-    <tr><td>400</td><td><code>INTERNAL_BALANCE_ACCOUNT_TOO_LOW</code></td><td>Balance is not enough</td></tr>
-    <tr><td>400</td><td><code>CANNOT_FULFILLED</code></td><td>The order requires an immediate full match, but the system cannot fulfill 100% of it.</td></tr>
-    <tr><td>400</td><td><code>MUST_BE_WAIT_PREVIOUS_ORDER_FILLED</code></td><td>A pending order with the same parameters already exists in the system.</td></tr>
-    <tr><td>400</td><td><code>PRICE_EXCEED_MAX_PRICE_REQUIRED</code></td><td>The price of the order exceeds the maximum price accepted.</td></tr>
-    <tr><td>401</td><td><code>API_KEY_REQUIRED</code></td><td>Missing api key in headers</td></tr>
-    <tr><td>401</td><td><code>INVALID_API_KEY</code></td><td>api key not correct</td></tr>
-    <tr><td>429</td><td><code>RATE_LIMIT</code></td><td>Rate limit reached</td></tr>
-  </tbody>
-</table>
+<table><thead><tr><th width="77">HTTP</th><th width="315">Code</th><th>Message</th></tr></thead><tbody><tr><td>400</td><td><code>MISSING_PARAMS</code></td><td>Missing some params in body</td></tr><tr><td>400</td><td><code>INVALID_PARAMS</code></td><td>Some params are invalid</td></tr><tr><td>400</td><td><code>MIN_PRICE_INVALID</code></td><td>minPrice is less than the system's minimum price or is not in the correct format.</td></tr><tr><td>400</td><td><code>INTERNAL_ACCOUNT_NOT_FOUND</code></td><td>internal account does not exist</td></tr><tr><td>400</td><td><code>INTERNAL_BALANCE_ACCOUNT_TOO_LOW</code></td><td>Balance is not enough</td></tr><tr><td>400</td><td><code>CANNOT_FULFILLED</code></td><td>The order requires an immediate full match, but the system cannot fulfill 100% of it.</td></tr><tr><td>400</td><td><code>MUST_BE_WAIT_PREVIOUS_ORDER_FILLED</code></td><td>A pending order with the same parameters already exists in the system.</td></tr><tr><td>400</td><td><code>PRICE_EXCEED_MAX_PRICE_REQUIRED</code></td><td>The price of the order exceeds the maximum price accepted.</td></tr><tr><td>401</td><td><code>API_KEY_REQUIRED</code></td><td>Missing api key in headers</td></tr><tr><td>401</td><td><code>INVALID_API_KEY</code></td><td>api key not correct</td></tr><tr><td>429</td><td><code>RATE_LIMIT</code></td><td>Rate limit reached</td></tr></tbody></table>
 
 {% hint style="info" %}
 Not every code applies to every endpoint. For example, `CANNOT_FULFILLED` and `PRICE_EXCEED_MAX_PRICE_REQUIRED` are only returned when creating an order. Individual API reference pages list the codes specific to each endpoint.
@@ -167,13 +152,13 @@ Wrong route or path:
 
 ## Handling common cases
 
-- **`401` (`API_KEY_REQUIRED` / `INVALID_API_KEY`)** — Check that the `apikey` header is present and correct. See [Authentication](authentication.md).
-- **`INTERNAL_BALANCE_ACCOUNT_TOO_LOW`** — Top up your [Internal Account](../concepts/glossary.md) before creating an order.
-- **`CANNOT_FULFILLED`** — The market cannot fill the order in full at the requested price. Lower expectations (e.g. enable `allowPartialFill`) or adjust `unitPrice`.
-- **`PRICE_EXCEED_MAX_PRICE_REQUIRED`** — The estimated price is above your `options.maxPriceAccepted`. Re-check the price with [Estimate TRX](api-reference/buy-resources/api-key/estimate-trx.md) before retrying.
-- **`429` (`RATE_LIMIT`)** — Back off and retry within your per-second budget.
+* **`401` (`API_KEY_REQUIRED` / `INVALID_API_KEY`)** — Check that the `apikey` header is present and correct. See [Authentication](authentication.md).
+* **`INTERNAL_BALANCE_ACCOUNT_TOO_LOW`** — Top up your [Internal Account](../concepts/glossary.md) before creating an order.
+* **`CANNOT_FULFILLED`** — The market cannot fill the order in full at the requested price. Lower expectations (e.g., enable `allowPartialFill`) or adjust `unitPrice`.
+* **`PRICE_EXCEED_MAX_PRICE_REQUIRED`** — The estimated price is above your `options.maxPriceAccepted`. Re-check the price with [Estimate TRX](api-reference/buy-resources/api-key/estimate-trx.md) before retrying.
+* **`429` (`RATE_LIMIT`)** — Back off and retry within your per-second budget.
 
 ## Next steps
 
-- [Authentication](authentication.md) — how to obtain and send your API Key.
-- [API Reference](api-reference/README.md) — per-endpoint parameters and responses.
+* [Authentication](authentication.md) — how to obtain and send your API Key.
+* [API Reference](api-reference/) — per-endpoint parameters and responses.

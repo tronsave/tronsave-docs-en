@@ -1,5 +1,7 @@
 ---
-description: Retrieve a buyer account's monthly trading statistics for the last 6 months. Requires a whitelisted API key.
+description: >-
+  Retrieve a buyer account's monthly trading statistics for the last 6 months.
+  Requires a whitelisted API key.
 ---
 
 # Monthly Stats
@@ -23,16 +25,9 @@ Contact support via Telegram: [**@wantingtrx**](https://t.me/wantingtrx)
 
 ## Headers
 
-<table>
-<thead>
-<tr><th width="120">Name</th><th width="100">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key. Must belong to a whitelisted address. See <a href="../../../authentication.md">Authentication</a> to get your API key.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="120">Name</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key. Must belong to a whitelisted address. See <a href="../../../authentication.md">Authentication</a> to get your API key.</td></tr></tbody></table>
 
-<mark style="color:red;">*</mark> Required.
+<mark style="color:red;">\*</mark> Required.
 
 ## Request body
 
@@ -42,23 +37,7 @@ This endpoint takes no request body — pass the `apikey` header only.
 
 A successful response returns `error: false` and the statistics window in `data`.
 
-<table>
-<thead>
-<tr><th width="280">Field</th><th width="100">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>data.fromMonth</code></td><td>String</td><td>Oldest month in the result window, formatted as <code>YYYY-MM</code>.</td></tr>
-<tr><td><code>data.toMonth</code></td><td>String</td><td>Current month, formatted as <code>YYYY-MM</code>.</td></tr>
-<tr><td><code>data.monthCount</code></td><td>Number</td><td>Total number of months in the <code>data</code> array.</td></tr>
-<tr><td><code>data.timezone</code></td><td>String</td><td>Timezone applied to all month boundaries — always UTC.</td></tr>
-<tr><td><code>data.data[].month</code></td><td>String</td><td>Month identifier, formatted as <code>YYYY-MM</code>.</td></tr>
-<tr><td><code>data.data[].totalOrder</code></td><td>Number</td><td>Total number of orders placed in the month.</td></tr>
-<tr><td><code>data.data[].totalOrderEnergy</code></td><td>Number</td><td>Number of Energy orders placed in the month.</td></tr>
-<tr><td><code>data.data[].totalOrderBW</code></td><td>Number</td><td>Number of Bandwidth orders placed in the month.</td></tr>
-<tr><td><code>data.data[].totalTrxDepositToCreateBuyOrder</code></td><td>Number</td><td>Total TRX spent to create buy orders in the month.</td></tr>
-<tr><td><code>data.data[].totalTrxDepositInternal</code></td><td>Number</td><td>Total TRX deposited into the internal account in the month.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="280">Field</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>data.fromMonth</code></td><td>String</td><td>Oldest month in the result window, formatted as <code>YYYY-MM</code>.</td></tr><tr><td><code>data.toMonth</code></td><td>String</td><td>Current month, formatted as <code>YYYY-MM</code>.</td></tr><tr><td><code>data.monthCount</code></td><td>Number</td><td>Total number of months in the <code>data</code> array.</td></tr><tr><td><code>data.timezone</code></td><td>String</td><td>Timezone applied to all month boundaries — always UTC.</td></tr><tr><td><code>data.data[].month</code></td><td>String</td><td>Month identifier, formatted as <code>YYYY-MM</code>.</td></tr><tr><td><code>data.data[].totalOrder</code></td><td>Number</td><td>Total number of orders placed in the month.</td></tr><tr><td><code>data.data[].totalOrderEnergy</code></td><td>Number</td><td>Number of Energy orders placed in the month.</td></tr><tr><td><code>data.data[].totalOrderBW</code></td><td>Number</td><td>Number of Bandwidth orders placed in the month.</td></tr><tr><td><code>data.data[].totalTrxDepositToCreateBuyOrder</code></td><td>Number</td><td>Total TRX spent to create buy orders in the month.</td></tr><tr><td><code>data.data[].totalTrxDepositInternal</code></td><td>Number</td><td>Total TRX deposited into the internal account in the month.</td></tr></tbody></table>
 
 ### 200: OK
 
@@ -85,7 +64,7 @@ A successful response returns `error: false` and the statistics window in `data`
 }
 ```
 
-### Success response example
+### Success example
 
 ```json
 {
@@ -120,11 +99,9 @@ A successful response returns `error: false` and the statistics window in `data`
 
 ### Errors
 
-This endpoint authenticates with the `apikey` header. Calls without a valid, whitelisted API key are rejected with `401 Unauthorized`.
-
-**401 Unauthorized — missing API key**
-
-Returned when the `apikey` header is absent.
+{% tabs %}
+{% tab title="401 401: Missing API key " %}
+The `apikey` The header was not provided.
 
 ```json
 {
@@ -133,10 +110,10 @@ Returned when the `apikey` header is absent.
     "data": null
 }
 ```
+{% endtab %}
 
-**401 Unauthorized — invalid API key**
-
-Returned when the `apikey` header is present but the key is invalid or not whitelisted.
+{% tab title="401: Invalid API key" %}
+The supplied API key is invalid
 
 ```json
 {
@@ -145,6 +122,22 @@ Returned when the `apikey` header is present but the key is invalid or not white
     "data": null
 }
 ```
+{% endtab %}
+
+{% tab title="403 Forbidden" %}
+Its wallet address is not whitelisted.
+
+```json
+{
+    "error": true,
+    "message": "TSAS:108 FORBIDDEN Forbidden",
+    "data": null
+}
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 ## Request examples
 

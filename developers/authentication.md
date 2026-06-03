@@ -1,10 +1,12 @@
 ---
-description: How TronSave authenticates API requests — Internal Account, API Key, and Signed Transaction.
+description: >-
+  How TronSave authenticates API requests — Internal Account, API Key, and
+  Signed Transaction.
 ---
 
 # Authentication
 
-Every TronSave API request must be authenticated. There are two methods: an **API Key** tied to a TronSave **Internal Account**, or a **Signed Transaction** where you pay from your own wallet per purchase. This page explains both and shows how to obtain an API Key on the website or via Telegram.
+Every TronSave API request must be authenticated. There are two methods: an **API Key** tied to a TronSave **Internal Account**, or a **Signed Transaction,** where you pay from your own wallet per purchase. This page explains both and shows how to obtain an API Key on the website or via Telegram.
 
 ## Internal Account and API Key
 
@@ -23,13 +25,7 @@ Your API Key controls spending from your Internal Account. Treat it like a passw
 
 ## The two authentication methods
 
-| | API Key | Signed Transaction |
-| --- | --- | --- |
-| **How it works** | Requests carry your API Key; orders are paid from your Internal Account balance | You sign a TRX payment from your own wallet for each purchase |
-| **Custody** | Funds held in a TronSave-managed Internal Account | Full self-custody — you keep your funds |
-| **Setup** | Get an API Key, deposit TRX once | No deposit; sign per transaction |
-| **Best for** | Bots and automated services making frequent calls | Users who want to retain custody and pay as they go |
-| **Sent as** | `apikey` request header | A signed transaction in the request body |
+<table><thead><tr><th width="142"></th><th width="296">API Key</th><th>Signed Transaction</th></tr></thead><tbody><tr><td><strong>How it works</strong></td><td>Requests carry your API Key; orders are paid from your Internal Account balance</td><td>You sign a TRX payment from your own wallet for each purchase</td></tr><tr><td><strong>Custody</strong></td><td>Funds held in a TronSave-managed Internal Account</td><td>Full self-custody — you keep your funds</td></tr><tr><td><strong>Setup</strong></td><td>Get an API Key, deposit TRX once</td><td>No deposit; sign per transaction</td></tr><tr><td><strong>Best for</strong></td><td>Bots and automated services making frequent calls</td><td>Users who want to retain custody and pay as they go</td></tr><tr><td><strong>Sent as</strong></td><td><code>apikey</code> request header</td><td>A signed transaction in the request body</td></tr></tbody></table>
 
 {% hint style="info" %}
 With the API Key method, you send the key in the `apikey` header:
@@ -79,7 +75,7 @@ You can obtain your API Key directly from the **website** or via **Telegram**.
 {% endtab %}
 
 {% tab title="On Telegram" %}
-1. Open the TronSave Telegram bot ([@BuyEnergyTronsave_bot](https://t.me/BuyEnergyTronsave_bot)) and go to **User Info**.
+1. Open the TronSave Telegram bot ([@BuyEnergyTronsave\_bot](https://t.me/BuyEnergyTronsave_bot)) and go to **User Info**.
 2. Select the **API key** button.
 3. Click on the API Key to copy it.
 
@@ -98,5 +94,5 @@ We do not recommend changing the API Key. Revoking invalidates the old key — a
 ## Next steps
 
 * [Developer Quickstart](quickstart.md) — get a key, deposit, and place your first order
-* [API Reference](api-reference/README.md) — full endpoint list
+* [API Reference](api-reference/) — full endpoint list
 * [Glossary](../concepts/glossary.md) · [Order Types](../concepts/order-types.md)

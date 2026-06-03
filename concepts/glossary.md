@@ -4,30 +4,6 @@ description: Standardized terminology used across the TronSave docs.
 
 # Glossary
 
-| Term | Definition |
-| --- | --- |
-| **Energy** | TRON resource consumed to execute smart contracts (e.g. USDT TRC‑20 transfers). Obtained by staking TRX or renting on TronSave. |
-| **Bandwidth** | TRON resource consumed by transaction byte size. Every transaction needs some. |
-| **TRX** | The native token of the TRON network. |
-| **SUN** | The smallest unit of TRX. **1 TRX = 1,000,000 SUN.** All prices are quoted in SUN. |
-| **Stake 2.0** | TRON's staking (freeze) mechanism that produces Energy/Bandwidth. The basis of TronSave's supply. |
-| **Delegation** | Granting Energy/Bandwidth from one account to another on‑chain. A filled order results in a delegation to the `receiver`. |
-| **Provider / Seller** | A user who stakes TRX and rents out (delegates) the resulting Energy to earn APY. |
-| **Buyer** | A user who rents Energy/Bandwidth from the marketplace. |
-| **Order book** | The live set of buy/sell orders that determines the market price. |
-| **Internal Account** | A TronSave‑managed balance you deposit TRX into; the API can spend from it automatically. Tied to an API Key. |
-| **API Key** | A secret identifier linked to your Internal Account, used to authorize API requests. |
-| **Signed Transaction** | An alternative auth method where you sign a TRX payment from your own wallet per purchase (full custody). |
-| **`unitPrice`** | Price per resource unit in SUN, or a tier: `SLOW` / `MEDIUM` / `FAST`. |
-| **`resourceType`** | `ENERGY` or `BANDWIDTH`. Defaults to `ENERGY`. |
-| **`durationSec`** | Rental duration in seconds. Default `259200` (3 days). |
-| **`receiver`** | The TRON address that receives the rented resource. |
-| **`requester`** | The address placing/representing the order (the `representAddress` of your internal account). |
-| **`fulfilledPercent`** | Order fill status: `0` pending, `1–99` partial, `100` complete. |
-| **APR / APY** | Provider returns. See [Pricing & APY](pricing-and-apy.md) for formulas. |
-| **WTRX** | Wrapped TRX, used in some SDK payment flows. |
-| **ZapBuy** | Buy Energy by sending TRX directly to a bot address; fixed 1‑hour rental. |
-| **Fast Charge** | API flow for rapid Energy charging (estimate → create → track → confirm). |
-| **Nile** | The TRON testnet TronSave uses (`api-dev.tronsave.io`). |
+<table><thead><tr><th width="244">Term</th><th>Definition</th></tr></thead><tbody><tr><td><strong>Energy</strong></td><td>TRON resource consumed to execute smart contracts (e.g. USDT TRC‑20 transfers). Obtained by staking TRX or renting on TronSave.</td></tr><tr><td><strong>Bandwidth</strong></td><td>TRON resource consumed by transaction byte size. Every transaction needs some.</td></tr><tr><td><strong>TRX</strong></td><td>The native token of the TRON network.</td></tr><tr><td><strong>SUN</strong></td><td>The smallest unit of TRX. <strong>1 TRX = 1,000,000 SUN.</strong> All prices are quoted in SUN.</td></tr><tr><td><strong>Stake 2.0</strong></td><td>TRON's staking (freeze) mechanism that produces Energy/Bandwidth. The basis of TronSave's supply.</td></tr><tr><td><strong>Delegation</strong></td><td>Granting Energy/Bandwidth from one account to another on‑chain. A filled order results in a delegation to the <code>receiver</code>.</td></tr><tr><td><strong>Provider / Seller</strong></td><td>A user who stakes TRX and rents out (delegates) the resulting Energy to earn APY.</td></tr><tr><td><strong>Buyer</strong></td><td>A user who rents Energy/Bandwidth from the marketplace.</td></tr><tr><td><strong>Order book</strong></td><td>The live set of buy/sell orders that determines the market price.</td></tr><tr><td><strong>Internal Account</strong></td><td>A TronSave‑managed balance you deposit TRX into; the API can spend from it automatically. Tied to an API Key.</td></tr><tr><td><strong>API Key</strong></td><td>A secret identifier linked to your Internal Account, used to authorize API requests.</td></tr><tr><td><strong>Signed Transaction</strong></td><td>An alternative auth method where you sign a TRX payment from your own wallet per purchase (full custody).</td></tr><tr><td><strong><code>unitPrice</code></strong></td><td>Price per resource unit in SUN, or a tier: <code>SLOW</code> / <code>MEDIUM</code> / <code>FAST</code>.</td></tr><tr><td><strong><code>resourceType</code></strong></td><td><code>ENERGY</code> or <code>BANDWIDTH</code>. Defaults to <code>ENERGY</code>.</td></tr><tr><td><strong><code>durationSec</code></strong></td><td>Rental duration in seconds. Default <code>259200</code> (3 days).</td></tr><tr><td><strong><code>receiver</code></strong></td><td>The TRON address that receives the rented resource.</td></tr><tr><td><strong><code>requester</code></strong></td><td>The address placing/representing the order (the <code>representAddress</code> of your internal account).</td></tr><tr><td><strong><code>fulfilledPercent</code></strong></td><td>Order fill status: <code>0</code> pending, <code>1–99</code> partial, <code>100</code> complete.</td></tr><tr><td><strong>APR / APY</strong></td><td>Provider returns. See <a href="pricing-and-apy.md">Pricing &#x26; APY</a> for formulas.</td></tr><tr><td><strong>WTRX</strong></td><td>Wrapped TRX, used in some SDK payment flows.</td></tr><tr><td><strong>ZapBuy</strong></td><td>Buy Energy by sending TRX directly to a bot address; fixed 1‑hour rental.</td></tr><tr><td><strong>Fast Charge</strong></td><td>API flow for rapid Energy charging (estimate → create → track → confirm).</td></tr><tr><td><strong>Nile</strong></td><td>The TRON testnet TronSave uses (<code>api-dev.tronsave.io</code>).</td></tr></tbody></table>
 
 > Terminology standard: write **Energy** and **Bandwidth** capitalized when referring to the TRON resources; **TRX** and **SUN** in caps; field names in `code`.

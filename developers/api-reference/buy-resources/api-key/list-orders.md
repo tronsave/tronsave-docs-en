@@ -1,5 +1,7 @@
 ---
-description: Retrieve a detailed, paginated list of orders created by a whitelisted buyer account, authenticated with a TronSave API key.
+description: >-
+  Retrieve a detailed, paginated list of orders created by a whitelisted buyer
+  account, authenticated with a TronSave API key.
 ---
 
 # List Orders
@@ -21,31 +23,13 @@ Rate limit: **15** requests per **1** second.
 
 ## Headers
 
-<table>
-<thead>
-<tr><th width="140">Name</th><th width="100">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key (must belong to a whitelisted address). See <a href="../../../authentication.md">Authentication</a>.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="140">Name</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key (must belong to a whitelisted address). See <a href="../../../authentication.md">Authentication</a>.</td></tr></tbody></table>
 
-<mark style="color:red;">*</mark> Required.
+<mark style="color:red;">\*</mark> Required.
 
 ## Query parameters
 
-<table>
-<thead>
-<tr><th width="170">Name</th><th width="100">Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>startTimestamp</code></td><td>Number</td><td>Timestamp in seconds: start of the time range to filter orders.</td></tr>
-<tr><td><code>endTimestamp</code></td><td>Number</td><td>Timestamp in seconds: end of the time range to filter orders.</td></tr>
-<tr><td><code>pageSize</code></td><td>Number</td><td>Number of records per page. (Default: 20, Maximum: 20)</td></tr>
-<tr><td><code>cursor</code></td><td>String</td><td>Pagination cursor. Use <code>nextCursor</code> to go forward, <code>prevCursor</code> to go backward. (Omit to fetch the first page.)</td></tr>
-<tr><td><code>direction</code></td><td>String</td><td>Only needed when navigating <strong>backward</strong>: pass <code>direction=prev</code> together with <code>cursor=prevCursor</code>. To go forward, just pass <code>cursor=nextCursor</code> — no <code>direction</code> needed.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="170">Name</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>startTimestamp</code></td><td>Number</td><td>Timestamp in seconds: start of the time range to filter orders.</td></tr><tr><td><code>endTimestamp</code></td><td>Number</td><td>Timestamp in seconds: end of the time range to filter orders.</td></tr><tr><td><code>pageSize</code></td><td>Number</td><td>Number of records per page. (Default: 20, Maximum: 20)</td></tr><tr><td><code>cursor</code></td><td>String</td><td>Pagination cursor. Use <code>nextCursor</code> to go forward, <code>prevCursor</code> to go backward. (Omit to fetch the first page.)</td></tr><tr><td><code>direction</code></td><td>String</td><td>Only needed when navigating <strong>backward</strong>: pass <code>direction=prev</code> together with <code>cursor=prevCursor</code>. To go forward, just pass <code>cursor=nextCursor</code> — no <code>direction</code> needed.</td></tr></tbody></table>
 
 ## Response
 
@@ -85,8 +69,8 @@ The `data` object wraps the paginated result. Each entry in the inner `data` arr
 }
 ```
 
-{% tabs %}
-{% tab title="200: OK" %}
+### Success example
+
 ```json
 {
     "error": false,
@@ -132,10 +116,12 @@ The `data` object wraps the paginated result. Each entry in the inner `data` arr
     }
 }
 ```
-{% endtab %}
 
+### Error
+
+{% tabs %}
 {% tab title="401: Missing API key" %}
-The `apikey` header was not provided.
+The `apikey` The header was not provided.
 
 ```json
 {
@@ -147,12 +133,24 @@ The `apikey` header was not provided.
 {% endtab %}
 
 {% tab title="401: Invalid API key" %}
-The supplied API key is invalid, or its wallet address is not whitelisted.
+The supplied API key is invalid
 
 ```json
 {
     "error": true,
     "message": "TSAS:107 INVALID_API_KEY",
+    "data": null
+}
+```
+{% endtab %}
+
+{% tab title="403 Forbidden" %}
+Its wallet address is not whitelisted.
+
+```json
+{
+    "error": true,
+    "message": "TSAS:108 FORBIDDEN Forbidden",
     "data": null
 }
 ```
@@ -163,17 +161,7 @@ The supplied API key is invalid, or its wallet address is not whitelisted.
 
 Query parameters:
 
-<table>
-<thead>
-<tr><th width="263">Key</th><th>Value</th></tr>
-</thead>
-<tbody>
-<tr><td><code>startTimestamp</code></td><td>1778236532</td></tr>
-<tr><td><code>endTimestamp</code></td><td>1779349961</td></tr>
-<tr><td><code>pageSize</code></td><td>2</td></tr>
-<tr><td><code>cursor</code></td><td>af28gmn9vIINZjkQk46sf-bkhEM</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="263">Key</th><th>Value</th></tr></thead><tbody><tr><td><code>startTimestamp</code></td><td>1778236532</td></tr><tr><td><code>endTimestamp</code></td><td>1779349961</td></tr><tr><td><code>pageSize</code></td><td>2</td></tr><tr><td><code>cursor</code></td><td>af28gmn9vIINZjkQk46sf-bkhEM</td></tr></tbody></table>
 
 ## Request examples
 

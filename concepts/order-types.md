@@ -1,14 +1,16 @@
 ---
-description: Every way to buy on TronSave — Normal, Pending, Smart, ZapBuy, Auto Buy, Fast Charge.
+description: >-
+  Every way to buy on TronSave — Normal, Pending, Smart, ZapBuy, Auto Buy, Fast
+  Charge.
 ---
 
 # Order Types
 
-TronSave offers several order types for different needs. This page is the conceptual overview; step‑by‑step guides live under [Buy Energy & Bandwidth](../guides/buy/README.md).
+TronSave offers several order types for different needs. This page is the conceptual overview; step‑by‑step guides live under [Buy Energy & Bandwidth](../guides/buy/).
 
 ## Normal Order
 
-The standard purchase: specify amount, duration and price, and the order matches against current market supply immediately. Best for everyday, on‑demand buying. → [Guide](../guides/buy/on-the-website/normal-order.md)
+The standard purchase: specify the amount, duration, and price, and the order matches against the current market supply immediately. Best for everyday, on‑demand buying. → [Guide](../guides/buy/on-the-website/normal-order.md)
 
 ## Pending Order
 
@@ -34,17 +36,13 @@ The fastest path: **send TRX directly** to the TronSave bot address and a **1‑
 
 Automatically tops up Energy for a watched address based on rules you set, so it never runs out. → [Guide](../guides/buy/auto-buy.md)
 
-## Fast Charge (API)
-
-A developer‑oriented flow for rapidly charging Energy with an estimate → create → track → confirm lifecycle. → [API Reference](../developers/api-reference/fast-charge/README.md)
-
 ## Quick comparison
 
-| Type | Speed | Duration | Best for |
-| --- | --- | --- | --- |
-| Normal | Immediate | Custom | Everyday buying |
-| Pending | Waits for price | Custom | Price‑sensitive buyers |
-| Smart | Over time | ≥ 3 days | Large rentals (≥10M Energy) |
-| ZapBuy | Instant | 1 hour (fixed) | Quick top‑ups via TRX transfer |
-| Auto Buy | Automatic | Custom | Never‑run‑out automation |
-| Fast Charge | Fast (API) | Custom | Programmatic charging |
+| Type     | Speed           | Duration       | Best for                       |
+| -------- | --------------- | -------------- | ------------------------------ |
+| Normal   | Immediate       | Custom         | Everyday buying                |
+| Pending  | Waits for price | Custom         | Price‑sensitive buyers         |
+| Smart    | Over time       | ≥ 3 days       | Large rentals (≥10M Energy)    |
+| ZapBuy   | Instant         | 1 hour (fixed) | Quick top‑ups via TRX transfer |
+| Auto Buy | Automatic       | Custom         | Never‑run‑out automation       |
+

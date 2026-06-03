@@ -9,7 +9,7 @@ TronSave is an **order‑book marketplace** for TRON resources. Buyers place ord
 ## The flow at a glance
 
 ```
-Buyer ──places order──▶  TronSave order book  ◀──supplies resource── Provider
+Buyer ─ places order──▶  TronSave order book  ◀──supplies resource ─ Provider
                               │
                               ├─ matches order at market price
                               ▼
@@ -24,23 +24,19 @@ Buyer ──places order──▶  TronSave order book  ◀──supplies resour
 2. **Order** — the buyer creates an order specifying `resourceType`, `resourceAmount`, `durationSec`, `receiver`, and a [price tier](../concepts/order-types.md) (`SLOW`/`MEDIUM`/`FAST` or a fixed SUN value).
 3. **Match** — the order book matches the order against provider supply. Orders can fill fully, partially, or stay pending depending on supply and the order's options.
 4. **Delegate** — matched resources are **delegated on‑chain** from the provider's account to the buyer's `receiver` address for the rental `durationSec`.
-5. **Expire / Extend** — when the duration ends, the delegation is reclaimed. Buyers can [extend](../developers/api-reference/extend-orders/README.md) before expiry instead of re‑ordering.
+5. **Expire / Extend** — when the duration ends, the delegation is reclaimed. Buyers can [extend](../developers/api-reference/extend-orders/) before expiry instead of re‑ordering.
 
 ## Two ways to pay
 
-| | API Key (Internal Account) | Signed Transaction |
-| --- | --- | --- |
-| **How** | Deposit TRX into a TronSave internal account; costs are deducted automatically | Sign a TRX payment from your own wallet per purchase |
-| **Best for** | Bots, backends, frequent buyers | Users who prefer not to hold TRX in TronSave |
-| **Custody** | TronSave holds your deposited balance | You keep full custody |
+<table><thead><tr><th width="131"></th><th width="325">API Key (Internal Account)</th><th>Signed Transaction</th></tr></thead><tbody><tr><td><strong>How</strong></td><td>Deposit TRX into a TronSave internal account; costs are deducted automatically</td><td>Sign a TRX payment from your own wallet per purchase</td></tr><tr><td><strong>Best for</strong></td><td>Bots, backends, frequent buyers</td><td>Users who prefer not to hold TRX in TronSave</td></tr><tr><td><strong>Custody</strong></td><td>TronSave holds your deposited balance</td><td>You keep full custody</td></tr></tbody></table>
 
 See [Authentication](../developers/authentication.md) for both methods.
 
 ## Where it happens
 
 * **Website** — [tronsave.io](https://tronsave.io) (full UI, all order types and tools)
-* **Telegram** — the [TronSave bot](../guides/buy/on-telegram/README.md)
-* **API / SDK** — [REST API](../developers/api-reference/README.md) and the [SDK](../developers/sdk.md) (TypeScript, Rust, Python, Java, PHP)
+* **Telegram** — the [TronSave bot](../guides/buy/on-telegram/)
+* **API / SDK** — [REST API](../developers/api-reference/) and the [SDK](../developers/sdk.md) (TypeScript, Rust, Python, Java, PHP)
 
 ## Next steps
 

@@ -1,10 +1,12 @@
 ---
-description: Submit a signed TRON transaction to create a resource order — Step 3 of the signed-transaction buy flow.
+description: >-
+  Submit a signed TRON transaction to create a resource order — Step 3 of the
+  signed-transaction buy flow.
 ---
 
 # Create Order
 
-Finalize a resource purchase by submitting a signed TRON transaction. This is the final step of the [signed-transaction flow](README.md): after you [estimate the TRX required](estimate-trx.md) and [obtain a signed transaction](get-signed-transaction.md), call this endpoint to place the order.
+Finalize a resource purchase by submitting a signed TRON transaction. This is the final step of the [signed-transaction flow](./): after you [estimate the TRX required](estimate-trx.md) and [obtain a signed transaction](get-signed-transaction.md), call this endpoint to place the order.
 
 <mark style="color:orange;">**`POST`**</mark> **`https://api.tronsave.io/v2/buy-resource`**
 
@@ -14,19 +16,15 @@ Finalize a resource purchase by submitting a signed TRON transaction. This is th
 
 ## Headers
 
-| Header | Value | Required |
-| --- | --- | --- |
-| `Content-Type` | `application/json` | Yes |
-
-{% hint style="info" %}
-This endpoint authenticates through the `signedTx` you submit — the TRX payment is signed by your own wallet — so an `apikey` header is not required. See [Authentication](../../../authentication.md).
-{% endhint %}
+| Header         | Value              |
+| -------------- | ------------------ |
+| `Content-Type` | `application/json` |
 
 ## Request body
 
-<table><thead><tr><th width="206">Field</th><th width="130">Type</th><th width="398">Description</th></tr></thead><tbody><tr><td><code>resourceType</code></td><td>String</td><td>"ENERGY" or "BANDWIDTH", default: ENERGY</td></tr><tr><td><code>unitPrice</code></td><td>Number</td><td>The price unit is equal to SUN.</td></tr><tr><td><code>resourceAmount</code> <mark style="color:red;">*</mark></td><td>Number</td><td>The number of resources.</td></tr><tr><td><code>receiver</code> <mark style="color:red;">*</mark></td><td>String</td><td>Resource receiving address</td></tr><tr><td><code>durationSec</code></td><td>Number</td><td>The duration of the bought resource, time unit, is in seconds. Default 259200 (3 days)</td></tr><tr><td><code>sponsor</code></td><td>String</td><td>sponsor code</td></tr><tr><td><code>signedTx</code></td><td>SignedTransaction</td><td>Signed transaction, note that it is a JSON object (the <code>signed_tx</code> produced in <a href="get-signed-transaction.md">Step 2</a>)</td></tr><tr><td><code>options</code></td><td>Object</td><td>optional</td></tr><tr><td><code>options.allowPartialFill</code></td><td>Boolean</td><td>Allow the order to be filled partially or not</td></tr><tr><td><code>options.onlyCreateWhenFulfilled</code></td><td>Boolean</td><td><p>[true] =&#x3E; order only creates when it can be fulfilled</p><p>[false] =&#x3E; order will create even if it can not be fulfilled</p><p>Default value: false</p></td></tr><tr><td><code>options.maxPriceAccepted</code></td><td>Number</td><td>Only create an order when the estimated price is less than this value.</td></tr><tr><td><code>options.preventDuplicateIncompleteOrders</code></td><td>Boolean</td><td><p>[true] =&#x3E; Only create if no <strong>uncompleted order</strong> with the same parameters exists.</p><p>[false] =&#x3E; Always create a new order, regardless of existing unfinished ones.</p><p>Default value: <strong>false</strong></p></td></tr><tr><td><code>options.minResourceDelegateRequiredAmount</code></td><td>Number</td><td>The minimum resource amount delegated by a single provider.</td></tr></tbody></table>
+<table><thead><tr><th width="206">Field</th><th width="130">Type</th><th width="398">Description</th></tr></thead><tbody><tr><td><code>resourceType</code></td><td>String</td><td>"ENERGY" or "BANDWIDTH", default: ENERGY</td></tr><tr><td><code>unitPrice</code></td><td>Number</td><td>The price unit is equal to SUN.</td></tr><tr><td><code>resourceAmount</code> <mark style="color:red;">*</mark></td><td>Number</td><td>The number of resources.</td></tr><tr><td><code>receiver</code> <mark style="color:red;">*</mark></td><td>String</td><td>Resource receiving address</td></tr><tr><td><code>durationSec</code></td><td>Number</td><td>The duration of the bought resource, time unit, is in seconds. Default 259200 (3 days)</td></tr><tr><td><code>sponsor</code></td><td>String</td><td>sponsor code</td></tr><tr><td><code>signedTx</code></td><td>SignedTransaction</td><td>Signed transaction, note that it is a JSON object (the <code>signed_tx</code> produced in <a href="get-signed-transaction.md">Step 2</a>)</td></tr><tr><td><code>options</code></td><td>Object</td><td>optional</td></tr><tr><td><code>options.allowPartialFill</code></td><td>Boolean</td><td>Allow the order to be filled partially or not</td></tr><tr><td><code>options.onlyCreateWhenFulfilled</code></td><td>Boolean</td><td><p>[true] => order only creates when it can be fulfilled</p><p>[false] => order will create even if it can not be fulfilled</p><p>Default value: false</p></td></tr><tr><td><code>options.maxPriceAccepted</code></td><td>Number</td><td>Only create an order when the estimated price is less than this value.</td></tr><tr><td><code>options.preventDuplicateIncompleteOrders</code></td><td>Boolean</td><td><p>[true] => Only create if no <strong>uncompleted order</strong> with the same parameters exists.</p><p>[false] => Always create a new order, regardless of existing unfinished ones.</p><p>Default value: <strong>false</strong></p></td></tr><tr><td><code>options.minResourceDelegateRequiredAmount</code></td><td>Number</td><td>The minimum resource amount delegated by a single provider.</td></tr></tbody></table>
 
-<mark style="color:red;">*</mark> Required field.
+<mark style="color:red;">\*</mark> Required field.
 
 ### Request body example
 
@@ -92,7 +90,7 @@ This endpoint authenticates through the `signedTx` you submit — the TRX paymen
 
 This endpoint authenticates through the `signedTx`, so it does **not** return a `401`/API-key error. Invalid or missing input is rejected with a `400` schema-validation error before the order is created.
 
-**`400 Bad Request`** — a required field is missing or invalid. The `message` names the offending property (here, `receiver`):
+**`400 Bad Request`** — a required field is missing or invalid. The `message` names of the offending property (here, `receiver`):
 
 ```json
 {
@@ -103,7 +101,7 @@ This endpoint authenticates through the `signedTx`, so it does **not** return a 
 }
 ```
 
-The order may also fail with a business-logic error returned in the success envelope (`error: true`). For example, when the order cannot be fulfilled or the account balance is insufficient:
+The order may also fail with a business-logic error returned in the success envelope (`error: true`). For example, when the order cannot be fulfilled, or the account balance is insufficient:
 
 ```json
 {
@@ -111,8 +109,6 @@ The order may also fail with a business-logic error returned in the success enve
     "message": "<error message>"
 }
 ```
-
-<!-- [NEEDS CONFIRMATION: exact business-logic error messages (e.g. balance too low / cannot be fulfilled) for this endpoint are not provided by the source.] -->
 
 ## Request examples
 
@@ -371,5 +367,5 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 ## Next steps
 
 * [Estimate TRX](estimate-trx.md) — recalculate cost before placing another order.
-* [Get Signed Transaction](get-signed-transaction.md) — produce the `signedTx` this endpoint requires.
-* [Buy with Signed Transaction overview](README.md) — the full three-step flow.
+* [Get Signed Transaction](get-signed-transaction.md) — produce the `signedTx` output that this endpoint requires.
+* [Buy with Signed Transaction overview](./) — the full three-step flow.

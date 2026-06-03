@@ -1,12 +1,14 @@
 ---
-description: Generate a signed TRX payment transaction for a resource order — either with your own code or via the TronSave Get Signed Transaction API.
+description: >-
+  Generate a signed TRX payment transaction for a resource order — either with
+  your own code or via the TronSave Get Signed Transaction API.
 ---
 
 # Get Signed Transaction
 
-This is **Step 2** of the [Buy with Signed Transaction](README.md) flow. After [Step 1 — Estimate TRX](estimate-trx.md) returns an `estimateTrx` (the cost of the buy order in SUN), you produce a signed transfer transaction that pays that amount from the buyer's wallet to the TronSave fund address. You then submit it in [Step 3 — Create Order](create-order.md).
+This is **Step 2** of the [Buy with Signed Transaction](./) flow. After [Step 1 — Estimate TRX](estimate-trx.md) returns an `estimateTrx` (the cost of the buy order in SUN), you produce a signed transfer transaction that pays that amount from the buyer's wallet to the TronSave fund address. You then submit it in [Step 3 — Create Order](create-order.md).
 
-You can do this two ways: sign the transaction yourself ([Option 1](#option-1-write-your-own-function)), or let the TronSave API sign it for you ([Option 2](#option-2-use-the-tronsave-api)).
+You can do this two ways: sign the transaction yourself ([Option 1](get-signed-transaction.md#option-1-write-your-own-function)), or let the TronSave API sign it for you ([Option 2](get-signed-transaction.md#option-2-use-the-tronsave-api)).
 
 ## Option 1: Write your own function
 
@@ -43,7 +45,7 @@ TATT1UzHRikft98bRFqApFTsaSw73ycfoS
 {% endtab %}
 {% endtabs %}
 
-The resulting `signed_tx` is then passed to [Step 3 — Create Order](create-order.md).
+The result `signed_tx` is then passed to [Step 3 — Create Order](create-order.md).
 
 ## Option 2: Use the TronSave API
 
@@ -57,8 +59,8 @@ This endpoint builds and signs the transfer transaction for you, given the buyer
 
 ### Headers
 
-| Header | Value |
-| --- | --- |
+| Header         | Value              |
+| -------------- | ------------------ |
 | `Content-Type` | `application/json` |
 
 ### Request body
@@ -274,11 +276,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 {% endtabs %}
 
 {% hint style="warning" %}
-This endpoint requires the buyer's `privateKey` in the request body. Only call it from a trusted server-side environment, never from client-side code. If you prefer not to send your private key, use [Option 1](#option-1-write-your-own-function) and sign the transaction locally.
+This endpoint requires the buyer's `privateKey` in the request body. Only call it from a trusted server-side environment, never from client-side code. If you prefer not to send your private key, use [Option 1](get-signed-transaction.md#option-1-write-your-own-function) and sign the transaction locally.
 {% endhint %}
 
 ## Next steps
 
 * [Step 1 — Estimate TRX](estimate-trx.md)
 * [Step 3 — Create Order](create-order.md)
-* [Buy with Signed Transaction overview](README.md)
+* [Buy with Signed Transaction overview](./)
