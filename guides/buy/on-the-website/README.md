@@ -54,7 +54,7 @@ For the conceptual differences between all order types, see [Order Types](../../
 ## Other ways to buy
 
 * **Telegram** — the [TronSave bot](../on-telegram/README.md)
-* **API / SDK** — [REST API](../../../developers/api-reference/README.md) and TypeScript SDK
+* **API / SDK** — [REST API](../../../developers/api-reference/README.md) and the [SDK](../../../developers/sdk.md) (TypeScript, Rust, Python, Java, PHP)
 
 ## Next steps
 

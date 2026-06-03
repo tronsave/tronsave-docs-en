@@ -282,13 +282,13 @@ buyEnergy();
 ```
 
 {% hint style="info" %}
-**Prefer an SDK?** If you're on Node.js, this is faster to get started:
+**Prefer an SDK?** The [SDK](sdk.md) (TypeScript, Rust, Python, Java, PHP) is faster to get started:
 
 ```bash
 npm install tronsave-sdk
 ```
 
-See the SDK documentation.
+This installs the TypeScript package; see the [SDK](sdk.md) page for the other languages.
 {% endhint %}
 
 ## Test environment (Nile testnet)
