@@ -14,11 +14,7 @@ These tools complement the standard order flows. For everyday buying, see [Buy E
 
 ## Available tools
 
-| Tool                                      | What it does                                                                                                                     |
-| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [Bulk Buy Resource](bulk-buy-resource.md) | Purchase Energy for multiple addresses in a single flow — ideal for managing many wallets, bots, or user accounts.               |
-| Bulk Send Token                           | SaveSender — send TRX and TRC20 tokens to a large list of recipients via CSV upload, with fee savings from Energy and Bandwidth. |
-| [Transfer USDT](transfer-usdt.md)         | One-click USDT transfers to any TRON address with optimized transaction costs.                                                   |
+<table><thead><tr><th width="219">Tool</th><th>What it does</th></tr></thead><tbody><tr><td><a href="bulk-buy-resource.md">Bulk Buy Resource</a></td><td>Purchase Energy for multiple addresses in a single flow — ideal for managing many wallets, bots, or user accounts.</td></tr><tr><td><a href="bulk-send-token.md">Bulk Send Token</a></td><td>SaveSender — send TRX and TRC20 tokens to a large list of recipients via CSV upload, with fee savings from Energy and Bandwidth.</td></tr><tr><td><a href="transfer-usdt.md">Transfer USDT</a></td><td>One-click USDT transfers to any TRON address with optimized transaction costs.</td></tr></tbody></table>
 
 ## Next steps
 

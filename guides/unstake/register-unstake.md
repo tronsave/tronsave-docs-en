@@ -1,5 +1,7 @@
 ---
-description: Register an Early Unstake on TronSave to withdraw staked TRX instantly without waiting for the official unstake period, for a variable service fee.
+description: >-
+  Register an Early Unstake on TronSave to withdraw staked TRX instantly without
+  waiting for the official unstake period, for a variable service fee.
 ---
 
 # Register Unstake
@@ -12,7 +14,7 @@ Follow these steps to complete your Early Unstake registration on TronSave.
 
 ### Step 1 – Connect wallet & login
 
-* Open the [Early Unstake](https://tronsave.io/tools/unstake) page.
+* Open the [Early Unstake](https://tronsave.io/unstake) page.
 * Connect the wallet you want to unstake and click **Login with TronSave**.
 
 ### Step 2 – Review terms
@@ -38,14 +40,12 @@ Follow these steps to complete your Early Unstake registration on TronSave.
 
 #### Liquidity check at this step
 
-* If the unstake amount exceeds the current system liquidity, your request requires manual approval from the admin and providers. Once approved, you can continue to [Step 5](#step-5-check-balance).
-* {% hint style="info" %}
-  **Recommendation:** join our Bot to receive instant notifications when your request is approved.
-  {% endhint %}
+* If the unstake amount exceeds the current system liquidity, your request requires manual approval from the admin and providers. Once approved, you can continue to [Step 5](register-unstake.md#step-5-check-balance).
+* <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Recommendation:</strong> join our Bot to receive instant notifications when your request is approved.</p></div>
 
 <figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FaUNoQ28DQxk9g4XpcjvO%2Fimage.png?alt=media&#x26;token=004576ef-2d0b-45f8-b95f-0531e3977634" alt="" width="563"><figcaption></figcaption></figure>
 
-* If the system has sufficient liquidity, your request is automatically approved and you can proceed to [Step 5](#step-5-check-balance).
+* If the system has sufficient liquidity, your request is automatically approved and you can proceed to [Step 5](register-unstake.md#step-5-check-balance).
 
 <figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FUAgdqUNnu0jKvXWZ4WIw%2Fimage.png?alt=media&#x26;token=120505e1-57d2-4d21-9603-932ecc47c198" alt="" width="563"><figcaption></figcaption></figure>
 

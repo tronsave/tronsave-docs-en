@@ -12,7 +12,7 @@ There are two ways to handle an early unstake on TronSave:
 
 | Method                              | What it does                                                                                                                              |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Early Unstake                       | Instantly withdraw your staked TRX. If the system has enough liquidity your request is auto-approved; otherwise it goes to manual review. |
+| [Early Unstake](./)                 | Instantly withdraw your staked TRX. If the system has enough liquidity your request is auto-approved; otherwise it goes to manual review. |
 | [Unstake Market](unstake-market.md) | List your unstake order on the marketplace for manual matching by providers when liquidity isn't immediately available.                   |
 
 {% hint style="info" %}
@@ -21,7 +21,7 @@ All Early Unstake transactions are fully verifiable on the TRON blockchain. Alwa
 
 ## How liquidity affects your request
 
-When you submit an unstake request, TronSave checks it against current system liquidity:
+When you submit an unstake request, TronSave checks it against the current system liquidity:
 
 * **Sufficient liquidity** — your request is automatically approved and processed.
 * **Insufficient liquidity** — auto-approval is liquidity-based with no fixed threshold, so your request is sent to the admin team and providers for manual review and payout approval.
