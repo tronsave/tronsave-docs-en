@@ -52,6 +52,7 @@
     * [Cancel Order](developers/api-reference/fast-charge/cancel-order.md)
     * [Get History](developers/api-reference/fast-charge/get-history.md)
   * [MCP Server](developers/api-reference/mcp.md)
+* [SDK](developers/sdk.md)
 * [Code Examples](developers/code-examples/README.md)
   * [v2 — Buy with Private Key](developers/code-examples/v2/buy-with-private-key.md)
   * [v2 — Buy with API Key](developers/code-examples/v2/buy-with-api-key.md)
