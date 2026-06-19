@@ -72,7 +72,7 @@ You place an order for **10,000,000 Energy for 3 days**. Only **9,000,000** is m
 1. Open the **My Order** tab and select the order.
 2. Open the **Refund** tab.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FFcbsOqafoNdnXbESYqQn%2Fimage.png?alt=media&#x26;token=0cbf3138-dde5-41da-b032-f7c0199f16a4" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ## Next steps
 

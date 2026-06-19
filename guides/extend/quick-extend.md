@@ -12,7 +12,7 @@ First, connect your wallet to the market. See the [Quickstart](../../getting-sta
 
 Scroll down to the **Extend** section and choose the order you want to extend.
 
-<figure><img src="../../.gitbook/assets/extend-section.png" alt="Open Extend Resource Tab"><figcaption><p>Open Extend Resource Tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 ## Step 2: Select the "Quick extend" option
 
@@ -22,19 +22,14 @@ Scroll down to the **Extend** section and choose the order you want to extend.
 
 Enter the desired conditions one by one.
 
-<table>
-<thead>
-<tr><th>Field</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>Max price</code></td><td>The maximum price you can pay to extend or buy more orders.</td></tr>
-<tr><td><code>Extend duration</code></td><td>From the current time + duration = the new expiration time of the order.</td></tr>
-<tr><td><code>Additional amount</code></td><td>The amount of Energy you want to buy more of. Enter <code>0</code> if you don't want to buy more.</td></tr>
-<tr><td><code>Extend amount</code></td><td>The amount of Energy you will extend.</td></tr>
-</tbody>
-</table>
+| Field               | Description                                                                            |
+| ------------------- | -------------------------------------------------------------------------------------- |
+| `Max price`         | The maximum price you can pay to extend or buy more orders.                            |
+| `Extend duration`   | From the current time + duration = the new expiration time of the order.               |
+| `Additional amount` | The amount of Energy you want to buy more of. Enter `0` if you don't want to buy more. |
+| `Extend amount`     | The amount of Energy you will extend.                                                  |
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FuYaRBFlhPCRPlXLNE4zQ%2Fimage.png?alt=media&#x26;token=a26dd2f7-4ad5-446e-aca0-6d025bbd3af7" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
 If `Additional amount` is `0`, you will only be able to extend the duration. You can choose to extend from 1 day to 30 days from now.
 
@@ -66,17 +61,17 @@ At the **Extend Order Details** stage, the market summarizes all extend requirem
 Make sure the amount of the transfer transaction matches the amount shown in `Payout`.
 {% endhint %}
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FVpFF8Hm8zqvSwwnTMUB3%2Fimage.png?alt=media&#x26;token=674f4722-d2a9-43af-9eba-0a388ee75f23" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FrGnWRM2yvaEWNQuO4W0e%2Fimage.png?alt=media&#x26;token=182d8c19-7966-4175-aa05-b7ec2dc0e949" alt=""><figcaption><p>Make sure the amount transferred is the same as the payout amount in Extend Order Confirm</p></figcaption></figure>
 
 After checking all the information, click **Sign transaction**.
 
-If everything is correct, the extend request will succeed. A success popup appears and the flow moves to the **Successfully** stage.
+If everything is correct, the extend request will succeed. A success pop-up appears, and the flow moves to the **Successfully** stage.
 
 <figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FBpP6YSSI1aidXrRBDll2%2Fimage_5.png?alt=media&#x26;token=1eb917be-bb3e-4d98-96ac-26126663a5d0" alt=""><figcaption></figcaption></figure>
 
 ## Next steps
 
-* [Extend overview](README.md)
-* [Buy Energy & Bandwidth](../buy/README.md)
+* [Extend overview](./)
+* [Buy Energy & Bandwidth](../buy/)
