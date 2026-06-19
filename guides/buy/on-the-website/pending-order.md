@@ -33,7 +33,7 @@ Once everything is filled in, click **Create order**. You don't need to connect 
 
 Select the **TOP UP DIRECTLY** option (click the **TOP UP** button).
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2Fr9VJGfYFeISpPdb8Smdm%2Fimage.png?alt=media&#x26;token=e9ae523d-cf78-47eb-af22-900605581654" alt="" width="329"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/pending-payment.png" alt="Pending Payment"><figcaption></figcaption></figure>
 
 The system will display:
 
@@ -41,7 +41,7 @@ The system will display:
 * The **exact amount of TRX** required
 * A **countdown timer** (usually **3 minutes**)
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FsSXpDSLtDBvzaCROh8W6%2Fimage.png?alt=media&#x26;token=51c86d09-0293-4e6d-9c32-4b39d634604c" alt="" width="339"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/pending-direct-transfer.png" alt="Pending Direct Transfer"><figcaption></figcaption></figure>
 
 _(The image above shows a sample order. Please do not use it for top-ups or real transactions.)_
 

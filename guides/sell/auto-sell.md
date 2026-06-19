@@ -21,7 +21,7 @@ Go to the [Seller settings page](https://tronsave.io/dashboard/seller/settings).
 * Open the [TronSave market](https://tronsave.io/dashboard/seller/settings) and connect your wallet. <!-- [NEEDS CONFIRMATION: wallet connection guide path — source linked to ../../faq/how-to-connect-wallet-in-tronsave] -->
 * Click **Login TRONSAVE** and sign the message to log in.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FsIxBY3CaytJNTuSkb97Z%2Fimage.png?alt=media&#x26;token=6c2d0a40-50d3-4ea3-b6ef-ed7a67eb4a5b" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/seller-desk.png" alt="Seller Desk"><figcaption></figcaption></figure>
 
 ### Step 3: Stake Energy/Bandwidth (optional)
 
@@ -46,7 +46,7 @@ Auto Sell needs permission to delegate resources from your account on your behal
 
 Set the matching rules to fit your strategy.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FrFPUo4Lt8ZAR95TO9LzM%2F2anh22.png?alt=media&#x26;token=1ce1b23f-48c5-4d7a-ba6f-665e9d9efb6c" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/seller-automations.png" alt="Seller Automations"><figcaption></figcaption></figure>
 
 <table>
   <thead>

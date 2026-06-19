@@ -19,11 +19,11 @@ The fastest path. TronSave builds the permission transaction for you.
 1. Open the **Seller** tab at [tronsave.io/dashboard/seller](https://tronsave.io/dashboard/seller) and click **Login TRONSAVE**.
 2. Choose **Settings**, then click **Register**.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2F0HqY5O2AYZXdvgMsewM4%2Fanh1.png?alt=media&#x26;token=9241d620-85b3-4d97-bc72-bbdf0798ae7e" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/seller-desk.png" alt="Seller Desk"><figcaption></figcaption></figure>
 
 3. Select the permissions for the pool according to your preferences, then click **Give Permission**.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FhAUmsURVlfnWuvHcIzlj%2Fimage.png?alt=media&#x26;token=f12d4a04-31c4-431e-aad9-b697e0921873" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/seller-automations.png" alt="Seller Automations"><figcaption></figcaption></figure>
 
 ## 2. Manual permission (in TronScan / TronLink)
 

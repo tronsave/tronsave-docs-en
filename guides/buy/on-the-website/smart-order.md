@@ -27,11 +27,11 @@ For the conceptual overview of all order types, see [Order Types](../../../conce
    * `Duration`: minimum **3 days**
 2. Click **Advanced Settings**.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FpCQuU6uMZpa6fqXlPsXE%2Fimage.png?alt=media&#x26;token=49876c43-692d-46ad-be90-e93f7a3c4973" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/market-advanced-settings.png" alt="Market Advanced Settings"><figcaption></figcaption></figure>
 
 3. Tick the checkbox to enable **Smart Matching**.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FGep4LSwOOubWjI9rsFw3%2Fimage.png?alt=media&#x26;token=d59e6ab3-0e50-4111-bdef-999caea1c707" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/market-create-order.png" alt="Market Create Order"><figcaption></figcaption></figure>
 
 ## How it works
 

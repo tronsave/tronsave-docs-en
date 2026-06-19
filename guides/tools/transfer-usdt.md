@@ -16,7 +16,7 @@ Open it at [tronsave.io/tools/transfer-token](https://tronsave.io/tools/transfer
 
 Send USDT in a single transaction to any TRON address. The interface is built for quick payments — enter a receiver and an amount, review, and confirm.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FEj4qjxR3IFi886yM0BEX%2Fimage.png?alt=media&#x26;token=3265aa71-29da-474a-b940-389ec24ab82d" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tools-transfer-usdt.png" alt="Tools Transfer Usdt"><figcaption></figcaption></figure>
 
 ### Energy estimation and optimization
 

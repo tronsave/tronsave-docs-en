@@ -31,7 +31,7 @@ Open the [TronSave market](https://tronsave.io/market) and connect your wallet. 
 
 Browse the open buy orders and click **Sell** on the order you want to fill.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2Funxb8cm0QpGuMy3DJ9Tw%2Fanh11.png?alt=media&#x26;token=65cc5102-529c-45cd-82ff-d451c2c81fac" alt=""><figcaption><p>Click the "Sell" button</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/market-create-order.png" alt="Click the "Sell" button"><figcaption><p>Click the "Sell" button</p></figcaption></figure>
 
 ## Option 1 — Manual Sell (normal)
 
@@ -39,7 +39,7 @@ Browse the open buy orders and click **Sell** on the order you want to fill.
 
 Enter the amount of the resource you want to delegate to fill the order.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2F0mnXKQxksqO3T5iDYRdf%2Fimage.png?alt=media&#x26;token=229f588f-0532-4443-9296-c45dcf220606" alt="" width="503"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sell-fill-order.png" alt="Sell Fill Order"><figcaption></figcaption></figure>
 
 ### Optional — Setting payment
 
