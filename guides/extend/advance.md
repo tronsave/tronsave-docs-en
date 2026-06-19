@@ -1,8 +1,10 @@
 ---
-description: Fine-grained control for extending and buying more Energy from one or many delegate addresses in a single batch.
+description: >-
+  Fine-grained control for extending and buying more Energy from one or many
+  delegate addresses in a single batch.
 ---
 
-# Advance
+# Advanced Extend
 
 **Advance** is the manual extend mode. Instead of a one-click top-up, it lets you select individual delegators, choose exactly how to extend each one, and confirm everything as a single payout. Use it when you want precise control over duration and amount, or when you're extending several delegated blocks at once.
 
@@ -12,17 +14,17 @@ This guide walks through the flow in four steps.
 
 Connect your wallet to the market first, then scroll down to the **Extend** section and choose the order you want to extend.
 
-<figure><img src="../../.gitbook/assets/extend-section.png" alt="Open the Extend tab"><figcaption><p>Open the Extend tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
 ## Step 2 — Select the "Advance" option
 
-<figure><img src="../../.gitbook/assets/extend-modal.png" alt="Extend Modal"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 ## Step 3 — Adjust the extend request
 
 The Advance panel can look dense at first. Here is what each part does.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FHEg9ToKWDS73l2H84sTM%2Fimage.png?alt=media&token=25fbeb04-c6d9-40da-9441-39dfeba5b6da" alt=""><figcaption></figcaption></figure>
+
 
 **1. Batch controls.** These apply one choice to every selected request:
 
@@ -72,7 +74,7 @@ If the delegator's remaining Energy is greater than 100k, you can buy more Energ
 
 The estimated payout for the selection is shown on the right.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FzfEbt0GpcmKLBtJLmV04%2Fimage.png?alt=media&token=5ed57a33-4ce2-4cea-899f-dc093e2ac7c5" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
 **3. Summary.** Shows the total extended amount across all selected items and the estimated total payout for all requests.
 
@@ -84,15 +86,15 @@ At the **Extend Order Details** stage, TronSave summarizes every extend request 
 Make sure the amount of the **transfer transaction** is the same as the amount in the **Payout**.
 {% endhint %}
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FifZQX5L9QMOSZRzgPXaS%2Fimage.png?alt=media&token=13895fef-6bc7-4752-96df-a68956ecd584" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FrGnWRM2yvaEWNQuO4W0e%2Fimage.png?alt=media&token=182d8c19-7966-4175-aa05-b7ec2dc0e949" alt=""><figcaption><p>The transferred amount must match the payout shown in Extend Order Confirm</p></figcaption></figure>
+<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FrGnWRM2yvaEWNQuO4W0e%2Fimage.png?alt=media&#x26;token=182d8c19-7966-4175-aa05-b7ec2dc0e949" alt=""><figcaption><p>The transferred amount must match the payout shown in Extend Order Confirm</p></figcaption></figure>
 
 Once you've checked everything, click **Sign transaction**. If the request succeeds, a success popup appears and the flow moves to the **Successfully** stage.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FBpP6YSSI1aidXrRBDll2%2Fimage_5.png?alt=media&token=1eb917be-bb3e-4d98-96ac-26126663a5d0" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FBpP6YSSI1aidXrRBDll2%2Fimage_5.png?alt=media&#x26;token=1eb917be-bb3e-4d98-96ac-26126663a5d0" alt=""><figcaption></figcaption></figure>
 
 ## Next steps
 
-* Prefer a faster top-up? See [Quick Extend](README.md).
-* New to renting? Start with [How to buy Energy & Bandwidth](../buy/README.md).
+* Prefer a faster top-up? See [Quick Extend](./).
+* New to renting? Start with [How to buy Energy & Bandwidth](../buy/).

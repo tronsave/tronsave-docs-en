@@ -1,5 +1,7 @@
 ---
-description: Buy Energy instantly by sending TRX to TronSave's bot address — a 1-hour rental order is created automatically from the amount you send.
+description: >-
+  Buy Energy instantly by sending TRX to TronSave's bot address — a 1-hour
+  rental order is created automatically from the amount you send.
 ---
 
 # ZapBuy
@@ -11,11 +13,14 @@ For the conceptual overview of all order types, see [Order Types](../../concepts
 ## How it works
 
 1. **Calculate the TRX to send** using the [Energy Calculator Tool](https://tronsave.io/tools/zap-buy). You can buy Energy flexibly based on your needs — you are not limited to fixed multiples.
+
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+
 2. **Send TRX** to TronSave's bot address:
 
-   ```ini
-   TLx8h8fjv5pyuxCu292ZgjbU14XZSiLGg4
-   ```
+```ini
+TLx8h8fjv5pyuxCu292ZgjbU14XZSiLGg4
+```
 
 3. The system calculates how much Energy your TRX can rent.
 4. A **1-hour rental order** is created automatically.
@@ -23,26 +28,14 @@ For the conceptual overview of all order types, see [Order Types](../../concepts
 
 {% hint style="info" %}
 * You must rent **at least 65,000 Energy**. Requests below 65,000 Energy are **ignored**, and **no order is created**.
-* ZapBuy only works when your order can be **matched immediately** with available Energy. If no match is found, you will not receive Energy.
+*   ZapBuy only works when your order can be **matched immediately** with available Energy. If no match is found, you will not receive Energy.
 
-  Contact TronSave with your transaction details to request a refund: [https://t.me/wantingtrx](https://t.me/wantingtrx)
+    Contact TronSave with your transaction details to request a refund: [https://t.me/wantingtrx](https://t.me/wantingtrx)
 {% endhint %}
 
 ## Technical details
 
-<table>
-<thead>
-<tr><th width="211">Parameter</th><th>Value</th></tr>
-</thead>
-<tbody>
-<tr><td>Supported Token</td><td><strong>TRX only</strong></td></tr>
-<tr><td>Recipient TRX Address</td><td>TronSave bot address: <strong>TLx8h8fjv5pyuxCu292ZgjbU14XZSiLGg4</strong></td></tr>
-<tr><td>Energy Recipient</td><td><strong>The wallet that sent the TRX</strong></td></tr>
-<tr><td>Rental Duration</td><td><strong>1 hour</strong> (fixed)</td></tr>
-<tr><td>Minimum Buy</td><td><strong>65,000 Energy</strong></td></tr>
-<tr><td>Order Creation</td><td>Automatically upon receiving TRX</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th width="211">Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Supported Token</td><td><strong>TRX only</strong></td></tr><tr><td>Recipient TRX Address</td><td>TronSave bot address: <strong>TLx8h8fjv5pyuxCu292ZgjbU14XZSiLGg4</strong></td></tr><tr><td>Energy Recipient</td><td><strong>The wallet that sent the TRX</strong></td></tr><tr><td>Rental Duration</td><td><strong>1 hour</strong> (fixed)</td></tr><tr><td>Minimum Buy</td><td><strong>65,000 Energy</strong></td></tr><tr><td>Order Creation</td><td>Automatically upon receiving TRX</td></tr></tbody></table>
 
 {% hint style="warning" %}
 If your request comes out to less than **65,000 Energy**, no Energy is rented and your transaction is ignored.
