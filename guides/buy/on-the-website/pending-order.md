@@ -27,13 +27,13 @@ Go to [tronsave.io/market](https://tronsave.io/market).
 
 Once everything is filled in, click **Create order**. You don't need to connect your wallet.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FRcFE4tiiS7589OFLKzcZ%2Fanh1.png?alt=media&#x26;token=503fb3a3-cfae-4f06-9503-0e03d9fbdb28" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ## Step 4 — Get payment instructions
 
-Select the **TOP UP DIRECTLY** option (click the **TOP UP** button).
+Click the **DIRECTLY TRX TRANSFER** option
 
-<figure><img src="../../../.gitbook/assets/pending-payment.png" alt="Pending Payment"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 The system will display:
 
@@ -57,7 +57,7 @@ Pay the **exact** amount of TRX. Otherwise, the order will not be accepted.
 
 After you make the payment, the system automatically verifies the transaction and fulfills your order.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FZ6Y8vxSry068iMK8WqfV%2Fanh3.png?alt=media&#x26;token=930d216a-6ca3-42cb-81f2-946ba88d2a17" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 ## Next steps
 

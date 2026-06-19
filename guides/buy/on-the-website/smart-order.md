@@ -1,5 +1,7 @@
 ---
-description: Place a large Energy rental that keeps filling over time as providers regain Energy, with automatic TRX refunds for unused duration.
+description: >-
+  Place a large Energy rental that keeps filling over time as providers regain
+  Energy, with automatic TRX refunds for unused duration.
 ---
 
 # Smart Order
@@ -10,35 +12,32 @@ For the conceptual overview of all order types, see [Order Types](../../../conce
 
 ## Requirements
 
-<table>
-<thead>
-<tr><th>Field</th><th>Minimum</th></tr>
-</thead>
-<tbody>
-<tr><td><code>Amount</code></td><td>10,000,000 Energy</td></tr>
-<tr><td><code>Duration</code></td><td>3 days</td></tr>
-</tbody>
-</table>
+| Field      | Minimum           |
+| ---------- | ----------------- |
+| `Amount`   | 10,000,000 Energy |
+| `Duration` | 3 days            |
 
 ## How to create a Smart Order
 
 1. **Enter your order details** in the Buy form:
    * `Amount`: minimum **10,000,000 Energy**
    * `Duration`: minimum **3 days**
-2. Click **Advanced Settings**.
+2. Suggest **Turn on Smart Matching**
 
-<figure><img src="../../../.gitbook/assets/market-advanced-settings.png" alt="Market Advanced Settings"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 3. Tick the checkbox to enable **Smart Matching**.
 
-<figure><img src="../../../.gitbook/assets/market-create-order.png" alt="Market Create Order"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ## How it works
 
 When Smart Order is enabled:
 
 1. Your order matches normally — the system fills as much as possible from the Energy currently delegated by providers.
-2. If the order is **not fully matched**, the system **keeps monitoring the providers who already partially filled it**.
+2. If the order is **not fully matched**, the system **continues to monitor the providers that have already partially filled it**.
 3. If any of those providers **regain at least 100,000 Energy** (through TRX recharge or delegation):
    * The system **automatically matches more Energy** from them to your order.
    * The **duration** of this additional match runs from the current time until the **original expiration time** of your order.
@@ -66,7 +65,7 @@ You place an order for **10,000,000 Energy for 3 days**. Only **9,000,000** is m
 
 * Smart Order **does not guarantee** full fulfillment, but improves the chances over time.
 * It only works with **providers who have already matched part of your order** and have **regained at least 100,000 Energy**.
-* Smart Order is **only active during the first one-third of the matched duration**. For example, if a provider matched for 3 days, Smart Order auto-matches more Energy only **within the first day**. After that, only regular matching applies.
+* Smart Order is **only active during the first one-third of the matched duration**. For example, if a provider is matched for 3 days, Smart Order auto-matches more Energy only **within the first day**. After that, only regular matching applies.
 
 ## Viewing refund details
 
