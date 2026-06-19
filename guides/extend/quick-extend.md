@@ -12,11 +12,11 @@ First, connect your wallet to the market. See the [Quickstart](../../getting-sta
 
 Scroll down to the **Extend** section and choose the order you want to extend.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FuvcD7pxkMtAF3BDrljLo%2FScreen%20Shot%202025-04-02%20at%2015.14.14.png?alt=media&#x26;token=7a44f6de-190f-403f-9284-57ce3c4db058" alt=""><figcaption><p>Open Extend Resource Tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extend-section.png" alt="Open Extend Resource Tab"><figcaption><p>Open Extend Resource Tab</p></figcaption></figure>
 
 ## Step 2: Select the "Quick extend" option
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2F7nbTirk5mWZZkPjaZILE%2Fimage.png?alt=media&#x26;token=fc0eac6d-3673-4e7f-be0b-5f416922b17a" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extend-modal.png" alt="Extend Modal"><figcaption></figcaption></figure>
 
 ## Step 3: Enter the extend conditions
 

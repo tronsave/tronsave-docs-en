@@ -14,7 +14,7 @@ There is no cap on referrals or rewards.
 
 **Step 2 — Click the "Referral" button.**
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FW4sDk6ePRmWwpMBhzDjx%2Fimage.png?alt=media&#x26;token=82800202-f670-4876-8914-11bac0fd9219" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/referral-create-code.png" alt="Referral Create Code"><figcaption></figcaption></figure>
 
 **Step 3 — Enter your Sponsor Code** _(optional)_.
 
@@ -30,7 +30,7 @@ If someone sent you a sponsor link, open TronSave using that exact URL so the sp
 
 ## Track rewards and stats
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FGhDL15vKbtZlFYpzvU6e%2Fimage.png?alt=media&#x26;token=65889ec9-81c4-473b-84c5-a9fac9770269" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/buyer-referrals.png" alt="Buyer Referrals"><figcaption></figcaption></figure>
 
 1. Click the **Copy** icon to copy your referral link.
 2. View the statistics for your referral program.

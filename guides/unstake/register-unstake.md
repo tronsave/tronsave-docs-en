@@ -22,7 +22,7 @@ Follow these steps to complete your Early Unstake registration on TronSave.
 * Carefully read all **Terms**.
 * Tick the checkbox _I confirm that I have read and understood all Early Unstake terms and conditions_ before proceeding.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FI623FjNHjCwdcvyqZlPv%2Fimage.png?alt=media&#x26;token=958fb01e-aee3-46bc-9bd5-b331193987e3" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/unstake-early.png" alt="Unstake Early"><figcaption></figcaption></figure>
 
 ### Step 3 – Calculate claimable
 

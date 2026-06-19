@@ -25,11 +25,11 @@ Connect your wallet at [tronsave.io](https://tronsave.io/dashboard/buyer/buy-res
 
 Select the **Add Auto Buy Energy Rule** button.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FlGwh06GEzehyNQ5Oeowh%2Fimage.png?alt=media&#x26;token=a98bcf88-e722-4900-8918-78d238d7a6d6" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/buyer-auto-buy-tab.png" alt="Buyer Auto Buy Tab"><figcaption></figcaption></figure>
 
 ### Step 4 — Check your internal balance
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2F9SKwhh1S8MU8zU5wS8OY%2Fimage.png?alt=media&#x26;token=16acad74-db84-41e3-a27f-55da16c657d6" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/buyer-internal-wallet.png" alt="Buyer Internal Wallet"><figcaption></figcaption></figure>
 
 Auto Buy draws from your **internal account balance**, not directly from your wallet. To fund it, click **Recharge** and deposit TRX to the address displayed.
 
@@ -77,7 +77,7 @@ After you save, the system automatically creates buy orders whenever the target'
 
 Once a rule is created, you can manage it with the following actions.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2F5CAntH2SEHmVYECFiWHC%2Fimage.png?alt=media&#x26;token=42525709-b53c-4a36-b5b6-9c9aa19f2325" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/buyer-auto-buy-rule.png" alt="Buyer Auto Buy Rule"><figcaption></figcaption></figure>
 
 | # | Action | What it does |
 | --- | --- | --- |

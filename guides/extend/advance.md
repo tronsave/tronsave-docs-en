@@ -12,11 +12,11 @@ This guide walks through the flow in four steps.
 
 Connect your wallet to the market first, then scroll down to the **Extend** section and choose the order you want to extend.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FWUuFH78CwQoKHa3ILhjQ%2FScreen%20Shot%202025-04-02%20at%2015.14.14.png?alt=media&token=10effe91-3b9f-4ea0-8b60-f1f7652aab1d" alt=""><figcaption><p>Open the Extend tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extend-section.png" alt="Open the Extend tab"><figcaption><p>Open the Extend tab</p></figcaption></figure>
 
 ## Step 2 — Select the "Advance" option
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FNHG2tHUO2vlwiGShKO3u%2Fimage.png?alt=media&token=2e1e944a-ca89-4252-a52a-4efb2b119023" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extend-modal.png" alt="Extend Modal"><figcaption></figcaption></figure>
 
 ## Step 3 — Adjust the extend request
 

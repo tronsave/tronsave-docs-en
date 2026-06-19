@@ -22,7 +22,7 @@ The flow below covers a TRC20 airdrop (it works for multisend too).
 
 Go to [tronsave.io](https://tronsave.io/), open the **Tools** menu, and click [**Bulk Send Token**](https://tronsave.io/tools/bulk-send).
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2F3CgrVmzM4mq8BCUMZ3N3%2Fimage.png?alt=media&#x26;token=238aba5c-5a50-4fb5-9402-27f8da41579d" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tools-bulk-send.png" alt="Tools Bulk Send"><figcaption></figcaption></figure>
 
 ### Step 2: Prepare your CSV
 
@@ -43,7 +43,7 @@ Connect your wallet and make sure it holds enough TRX for fees and enough of the
 2. Upload your CSV.
 3. Verify the preview.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2F3HOB1PO2cWSTkVO0P4JZ%2Fimage.png?alt=media&#x26;token=33ae8703-e698-4d04-8d85-631a23e506c5" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tools-bulk-send-token.png" alt="Tools Bulk Send Token"><figcaption></figcaption></figure>
 
 ### Step 5: Approve the token (TRC20)
 

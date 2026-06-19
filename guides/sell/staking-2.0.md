@@ -8,7 +8,7 @@ This guide walks through staking TRX in the TronSave app to obtain Energy. For t
 
 ## Step 1: Choose the Seller tab and select "Stake more"
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FcqUXPt3YwgrxlTn15qwD%2Fanh1%20(1).png?alt=media&#x26;token=640c2966-baa3-4c26-9536-fc0f69e2d6f2" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/seller-desk.png" alt="Seller Desk"><figcaption></figcaption></figure>
 
 ## Step 2: Enter the amount of TRX you want to stake
 

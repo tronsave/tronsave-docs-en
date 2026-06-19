@@ -32,7 +32,7 @@ Make sure your TronSave internal account has enough balance to cover the bulk or
 
 Upload a CSV file containing wallet addresses, one address per line.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FQTcH0MYFzGg2dh13RYnl%2Fimage.png?alt=media&#x26;token=1d420415-bc85-496d-b20c-553312e8d1e5" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tools-bulk-buy.png" alt="Tools Bulk Buy"><figcaption></figcaption></figure>
 
 ### Step 4 — Set amount and duration
 

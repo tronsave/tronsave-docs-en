@@ -58,7 +58,7 @@ You can obtain your API Key directly from the **website** or via **Telegram**.
 **Note:** If you're using the **Nile testnet**, use this URL instead: [`https://testnet.tronsave.io/`](https://testnet.tronsave.io/)
 {% endhint %}
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FNDLfa6Tp89qIL9bTISKm%2Fimage.png?alt=media&#x26;token=d9029fa4-be76-4749-810f-d383c146c956" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/buyer-internal-wallet.png" alt="Buyer Internal Wallet"><figcaption></figcaption></figure>
 
 **Step 2 — Deposit by transferring TRX**
 
