@@ -90,9 +90,9 @@ Make sure the amount of the **transfer transaction** is the same as the amount i
 
 <figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FrGnWRM2yvaEWNQuO4W0e%2Fimage.png?alt=media&#x26;token=182d8c19-7966-4175-aa05-b7ec2dc0e949" alt=""><figcaption><p>The transferred amount must match the payout shown in Extend Order Confirm</p></figcaption></figure>
 
-Once you've checked everything, click **Sign transaction**. If the request succeeds, a success popup appears and the flow moves to the **Successfully** stage.
+Once you've checked everything, click **Sign transaction**. If the request succeeds, a success pop-up appears, and the flow moves to the **Successfully** stage.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FBpP6YSSI1aidXrRBDll2%2Fimage_5.png?alt=media&#x26;token=1eb917be-bb3e-4d98-96ac-26126663a5d0" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
 ## Next steps
 

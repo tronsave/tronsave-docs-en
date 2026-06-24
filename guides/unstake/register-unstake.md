@@ -29,25 +29,23 @@ Follow these steps to complete your Early Unstake registration on TronSave.
 * Click **Calculate Claimable** to estimate how much you will receive after all deductions and fees are applied.
 * Click the **Confirm** button.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FDg2rjPhERnvBAGpQnMdx%2Fimage.png?alt=media&#x26;token=9d9b61b7-4d0d-43c7-bca8-388c5188b336" alt="" width="473"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 4 – Submit registration request
 
 * Enter your **Receiver Address** for confirmation.
 * Then click **Register Withdraw** to send your unstake request.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FwVuRteXcNvv0tYH452Xk%2Fimage.png?alt=media&#x26;token=fec5a7b8-3536-4a14-ac3d-fc4ddcd553a7" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
 
 #### Liquidity check at this step
 
 * If the unstake amount exceeds the current system liquidity, your request requires manual approval from the admin and providers. Once approved, you can continue to [Step 5](register-unstake.md#step-5-check-balance).
-* <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Recommendation:</strong> join our Bot to receive instant notifications when your request is approved.</p></div>
+* <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Recommendation:</strong> Join our Bot to receive instant notifications when your request is approved.</p></div>
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FaUNoQ28DQxk9g4XpcjvO%2Fimage.png?alt=media&#x26;token=004576ef-2d0b-45f8-b95f-0531e3977634" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 
-* If the system has sufficient liquidity, your request is automatically approved and you can proceed to [Step 5](register-unstake.md#step-5-check-balance).
-
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FUAgdqUNnu0jKvXWZ4WIw%2Fimage.png?alt=media&#x26;token=120505e1-57d2-4d21-9603-932ecc47c198" alt="" width="563"><figcaption></figcaption></figure>
+* If the system has sufficient liquidity, your request is automatically approved, and you can proceed to [Step 5](register-unstake.md#step-5-check-balance).
 
 ### Step 5 – Check balance
 
@@ -55,7 +53,7 @@ Follow these steps to complete your Early Unstake registration on TronSave.
 * Make sure to **withdraw or transfer all other tokens** from this address first — any **non-TRX tokens** left will **not be counted or refunded** in this process.
 * If your balance exceeds the unstake amount, withdraw the excess.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FlFD2lbVeDFyDVZrTy40B%2Fimage.png?alt=media&#x26;token=6e527f72-d57a-4b36-a597-bc620f37bee0" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 6 – Update permissions
 
@@ -65,7 +63,7 @@ Follow these steps to complete your Early Unstake registration on TronSave.
 TXUwRhntqX3kyALhtpC74JP8Nt6m2VMiYC
 ```
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FWQJfQWXTVs1JL84OhFo0%2Fimage.png?alt=media&#x26;token=8766c72f-117f-441f-8423-6f7d24b54c88" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 This step requires around **105 TRX** for the fee (permission update fee plus network fees for unstake and withdraw).
@@ -75,7 +73,7 @@ Please double-check the **authorized address** and confirm only when you fully u
 
 ### Step 7 – Confirm & wait for verification
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FaXsuXsq9gRuFO3PLSujV%2Fimage.png?alt=media&#x26;token=5b405e0b-15ef-4b49-b174-76cfbbe6b54d" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 * After confirmation, your unstake request is processed.
 * Within 24 hours, your order is settled as quickly as possible.

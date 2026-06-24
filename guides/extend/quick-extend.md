@@ -67,9 +67,9 @@ Make sure the amount of the transfer transaction matches the amount shown in `Pa
 
 After checking all the information, click **Sign transaction**.
 
-If everything is correct, the extend request will succeed. A success pop-up appears, and the flow moves to the **Successfully** stage.
+If everything is correct, the extended request will succeed. A success pop-up appears, and the flow moves to the **Successfully** stage.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FBpP6YSSI1aidXrRBDll2%2Fimage_5.png?alt=media&#x26;token=1eb917be-bb3e-4d98-96ac-26126663a5d0" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 
 ## Next steps
 
