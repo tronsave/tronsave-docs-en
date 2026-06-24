@@ -1,5 +1,7 @@
 ---
-description: Manually fill open buy orders on the TronSave marketplace to sell your staked Energy or Bandwidth.
+description: >-
+  Manually fill open buy orders on the TronSave marketplace to sell your staked
+  Energy or Bandwidth.
 ---
 
 # Manual Sell
@@ -31,7 +33,7 @@ Open the [TronSave market](https://tronsave.io/market) and connect your wallet. 
 
 Browse the open buy orders and click **Sell** on the order you want to fill.
 
-<figure><img src="../../.gitbook/assets/market-create-order.png" alt="Click the "Sell" button"><figcaption><p>Click the "Sell" button</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/market-create-order.png" alt="Click the"><figcaption><p>Click the "Sell" button</p></figcaption></figure>
 
 ## Option 1 — Manual Sell (normal)
 
@@ -43,13 +45,13 @@ Enter the amount of the resource you want to delegate to fill the order.
 
 ### Optional — Setting payment
 
-You can change the address that receives the interest for this manual Energy sale order. Select **Setting payment** and enter the receiving address.
+You can change the address that receives the interest for this manual Energy sale order. Select **Payment setting** and enter the receiving address.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FRc6eDJBHqVHcWmtTclpk%2Fimage.png?alt=media&#x26;token=9b64fc1a-a7c0-43a5-9219-55cc1ae29cdb" alt="" width="500"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
-### Click **Fill** to execute the sell order
+### Click **Fill** order to execute the sell order
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FQNaak20VMHoHSjnDQB4N%2Fimage.png?alt=media&#x26;token=df52b844-2a6a-4410-addc-6bd798a6bf6e" alt="" width="506"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
 ## Option 2 — Manual Sell (MultiSign)
 
@@ -57,27 +59,22 @@ The **MultiSign** feature lets you fill a buy order using Energy that another ac
 
 ### Click **MultiSign Delegating**
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FyVtOxAKmE9RblvtHqd63%2Fimage.png?alt=media&#x26;token=b7c3c28e-5f23-4543-b36e-0776cd16ea70" alt="" width="502"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 
 In the Fill order table, complete the following fields:
 
-<table>
-<thead>
-<tr><th>Field</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><code>MultiSign Account</code></td><td>The address that has delegated authority to you.</td></tr>
-<tr><td><code>To delegate amount</code></td><td>The amount of Energy you want to sell.</td></tr>
-</tbody>
-</table>
+| Field                | Description                                      |
+| -------------------- | ------------------------------------------------ |
+| `MultiSign Account`  | The address that has delegated authority to you. |
+| `To delegate amount` | The amount of Energy you want to sell.           |
 
 You can also set the receiving address under **Setting payment**.
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FqlgGm01DEzDqF8l9M2MQ%2Fimage.png?alt=media&#x26;token=36e54b9d-2a41-464a-9bb8-03552e2dbccc" alt="" width="501"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
-### Click **Fill** to execute the sell order
+### Click **Fill** order to execute the sell order
 
-<figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FQNaak20VMHoHSjnDQB4N%2Fimage.png?alt=media&#x26;token=df52b844-2a6a-4410-addc-6bd798a6bf6e" alt="" width="506"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 ## Next steps
 
