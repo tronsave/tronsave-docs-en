@@ -42,11 +42,13 @@ Choose **Energy** or **Bandwidth**, enter the **Staking Amount**, then click **S
 
 Auto Sell needs permission to delegate resources from your account on your behalf.
 
+<figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+
 ### Step 5: Edit your Auto Sell conditions
 
 Set the matching rules to fit your strategy.
 
-<figure><img src="../../.gitbook/assets/seller-automations.png" alt="Seller Automations"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
 
 | # | Setting                 | Description                                                                                                                                                               |
 | - | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
