@@ -2,7 +2,7 @@
 description: The TronSave REST API — base URLs, authentication, versioning, the response envelope, and links to every endpoint group.
 ---
 
-# API Reference
+# TRON Energy API Reference
 
 The TronSave API lets you buy, extend, and sell Energy and Bandwidth on the TRON network programmatically. Every endpoint is a JSON REST call over HTTPS.
 
