@@ -1,8 +1,10 @@
 ---
-description: Rent TRON Energy & Bandwidth — and integrate it into your app in minutes.
+description: >-
+  Rent TRON energy & bandwidth to cut USDT (TRC-20) fees, and integrate energy
+  purchasing via the TronSave REST API or SDK — in minutes.
 ---
 
-# README
+# TronSave — Rent TRON Energy & Bandwidth (Docs + API)
 
 **TronSave** is a marketplace for renting and managing **TRON Energy & Bandwidth**. Pay a fraction of the burn-TRX cost for transactions like USDT (TRC‑20) transfers, or earn yield by renting out the resources from your staked TRX.
 
