@@ -1,5 +1,5 @@
 ---
-description: How TronSave's order-book marketplace matches buyers and providers.
+description: How TronSave's order-book marketplace matches TRON Energy buyers with providers — price tiers, order fills, on-chain delegation, and duration.
 ---
 
 # The Rental Model

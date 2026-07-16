@@ -1,5 +1,5 @@
 ---
-description: Standardized terminology used across the TronSave docs.
+description: Glossary of TRON energy rental terms used across the TronSave docs — Energy, Bandwidth, SUN, Stake 2.0, delegation, order book, and API fields.
 ---
 
 # Glossary

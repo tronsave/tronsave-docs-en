@@ -1,5 +1,5 @@
 ---
-description: Buy your first Energy in under 10 minutes — website or API.
+description: Buy your first TRON Energy in under 10 minutes — on the tronsave.io website with a wallet, or via the API, with the Nile testnet for safe testing.
 ---
 
 # Quickstart

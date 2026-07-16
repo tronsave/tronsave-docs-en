@@ -1,5 +1,5 @@
 ---
-description: How TRON Stake 2.0 produces Energy — the basis of TronSave's supply.
+description: How TRON Stake 2.0 turns staked TRX into Energy — the yield formula, the 14-day unstaking period, and why staking powers TronSave's rental supply.
 ---
 
 # Staking 2.0
