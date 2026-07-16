@@ -1,5 +1,5 @@
 ---
-description: How rental prices are set and how provider APY is calculated.
+description: How TRON Energy rental prices are set with unitPrice tiers, and how provider APY (around 18%) is calculated from rental income and voting rewards.
 ---
 
 # Pricing & APY

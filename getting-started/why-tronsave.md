@@ -1,5 +1,5 @@
 ---
-description: The concrete benefits of TronSave for buyers and providers.
+description: The benefits of TronSave for buyers and providers — rent TRON Energy to cut transaction fees by up to ~70%, or earn ~18% APY on your staked TRX.
 ---
 
 # Why TronSave?

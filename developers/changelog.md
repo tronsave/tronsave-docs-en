@@ -1,5 +1,5 @@
 ---
-description: Version history and breaking changes for the TronSave API.
+description: Version history for the TronSave energy rental API — the current v2 generation, legacy v0 support status, and notable changes for integrations.
 ---
 
 # Changelog
