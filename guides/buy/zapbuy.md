@@ -12,7 +12,7 @@ For the conceptual overview of all order types, see [Order Types](../../concepts
 
 ## How it works
 
-1. **Calculate the TRX to send** using the [Energy Calculator Tool](https://tronsave.io/tools/zap-buy). You can buy Energy flexibly based on your needs — you are not limited to fixed multiples.
+1. **Calculate the TRX to send** using the [Energy Calculator Tool](https://tronsave.io/tools/zapbuy). You can buy Energy flexibly based on your needs — you are not limited to fixed multiples.
 
 <figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 

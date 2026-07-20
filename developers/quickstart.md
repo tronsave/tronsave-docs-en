@@ -80,7 +80,7 @@ Content-Type: application/json
 
 **Request fields:**
 
-<table><thead><tr><th width="174">Field</th><th width="168">Example</th><th>Description</th></tr></thead><tbody><tr><td><code>receiver</code></td><td><code>"TFwUFW..."</code></td><td>The TRON address that will receive the Energy</td></tr><tr><td><code>resourceAmount</code></td><td><code>32000</code></td><td>Amount of Energy to buy (a single USDT TRC-20 transfer costs ~32,000 Energy)</td></tr><tr><td><code>durationSec</code></td><td><code>259200</code></td><td>Rental duration in seconds — <code>259200</code> = 3 days</td></tr><tr><td><code>unitPrice</code></td><td><code>"MEDIUM"</code></td><td>See the pricing table below</td></tr></tbody></table>
+<table><thead><tr><th width="174">Field</th><th width="168">Example</th><th>Description</th></tr></thead><tbody><tr><td><code>receiver</code></td><td><code>"TFwUFW..."</code></td><td>The TRON address that will receive the Energy</td></tr><tr><td><code>resourceAmount</code></td><td><code>65000</code></td><td>Amount of Energy to buy (a single USDT TRC-20 transfer costs ~65,000 Energy, or ~130,000 if the recipient has never held USDT)</td></tr><tr><td><code>durationSec</code></td><td><code>259200</code></td><td>Rental duration in seconds — <code>259200</code> = 3 days</td></tr><tr><td><code>unitPrice</code></td><td><code>"MEDIUM"</code></td><td>See the pricing table below</td></tr></tbody></table>
 
 **Choosing `unitPrice`:**
 
@@ -205,7 +205,7 @@ const TRONSAVE_API = "https://api.tronsave.io";
 const API_KEY = "YOUR_API_KEY";
 const RECEIVER = "YOUR_TRON_RECEIVER_ADDRESS";
 
-async function buyEnergy(amount = 32000, durationSec = 259200) {
+async function buyEnergy(amount = 65000, durationSec = 259200) {
   // Step 1: Estimate cost
   const estimateRes = await fetch(`${TRONSAVE_API}/v2/estimate-buy-resource`, {
     method: "POST",
