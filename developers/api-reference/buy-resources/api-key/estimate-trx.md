@@ -10,7 +10,7 @@ Use this endpoint to calculate how much TRX an order will cost before you place 
 
 ## Endpoint
 
-<mark style="color:orange;">**`POST`**</mark> **`https://api.tronsave.io/v2/order-book/estimate-buy-resource`**
+<mark style="color:orange;">**`POST`**</mark> **`https://api.tronsave.io/v2/estimate-buy-resource`**
 
 {% hint style="info" %}
 **Rate limit:** 15 requests per 1 second.
