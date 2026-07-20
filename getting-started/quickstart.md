@@ -11,7 +11,7 @@ There are two fast paths to your first Energy purchase. Pick one.
 1. Go to [tronsave.io/market](https://tronsave.io/market) and click **Connect** to connect your TRON wallet (e.g., TronLink).
 2. Choose **Buy**, then set:
    * **Resource**: Energy (default) or Bandwidth
-   * **Amount**: e.g. `32000` Energy (≈ one USDT TRC‑20 transfer)
+   * **Amount**: e.g. `65000` Energy (≈ one USDT TRC‑20 transfer; ≈ `130000` if the recipient has never held USDT)
    * **Duration**: e.g., 1 hour or 3 days
    * **Price tier**: `MEDIUM` is a good default — see [Order Types](../concepts/order-types.md)
 3. Confirm and sign. Energy is delegated to your address within seconds once the order matches.

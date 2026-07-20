@@ -47,7 +47,7 @@ Set rules once and let TronSave **automatically top up** Energy or Bandwidth for
 | -------- | --------------------------------------------------------------- | ---------------- | ----------------------------- |
 | Website  | [tronsave.io](https://tronsave.io/market)                       | Connected wallet | Full control, all order types |
 | Telegram | [TronSave bot](https://t.me/BuyEnergyTronsave_bot)              | Internal account | Buying from chat              |
-| ZapBuy   | [TRX transfer](https://tronsave.io/tools/zap-buy)               | Sending wallet   | Instant 1-hour top-ups        |
+| ZapBuy   | [TRX transfer](https://tronsave.io/tools/zapbuy)               | Sending wallet   | Instant 1-hour top-ups        |
 | Auto Buy | [tronsave.io](https://tronsave.io/dashboard/buyer/buy-resource) | Internal account | Never-run-out automation      |
 
 {% hint style="info" %}
