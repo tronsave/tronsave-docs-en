@@ -10,7 +10,7 @@ description: Send TRX or TRC20 tokens to many recipients in one batch using Save
 
 * **Completely free to use** — no platform fees for sending tokens.
 * **Built for TRON** — optimized for TRX and TRC20 tokens.
-* **Up to 92% fee savings** — through integrated Energy and Bandwidth.
+* **60–80% fee savings** — through integrated Energy and Bandwidth.
 * **CSV upload** — prepare a list of recipients and amounts.
 * **Fast** — send to hundreds of addresses in a few minutes.
 

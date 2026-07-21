@@ -60,7 +60,7 @@ Staking locks your TRX for 14 days before it can be unfrozen and reclaimed. Plan
 
 ### Method 3 - Buy Energy on TronSave
 
-Renting Energy through [TronSave](https://tronsave.io) saves on fees. You don't need to freeze a large amount of TRX or burn extra TRX, and you can save up to **92%** of the handling fee.
+Renting Energy through [TronSave](https://tronsave.io) saves on fees. You don't need to freeze a large amount of TRX or burn extra TRX, and you can save roughly **60–80%** of the handling fee.
 
 See [Order Types](../concepts/order-types.md) and the [Quickstart](../getting-started/quickstart.md) to get started.
 
