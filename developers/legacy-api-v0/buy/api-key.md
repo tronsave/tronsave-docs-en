@@ -894,7 +894,7 @@ The canonical path for this endpoint is `GET https://api.tronsave.io/v0/order/:i
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl --location 'https://api.tronsave.io/v0/order/ORDER_ID' \
+curl --location 'https://api.tronsave.io/v0/orders/ORDER_ID' \
   --header 'apikey: YOUR_API_KEY'
 ```
 {% endtab %}
@@ -902,7 +902,7 @@ curl --location 'https://api.tronsave.io/v0/order/ORDER_ID' \
 {% tab title="JavaScript" %}
 ```javascript
 const getOneOrderDetails = async (orderId) => {
-  const url = `https://api.tronsave.io/v0/order/${orderId}`;
+  const url = `https://api.tronsave.io/v0/orders/${orderId}`;
   const res = await fetch(url, {
     headers: { apikey: "YOUR_API_KEY" },
   });
@@ -916,7 +916,7 @@ const getOneOrderDetails = async (orderId) => {
 import requests
 
 order_id = "ORDER_ID"
-url = f"https://api.tronsave.io/v0/order/{order_id}"
+url = f"https://api.tronsave.io/v0/orders/{order_id}"
 headers = {"apikey": "YOUR_API_KEY"}
 
 response = requests.get(url, headers=headers)
@@ -934,7 +934,7 @@ import java.net.http.HttpResponse;
 public class GetOneOrderDetails {
     public static void main(String[] args) throws Exception {
         String orderId = "ORDER_ID";
-        String url = "https://api.tronsave.io/v0/order/" + orderId;
+        String url = "https://api.tronsave.io/v0/orders/" + orderId;
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -963,7 +963,7 @@ import (
 
 func main() {
 	orderID := "ORDER_ID"
-	url := "https://api.tronsave.io/v0/order/" + orderID
+	url := "https://api.tronsave.io/v0/orders/" + orderID
 
 	req, _ := http.NewRequest("GET", url, nil)
 	req.Header.Set("apikey", "YOUR_API_KEY")
@@ -984,7 +984,7 @@ func main() {
 ```rust
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let order_id = "ORDER_ID";
-    let url = format!("https://api.tronsave.io/v0/order/{order_id}");
+    let url = format!("https://api.tronsave.io/v0/orders/{order_id}");
 
     let client = reqwest::blocking::Client::new();
     let response = client
