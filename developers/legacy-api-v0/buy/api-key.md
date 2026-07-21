@@ -22,7 +22,7 @@ All endpoints on this page authenticate with an **API key** sent in the `apikey`
 * Create order: <mark style="color:orange;">`POST`</mark> `https://api-dev.tronsave.io/v0/internal-buy-energy`
 * Get Internal Account Info: <mark style="color:blue;">`GET`</mark> `https://api-dev.tronsave.io/v0/user-info`
 * Get Internal Account Order History: <mark style="color:blue;">`GET`</mark> `https://api-dev.tronsave.io/v0/orders`
-* Get one order details: <mark style="color:blue;">`GET`</mark> `https://api-dev.tronsave.io/v0/order/:id`
+* Get one order details: <mark style="color:blue;">`GET`</mark> `https://api-dev.tronsave.io/v0/orders/:id`
 * Get Order Book: <mark style="color:blue;">`GET`</mark> `https://api-dev.tronsave.io/v0/order-book`
 {% endhint %}
 
@@ -182,7 +182,7 @@ Rate limit: **15** requests per **1** second.
 
 <table><thead><tr><th width="150">Name</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code><mark style="color:red;">*</mark></td><td>String</td><td>TronSave API key that represents your internal account.</td></tr></tbody></table>
 
-<sub><mark style="color:red;">\*<mark style="color:red;"></sub> <sub></sub><sub>Required.</sub>
+<sub><mark style="color:red;">\*<mark style="color:red;"></sub> <sub>Required.</sub>
 
 ### Query parameters
 
@@ -825,7 +825,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 Get the details of one order by API key.
 
-<mark style="color:blue;">**`GET`**</mark> **`https://api.tronsave.io/v0/order/:id`**
+<mark style="color:blue;">**`GET`**</mark> **`https://api.tronsave.io/v0/orders/:id`**
 
 {% hint style="info" %}
 Rate limit: **15** requests per **1** second.
