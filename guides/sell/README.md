@@ -8,6 +8,8 @@ description: >-
 
 Providers supply the Energy and Bandwidth that buyers rent on TronSave. As a provider, you stake TRX to produce resources, grant TronSave permission to delegate and reclaim those resources on your behalf, and earn yield as your supply fills orders.
 
+👉 **[Sell TRON energy and earn APY on TronSave](https://tronsave.io/earn)** — see live rates and turn your staked TRX into passive income.
+
 {% hint style="info" %}
 To join as a provider, you need to stake at least **5,000 TRX**. Becoming a provider can earn around **18% APY** on resource sales (varies with the market).
 {% endhint %}
