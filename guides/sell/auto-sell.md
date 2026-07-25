@@ -8,6 +8,8 @@ description: >-
 
 **Auto Sell** lets TronSave match and fill incoming buyer orders with your staked Energy or Bandwidth automatically. You set your price floor, duration limits, and profit share once, grant the system delegation permission, and TronSave handles matching, delegating, and paying out for you.
 
+👉 **[Start selling TRON energy on TronSave Earn](https://tronsave.io/earn)** — set your rules once and earn APY as buyers fill your orders.
+
 {% hint style="info" %}
 To sell, you first need staked resources to delegate. If you only hold TRX, stake it first — see [Get Energy by Staking 2.0](staking-2.0.md). For the underlying mechanics, see the [Staking 2.0](../../concepts/staking-2.0.md) and [Order Types](../../concepts/order-types.md) concepts.
 {% endhint %}
