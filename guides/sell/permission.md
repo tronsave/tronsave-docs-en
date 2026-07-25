@@ -8,6 +8,8 @@ description: >-
 
 As a **Provider**, you stake TRX, receive [Energy or Bandwidth](../../concepts/energy-and-bandwidth.md), and let TronSave delegate that resource to buyers so you earn up to **25% APY**. Becoming a Provider requires staking at least **5,000 TRX**.
 
+👉 **[Sell TRON energy and earn APY on TronSave](https://tronsave.io/earn)** — once permission is granted, your staked TRX starts earning from filled orders.
+
 For TronSave to manage delegation, staking, voting, and reward withdrawal on your behalf, you must grant it an **active permission** on your account using TRON multi-signature. You can do this automatically inside TronSave, or manually in TronScan / TronLink.
 
 {% hint style="info" %}
