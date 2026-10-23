@@ -134,7 +134,7 @@ An `authorization: ApiKey …` HTTP header is only validated when the session st
 
 **Extend a delegation** (Internal Account):
 
-1. `tronsave_internal_extend_delegates` with the receiver, `extendTo` (Unix **milliseconds**) and `maxPriceAccepted`. It returns the extendable rows and `extendData`.
+1. `tronsave_internal_extend_delegates` with the receiver, `extendTo` (Unix **seconds**; milliseconds are rejected with `INVALID_EXTEND_TIME`) and `maxPriceAccepted`. It returns the extendable rows and `extendData`.
 2. `tronsave_internal_create_extend_request` with that `extendData` unchanged.
 
 {% hint style="info" %}
