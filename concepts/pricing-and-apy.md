@@ -9,7 +9,8 @@ description: How TRON Energy rental prices are set with unitPrice tiers, and how
 Rental price is set per order via `unitPrice` (SUN per resource unit) — either a fixed number or a tier (`SLOW` / `MEDIUM` / `FAST`). The market's live order book determines what a given tier resolves to. See [The Rental Model](rental-model.md#the-price-tiers) for the exact tier rules.
 
 * **1 TRX = 1,000,000 SUN.**
-* Always [estimate](/broken/pages/qSPR7nGa8LyjgLyYINRR) before ordering to see the current price and available supply.
+* **Duration:** for rentals shorter than one day, `unitPrice` covers the whole rental. For one day or longer it is charged **per started day**: total = amount × `unitPrice` × days. Example: 64,285 Energy at 40 SUN for 30 days = 64,285 × 40 × 30 SUN ≈ 77.1 TRX.
+* Always [estimate](../developers/api-reference/buy-resources/api-key/estimate-trx.md) before ordering to see the current price and available supply.
 
 ## How provider APY is calculated
 
