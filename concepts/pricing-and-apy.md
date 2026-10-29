@@ -10,7 +10,7 @@ Rental price is set per order via `unitPrice` (SUN per resource unit) — either
 
 * **1 TRX = 1,000,000 SUN.**
 * **Duration:** for rentals shorter than one day, `unitPrice` covers the whole rental. For one day or longer it is charged **per started day**: total = amount × `unitPrice` × days. Example: 64,285 Energy at 40 SUN for 30 days = 64,285 × 40 × 30 SUN ≈ 77.1 TRX.
-* Always [estimate](/broken/pages/qSPR7nGa8LyjgLyYINRR) before ordering to see the current price and available supply.
+* Always [estimate](../developers/api-reference/buy-resources/api-key/estimate-trx.md) before ordering to see the current price and available supply.
 
 ## How provider APY is calculated
 
