@@ -10,7 +10,7 @@ The **TronSave Unstake Market** is an intermediary marketplace that connects use
 
 ### Step 1 — Connect wallet and log in
 
-* Open the [Unstake Market](https://tronsave.io/unstake/market) page.
+* Open the [Unstake Market](https://tronsave.io/unstake/unstake-market) page.
 * Connect the wallet you want to use and click **Login with TronSave**.
 
 ### Step 2 — Select an order
