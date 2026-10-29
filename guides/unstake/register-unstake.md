@@ -40,12 +40,12 @@ Follow these steps to complete your Early Unstake registration on TronSave.
 
 #### Liquidity check at this step
 
-* If the unstake amount exceeds the current system liquidity, your request requires manual approval from the admin and providers. Once approved, you can continue to [Step 5](register-unstake.md#step-5-check-balance).
+* If the unstake amount is above the review threshold (50,000 TRX by default), your request needs approval from the admin team. Once approved, you can continue to [Step 5](register-unstake.md#step-5-check-balance).
 * <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Recommendation:</strong> Join our Bot to receive instant notifications when your request is approved.</p></div>
 
 <figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 
-* If the system has sufficient liquidity, your request is automatically approved, and you can proceed to [Step 5](register-unstake.md#step-5-check-balance).
+* Requests at or below the threshold skip this review, and you can proceed to [Step 5](register-unstake.md#step-5-check-balance).
 
 ### Step 5 – Check balance
 
@@ -81,8 +81,8 @@ Please double-check the **authorized address** and confirm only when you fully u
 If liquidity remains unavailable after 24 hours of processing, your unstake order is listed on the marketplace for manual matching by providers.
 
 {% hint style="info" %}
-* You may **cancel your unstake request at any time**.
-* After cancellation, the system **restores your wallet permissions**.
+* **Before** the permission transfer, you may cancel your unstake request at any time.
+* **After** the permission transfer, you can cancel if the request is still unfunded 24 hours after it was confirmed. The system then sets your address back as the single owner and active key (a previous multisig setup is not restored) and sends 100 TRX to cover the change.
 {% endhint %}
 
 ## 2. Security & notices
