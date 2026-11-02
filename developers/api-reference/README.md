@@ -74,6 +74,7 @@ For error codes, HTTP status mapping, and rate-limit behavior, see [Errors & Rat
 | [Extend Orders](extend-orders/README.md) | Find extendable delegations and extend the duration of existing orders. |
 | [Sell Resources](sell-resources.md) | List and manage resources you provide to the marketplace. |
 | [Fast Charge](fast-charge/README.md) | Quickly top up resources — estimate, create, track, confirm, and cancel orders. |
+| [Activate Addresses](activate-address/README.md) | Check whether TRON addresses are activated, and activate up to 100 per request (1.5 TRX each). |
 | [MCP Server](mcp.md) | Use the TronSave Model Context Protocol server to drive the API from AI agents. |
 
 ## Next steps
