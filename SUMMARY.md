@@ -99,6 +99,7 @@
   * [Bulk Buy Resource](guides/tools/bulk-buy-resource.md)
   * [Transfer USDT](guides/tools/transfer-usdt.md)
 * [Connect Your Wallet](guides/connect-wallet.md)
+* [Use TronSave with AI Assistants](guides/ai-assistants.md)
 * [Referral Program](guides/referral-program.md)
 * [Partner / Bot Agency](guides/partner-bot-agency/README.md)
   * [Register](guides/partner-bot-agency/register.md)
