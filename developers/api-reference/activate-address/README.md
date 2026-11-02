@@ -21,5 +21,5 @@ Addresses that are already active are skipped and not charged. Activation runs a
 * Keep enough TRX in the internal account for `1.5 × (number of inactive addresses)`.
 
 {% hint style="info" %}
-Need energy delivered to many addresses as well? See [Fast Charge](../fast-charge/README.md), or the **Bulk Buy** tool on the website. The **Bulk Send** tool can also activate inactive recipients while it sends tokens.
+Need energy delivered to many addresses as well? See [Fast Charge](../fast-charge/README.md). On the website, the **Bulk Buy** tool can activate inactive recipients (about 1.1 TRX each) before it delivers resources to them.
 {% endhint %}
