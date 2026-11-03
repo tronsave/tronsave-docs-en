@@ -94,7 +94,7 @@
   * [Auto Sell](guides/sell/auto-sell.md)
   * [Sell Suggestion](guides/sell/sell-suggestion.md)
   * [Exclusive Provider Program](guides/sell/exclusive-provider-program.md)
-* [Early Unstake](guides/unstake/README.md)
+* [Early Unstake (Flash Unstake)](guides/unstake/README.md)
   * [Register Unstake](guides/unstake/register-unstake.md)
   * [Unstake Market](guides/unstake/unstake-market.md)
 * [Tools](guides/tools/README.md)
