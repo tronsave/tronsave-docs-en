@@ -14,7 +14,7 @@ For the conceptual overview of all order types, see [Order Types](../../concepts
 
 1. **Calculate the TRX to send** using the [Energy Calculator Tool](https://tronsave.io/tools/zapbuy). You can buy Energy flexibly based on your needs — you are not limited to fixed multiples.
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 2. **Send TRX** to TronSave's bot address:
 

@@ -42,7 +42,7 @@ You can change an order's target (receiving) address if the order is **not fully
 
 1. Open the **My Orders** tab and click into **Order Detail**.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
