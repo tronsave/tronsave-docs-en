@@ -16,8 +16,8 @@ Contact support on Telegram: [**@wantingtrx**](https://t.me/wantingtrx)
 
 Selling is a two-step flow:
 
-1. [**Get active orders**](./#step-1-get-active-orders) - list open buy orders you can fill.
-2. [**Sell the resource**](./#step-2-sell-the-resource) - submit a signed delegate transaction against a chosen order.
+1. [**Get active orders**](sell-resources.md) - list open buy orders you can fill.
+2. [**Sell the resource**](sell-resources-1.md) - submit a signed delegate transaction against a chosen order.
 3. [**Get Delegate Detail**](sell-resources-2.md) - get detailed information and the current status of a specific delegate using its delegateId.
 
 ## Next steps
