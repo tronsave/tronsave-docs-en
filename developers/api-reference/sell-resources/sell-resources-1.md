@@ -1,224 +1,20 @@
 ---
-description: Manually sell Energy or Bandwidth on TronSave by matching active buy orders with a signed on-chain delegate transaction.
+description: >-
+  Manually sell Energy or Bandwidth on TronSave by matching active buy orders
+  with a signed on-chain delegate transaction.
 ---
 
-# Sell Resources
+# Sell the resources
 
 The Sell Resources API lets a resource provider manually fill open buy orders on TronSave. The seller fetches active orders, builds and signs an on-chain `DelegateResourceContract` transaction, then submits the signed transaction to TronSave for order matching and payout.
 
 {% hint style="warning" %}
 **Whitelist required.** The Sell API is restricted to whitelisted wallets. Log in to TronSave and send your wallet address to support so it can be added to the whitelist. Once whitelisted, use the API Key generated from that wallet address to call the Sell endpoints.
 
-Contact support on Telegram: [**@wantingtrx**](https://t.me/wantingtrx)
+Contact support on Telegram: [**@wantingtrx**](https://t.me/wantingtrx)r.
 {% endhint %}
 
-Selling is a two-step flow:
-
-1. [**Get active orders**](#step-1-get-active-orders) — list open buy orders you can fill.
-2. [**Sell the resource**](#step-2-sell-the-resource) — submit a signed delegate transaction against a chosen order.
-
-## Step 1: Get active orders
-
-Returns the global list of active buy orders available for matching.
-
-<mark style="color:blue;">**`GET`**</mark> **`https://api.tronsave.io/v2/orders/active-global`**
-
-{% hint style="info" %}
-**Rate limit:** 3 requests per 1 second.
-{% endhint %}
-
-### Headers
-
-<table><thead><tr><th width="160">Name</th><th width="120">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code> <mark style="color:red;">*</mark></td><td>String</td><td>TronSave API Key (must belong to a whitelisted address). See <a href="../authentication.md">Authentication</a>.</td></tr></tbody></table>
-
-### Query parameters
-
-<table><thead><tr><th width="221">Name</th><th width="172">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>page</code></td><td>Integer</td><td>Page index, starting from 0. Default: <code>0</code></td></tr><tr><td><code>pageSize</code></td><td>Integer</td><td>Number of orders per page. Default: <code>10</code></td></tr></tbody></table>
-
-### Response
-
-```javascript
-{
-  "error": false,
-  "message": "Success",
-  "data": {
-    "data": [
-      {
-        "id": string,            // Order identifier — use as orderId in Step 2
-        "receiver": string,      // TRON address that receives the delegated resource
-        "resourceAmount": number,// the amount of resource
-        "resourceType": string,  // the resource type is "ENERGY" or "BANDWIDTH"
-        "remainAmount": number,  // the remaining amount that can be matched by the system
-        "orderType": string,     // type of order is "NORMAL" or "EXTEND"
-        "price": number,         // price unit is equal to SUN
-        "durationSec": number,   // rent duration, duration unit is equal to seconds
-        "status": string,        // the order status, either Active or Completed
-        "allowPartialFill": boolean, // Allow the order to be filled partially or not
-        "payoutAmount": number,  // Total payout of this order (SUN)
-        "fulfilledPercent": number, // The percent that shows filling processing. 0-100
-        "createdAt": 1778467289
-      }
-    ],
-    "total": 3
-  }
-}
-```
-
-**Example response**
-
-```javascript
-{
-  "error": false,
-  "message": "Success",
-  "data": {
-    "data": [
-      {
-        "id": "6a0141d98e6f3f91d2284444",
-        "receiver": "TA4JgKPtrPLtGQ1WMz3qmorqbL22221111",
-        "resourceAmount": 500000,
-        "resourceType": "ENERGY",
-        "remainAmount": 339999,
-        "orderType": "NORMAL",
-        "price": 50,
-        "durationSec": 259200,
-        "status": "Active",
-        "allowPartialFill": true,
-        "payoutAmount": 24000150,
-        "fulfilledPercent": 32,
-        "createdAt": 1778467289
-      }
-    ],
-    "total": 3
-  }
-}
-```
-
-### Request examples
-
-{% tabs %}
-{% tab title="cURL" %}
-```bash
-curl -X GET \
-  "https://api.tronsave.io/v2/orders/active-global?page=0&pageSize=10" \
-  -H "apikey: YOUR_API_KEY"
-```
-{% endtab %}
-
-{% tab title="JavaScript" %}
-```javascript
-const res = await fetch(
-  "https://api.tronsave.io/v2/orders/active-global?page=0&pageSize=10",
-  {
-    method: "GET",
-    headers: {
-      apikey: "YOUR_API_KEY",
-      "content-type": "application/json",
-    },
-  }
-);
-
-const data = await res.json();
-console.log(data.data.data);
-```
-{% endtab %}
-
-{% tab title="Python" %}
-```python
-import urllib.parse
-import urllib.request
-import json
-
-query = urllib.parse.urlencode({"page": 0, "pageSize": 10})
-url = f"https://api.tronsave.io/v2/orders/active-global?{query}"
-
-req = urllib.request.Request(
-    url,
-    method="GET",
-    headers={"apikey": "YOUR_API_KEY", "content-type": "application/json"},
-)
-with urllib.request.urlopen(req) as response:
-    data = json.loads(response.read().decode("utf-8"))
-print(data["data"]["data"])
-```
-{% endtab %}
-
-{% tab title="Java" %}
-```java
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-
-public class GetActiveOrders {
-    public static void main(String[] args) throws Exception {
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-            .uri(URI.create("https://api.tronsave.io/v2/orders/active-global?page=0&pageSize=10"))
-            .header("apikey", "YOUR_API_KEY")
-            .header("content-type", "application/json")
-            .GET()
-            .build();
-
-        HttpResponse<String> response =
-            client.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
-    }
-}
-```
-{% endtab %}
-
-{% tab title="Go" %}
-```go
-package main
-
-import (
-	"fmt"
-	"io"
-	"net/http"
-)
-
-func main() {
-	url := "https://api.tronsave.io/v2/orders/active-global?page=0&pageSize=10"
-	req, _ := http.NewRequest("GET", url, nil)
-	req.Header.Set("apikey", "YOUR_API_KEY")
-	req.Header.Set("content-type", "application/json")
-
-	resp, err := http.DefaultClient.Do(req)
-	if err != nil {
-		panic(err)
-	}
-	defer resp.Body.Close()
-
-	body, _ := io.ReadAll(resp.Body)
-	fmt.Println(string(body))
-}
-```
-{% endtab %}
-
-{% tab title="Rust" %}
-```rust
-// Cargo.toml:
-// reqwest = { version = "0.12", features = ["blocking", "json"] }
-use std::error::Error;
-
-fn main() -> Result<(), Box<dyn Error>> {
-    let client = reqwest::blocking::Client::new();
-    let res = client
-        .get("https://api.tronsave.io/v2/orders/active-global")
-        .query(&[("page", "0"), ("pageSize", "10")])
-        .header("apikey", "YOUR_API_KEY")
-        .header("content-type", "application/json")
-        .send()?;
-
-    let body: serde_json::Value = res.json()?;
-    println!("{}", body);
-    Ok(())
-}
-```
-{% endtab %}
-{% endtabs %}
-
-## Step 2: Sell the resource
+## Endpoint
 
 Submits a signed delegate transaction to fill the chosen order.
 
@@ -230,11 +26,11 @@ Submits a signed delegate transaction to fill the chosen order.
 
 ### Headers
 
-<table><thead><tr><th width="160">Name</th><th width="120">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code> <mark style="color:red;">*</mark></td><td>String</td><td>TronSave API Key (must belong to a whitelisted address). See <a href="../authentication.md">Authentication</a>.</td></tr></tbody></table>
+<table><thead><tr><th width="160">Name</th><th width="120">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>apikey</code> <mark style="color:red;">*</mark></td><td>String</td><td>TronSave API Key (must belong to a whitelisted address). See <a href="../../authentication.md">Authentication</a>.</td></tr></tbody></table>
 
 ### Request body
 
-<table><thead><tr><th width="268">Name</th><th width="122">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>orderId</code> <mark style="color:red;">*</mark></td><td>string</td><td>Order ID from the <code>id</code> field in <strong>Step 1</strong>.</td></tr><tr><td><code>paymentAddress</code></td><td>string</td><td>TRON address to receive payment for the sell order. If not provided, the payment is sent to the delegator address.</td></tr><tr><td><code>isAllowSellForLockedDelegator</code></td><td>boolean</td><td><code>false</code> (default) — do not sell to a target address currently locked on-chain.<br><code>true</code> — sell to all target addresses.</td></tr><tr><td><code>signedTx</code> <mark style="color:red;">*</mark></td><td>object</td><td>Signed transaction. Note that it is a JSON object.</td></tr></tbody></table>
+<table><thead><tr><th width="278">Name</th><th width="95">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>orderId</code> <mark style="color:red;">*</mark></td><td>string</td><td>Order ID from the <code>id</code> field in <a href="sell-resources.md"><strong>Get Active Order</strong></a>.</td></tr><tr><td><code>paymentAddress</code></td><td>string</td><td>TRON address to receive payment for the sell order. If not provided, the payment is sent to the delegator address.</td></tr><tr><td><code>isAllowSellForLockedDelegator</code></td><td>boolean</td><td><code>false</code> (default) — do not sell to a target address currently locked on-chain.<br><code>true</code> — sell to all target addresses.</td></tr><tr><td><code>signedTx</code> <mark style="color:red;">*</mark></td><td>object</td><td>Signed transaction. Note that it is a JSON object.</td></tr></tbody></table>
 
 ### Request body example
 
@@ -344,8 +140,6 @@ Business-logic failures (for example, the chosen order can no longer be fulfille
   "message": "<error description>"
 }
 ```
-
-<!-- [NEEDS CONFIRMATION: exact business-logic error messages for /v2/orders/sell-manual (e.g. order already filled, signedTx mismatch, locked delegator) — source does not include these samples] -->
 
 {% hint style="info" %}
 **Rate limits:** the global default is 15 requests/second; the Sell Resources endpoints are limited to 2–3 requests/second (3 req/s for `active-global`, 2 req/s for `sell-manual`). Exceeding the limit returns `{"error": true, "message": "Rate limit reached"}`.
@@ -1030,6 +824,6 @@ if __name__ == "__main__":
 
 ## Next steps
 
-* New to the API? Start with the [Quickstart](../quickstart.md) and [Authentication](../authentication.md).
-* Learn the difference between [Energy and Bandwidth](../../concepts/energy-and-bandwidth.md) and review [Order Types](../../concepts/order-types.md).
-* Looking to buy instead of sell? See [Buy Resources](buy-resources/README.md).
+* [Get Delegate Detail ](sell-resources-2.md)- get detailed information and the current status of a specific delegate using its delegateId.
+* New to the API? Start with the [Quickstart](../../quickstart.md) and [Authentication](../../authentication.md).
+* Learn the difference between [Energy and Bandwidth](../../../concepts/energy-and-bandwidth.md) and review [Order Types](../../../concepts/order-types.md).

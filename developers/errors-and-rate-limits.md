@@ -13,7 +13,7 @@ Every TronSave API endpoint shares the same rate-limiting policy and error-respo
 Most endpoints allow a default of **15 requests per second**.
 
 {% hint style="warning" %}
-The [Sell Resources](api-reference/sell-resources.md) endpoints are limited to **2–3 requests per second**. All other endpoints use the default of 15 requests per second.
+The [Sell Resources](api-reference/sell-resources/) endpoints are limited to **2–3 requests per second**. All other endpoints use the default of 15 requests per second.
 {% endhint %}
 
 The current limit for each endpoint is documented in its API reference page (for example, the [Create Order](api-reference/buy-resources/api-key/create-order.md) and [Estimate TRX](api-reference/buy-resources/api-key/estimate-trx.md) endpoints state `Rate limit: 15 requests per 1 second`).

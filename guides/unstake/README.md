@@ -1,12 +1,12 @@
 ---
 description: >-
-  Withdraw staked TRX early on TronSave (Early Unstake, also called Flash
-  Unstake) without waiting for the official unstake period.
+  Withdraw staked TRX early on TronSave without waiting for the official unstake
+  period.
 ---
 
-# Early Unstake (Flash Unstake)
+# Early Unstake
 
-Unstaking on TRON normally locks your TRX for the official unstake period before you can withdraw it. TronSave's **Early Unstake** (also called **Flash Unstake**) lets you get faster access to that liquidity, with a variable service fee that depends on the unstake amount.
+Unstaking on TRON normally locks your TRX for the official unstake period before you can withdraw it. TronSave's **Early Unstake** lets you get faster access to that liquidity, with a variable service fee that depends on the unstake amount.
 
 There are two ways to handle an early unstake on TronSave:
 

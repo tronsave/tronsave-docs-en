@@ -1,16 +1,18 @@
 ---
-description: The TronSave REST API — base URLs, authentication, versioning, the response envelope, and links to every endpoint group.
+description: >-
+  The TronSave REST API — base URLs, authentication, versioning, the response
+  envelope, and links to every endpoint group.
 ---
 
-# TRON Energy API Reference
+# API Reference
 
 The TronSave API lets you buy, extend, and sell Energy and Bandwidth on the TRON network programmatically. Every endpoint is a JSON REST call over HTTPS.
 
 ## Base URLs
 
-| Environment | API base URL |
-| --- | --- |
-| Production | `https://api.tronsave.io` |
+| Environment    | API base URL                  |
+| -------------- | ----------------------------- |
+| Production     | `https://api.tronsave.io`     |
 | Testnet (Nile) | `https://api-dev.tronsave.io` |
 
 Endpoints are versioned by path prefix — the current version is `v2`, e.g. `https://api.tronsave.io/v2/buy-resource`. See [Environments & Networks](../environments.md) for the full list of hosts and chains.
@@ -38,7 +40,7 @@ See [Authentication](../authentication.md) for how to obtain a key, fund your ac
 `v2` is the current API and the one documented throughout this reference. The previous `v0` API is still available for existing integrations.
 
 {% hint style="warning" %}
-New integrations should use `v2`. The legacy `v0` API is maintained for backward compatibility only — see [Legacy API (v0)](../legacy-api-v0/README.md).
+New integrations should use `v2`. The legacy `v0` API is maintained for backward compatibility only — see [Legacy API (v0)](../legacy-api-v0/).
 {% endhint %}
 
 ## Response envelope
@@ -53,31 +55,22 @@ Every API response is wrapped in a consistent JSON envelope:
 }
 ```
 
-<table>
-  <thead>
-    <tr><th width="160">Field</th><th>Description</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><code>error</code></td><td>Boolean flag — <code>false</code> on success, <code>true</code> on failure.</td></tr>
-    <tr><td><code>message</code></td><td>Human-readable status or error message.</td></tr>
-    <tr><td><code>data</code></td><td>The response payload (object) — the shape depends on the endpoint.</td></tr>
-  </tbody>
-</table>
+<table><thead><tr><th width="160">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>error</code></td><td>Boolean flag — <code>false</code> on success, <code>true</code> on failure.</td></tr><tr><td><code>message</code></td><td>Human-readable status or error message.</td></tr><tr><td><code>data</code></td><td>The response payload (object) — the shape depends on the endpoint.</td></tr></tbody></table>
 
 For error codes, HTTP status mapping, and rate-limit behavior, see [Errors & Rate Limits](../errors-and-rate-limits.md).
 
 ## Endpoint groups
 
-| Group | What it does |
-| --- | --- |
-| [Buy Resources](buy-resources/README.md) | Estimate cost and create orders to buy Energy or Bandwidth, via signed transaction or API key. |
-| [Extend Orders](extend-orders/README.md) | Find extendable delegations and extend the duration of existing orders. |
-| [Sell Resources](sell-resources.md) | List and manage resources you provide to the marketplace. |
-| [Fast Charge](fast-charge/README.md) | Quickly top up resources — estimate, create, track, confirm, and cancel orders. |
-| [Activate Addresses](activate-address/README.md) | Check whether TRON addresses are activated, and activate up to 100 per request (1.5 TRX each). |
-| [MCP Server](mcp.md) | Use the TronSave Model Context Protocol server to drive the API from AI agents. |
+| Group                                   | What it does                                                                                   |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [Buy Resources](buy-resources/)         | Estimate cost and create orders to buy Energy or Bandwidth, via signed transaction or API key. |
+| [Extend Orders](extend-orders/)         | Find extendable delegations and extend the duration of existing orders.                        |
+| [Sell Resources](sell-resources/)       | List and manage resources you provide to the marketplace.                                      |
+| [Fast Charge](fast-charge/)             | Quickly top up resources — estimate, create, track, confirm, and cancel orders.                |
+| [Activate Addresses](activate-address/) | Check whether TRON addresses are activated, and activate up to 100 per request (1.5 TRX each). |
+| [MCP Server](mcp.md)                    | Use the TronSave Model Context Protocol server to drive the API from AI agents.                |
 
 ## Next steps
 
 * [Developer Quickstart](../quickstart.md) · [Authentication](../authentication.md) · [Environments & Networks](../environments.md)
-* [Buy Resources](buy-resources/README.md) · [Errors & Rate Limits](../errors-and-rate-limits.md)
+* [Buy Resources](buy-resources/) · [Errors & Rate Limits](../errors-and-rate-limits.md)

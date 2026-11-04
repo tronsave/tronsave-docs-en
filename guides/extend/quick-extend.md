@@ -69,7 +69,7 @@ After checking all the information, click **Sign transaction**.
 
 If everything is correct, the extended request will succeed. A success pop-up appears, and the flow moves to the **Successfully** stage.
 
-<figure><img src="../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
 ## Next steps
 

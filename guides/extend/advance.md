@@ -24,8 +24,6 @@ Connect your wallet to the market first, then scroll down to the **Extend** sect
 
 The Advance panel can look dense at first. Here is what each part does.
 
-
-
 **1. Batch controls.** These apply one choice to every selected request:
 
 * **Using the same settings** — applies the same extend and buy options to all selected extend and buy requests.
@@ -74,7 +72,7 @@ If the delegator's remaining Energy is greater than 100k, you can buy more Energ
 
 The estimated payout for the selection is shown on the right.
 
-<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 **3. Summary.** Shows the total extended amount across all selected items and the estimated total payout for all requests.
 
@@ -86,7 +84,7 @@ At the **Extend Order Details** stage, TronSave summarizes every extend request 
 Make sure the amount of the **transfer transaction** is the same as the amount in the **Payout**.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="https://1055070949-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fh0rlDWTk05Qu3lvB5Gve%2Fuploads%2FrGnWRM2yvaEWNQuO4W0e%2Fimage.png?alt=media&#x26;token=182d8c19-7966-4175-aa05-b7ec2dc0e949" alt=""><figcaption><p>The transferred amount must match the payout shown in Extend Order Confirm</p></figcaption></figure>
 

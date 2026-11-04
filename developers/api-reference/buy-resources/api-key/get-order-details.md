@@ -6,7 +6,7 @@ description: >-
 
 # Get Order Details
 
-Retrieve detailed information and the current status of a specific order using its `orderId`. The response includes the order parameters, fulfillment progress, and every on-chain delegate that has matched the order.
+Retrieve detailed information and the current status of a specific order using its `orderId`. The response includes the order parameters, fulfillment progress, and all on-chain delegates that matched the order.
 
 ## Endpoint
 
@@ -50,18 +50,18 @@ A successful response returns `error: false` and the order details in `data`.
         "receiver": string, // the address of the resource that is received 
         "resourceAmount": number, // the amount of resource
         "resourceType": string, // the resource type is "ENERGY" or "BANDWIDTH"
-        "remainAmount": number, // the remaining amount can be matched by the system,
+        "remainAmount": number, // the remaining amount can be matched by the system
         "price": number, // price unit is equal to SUN
         "durationSec": number, // rent duration, duration unit is equal to seconds
         "orderType": string, // type of order is "NORMAL" or "EXTEND"
         "allowPartialFill": boolean, //Allow the order to be filled partially or not
         "payoutAmount": number, // Total payout of this order
-        "fulfilledPercent": number, //The percent that shows filling processing. 0-100
+        "fulfilledPercent": number, //The percent that shows filling progress. 0-100
         "delegates": [ //All matched delegates for this order
             {
                 "delegator": string, // The address that delegates the resource for the target address
                 "amount": number, //The amount of resource was delegated
-                "txid": number // The transaction ID in on-chain
+                "txid": number // The transaction ID on-chain
             }
         ]
     }
