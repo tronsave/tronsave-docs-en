@@ -217,6 +217,6 @@ fn main() -> Result<(), Box<dyn Error>> {
 
 ## Next steps
 
-* [Sell the resources ](sell-resources-1.md)- submit a signed delegate transaction against a chosen order.
-* [Get Delegate Detail ](sell-resources-2.md)- get detailed information and the current status of a specific delegate using its delegateId.
+* [Sell the resources ](sell-the-resources.md)- submit a signed delegate transaction against a chosen order.
+* [Get Delegate Detail ](get-delegate-detail.md)- get detailed information and the current status of a specific delegate using its delegateId.
 

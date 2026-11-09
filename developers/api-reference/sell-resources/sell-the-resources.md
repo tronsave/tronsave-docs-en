@@ -30,7 +30,7 @@ Submits a signed delegate transaction to fill the chosen order.
 
 ### Request body
 
-<table><thead><tr><th width="278">Name</th><th width="95">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>orderId</code> <mark style="color:red;">*</mark></td><td>string</td><td>Order ID from the <code>id</code> field in <a href="sell-resources.md"><strong>Get Active Order</strong></a>.</td></tr><tr><td><code>paymentAddress</code></td><td>string</td><td>TRON address to receive payment for the sell order. If not provided, the payment is sent to the delegator address.</td></tr><tr><td><code>isAllowSellForLockedDelegator</code></td><td>boolean</td><td><code>false</code> (default) — do not sell to a target address currently locked on-chain.<br><code>true</code> — sell to all target addresses.</td></tr><tr><td><code>signedTx</code> <mark style="color:red;">*</mark></td><td>object</td><td>Signed transaction. Note that it is a JSON object.</td></tr></tbody></table>
+<table><thead><tr><th width="278">Name</th><th width="95">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>orderId</code> <mark style="color:red;">*</mark></td><td>string</td><td>Order ID from the <code>id</code> field in <a href="get-active-orders.md"><strong>Get Active Order</strong></a>.</td></tr><tr><td><code>paymentAddress</code></td><td>string</td><td>TRON address to receive payment for the sell order. If not provided, the payment is sent to the delegator address.</td></tr><tr><td><code>isAllowSellForLockedDelegator</code></td><td>boolean</td><td><code>false</code> (default) — do not sell to a target address currently locked on-chain.<br><code>true</code> — sell to all target addresses.</td></tr><tr><td><code>signedTx</code> <mark style="color:red;">*</mark></td><td>object</td><td>Signed transaction. Note that it is a JSON object.</td></tr></tbody></table>
 
 ### Request body example
 
@@ -824,6 +824,6 @@ if __name__ == "__main__":
 
 ## Next steps
 
-* [Get Delegate Detail ](sell-resources-2.md)- get detailed information and the current status of a specific delegate using its delegateId.
+* [Get Delegate Detail ](get-delegate-detail.md)- get detailed information and the current status of a specific delegate using its delegateId.
 * New to the API? Start with the [Quickstart](../../quickstart.md) and [Authentication](../../authentication.md).
 * Learn the difference between [Energy and Bandwidth](../../../concepts/energy-and-bandwidth.md) and review [Order Types](../../../concepts/order-types.md).

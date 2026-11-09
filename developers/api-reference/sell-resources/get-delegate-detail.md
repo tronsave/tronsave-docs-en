@@ -30,7 +30,7 @@ The `:delegateId` returned when selling the resource.
 
 ## Path parameters
 
-<table><thead><tr><th width="124">Name</th><th width="109">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>delegateId</code></td><td>string</td><td>The unique ID of the delegation to retrieve. (<a href="sell-resources-1.md">Sell the resources</a>)</td></tr></tbody></table>
+<table><thead><tr><th width="124">Name</th><th width="109">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>delegateId</code></td><td>string</td><td>The unique ID of the delegation to retrieve. (<a href="sell-the-resources.md">Sell the resources</a>)</td></tr></tbody></table>
 
 ### Response
 
