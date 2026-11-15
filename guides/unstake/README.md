@@ -12,7 +12,7 @@ There are two ways to handle an early unstake on TronSave:
 
 | Method                              | What it does                                                                                                                              |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| [Early Unstake](./)                 | Instantly withdraw your staked TRX. If the system has enough liquidity your request is auto-approved; otherwise it goes to manual review. |
+| [Early Unstake](./)                 | Get your staked TRX without waiting for the unstake period, for a 7–10% fee. Requests above 50,000 TRX are reviewed first.                |
 | [Unstake Market](unstake-market.md) | List your unstake order on the marketplace for manual matching by providers when liquidity isn't immediately available.                   |
 
 {% hint style="info" %}
@@ -21,11 +21,9 @@ All Early Unstake transactions are fully verifiable on the TRON blockchain. Alwa
 
 ## How liquidity affects your request
 
-When you submit an unstake request, TronSave checks it against the current system liquidity:
-
-* **Sufficient liquidity** — your request is automatically approved and processed.
-* **Insufficient liquidity** — auto-approval is liquidity-based with no fixed threshold, so your request is sent to the admin team and providers for manual review and payout approval.
-* **Liquidity still unavailable after 24 hours** — your unstake order is listed on the [Unstake Market](unstake-market.md) for manual matching by providers.
+* **Review** — requests up to the review threshold (50,000 TRX by default) skip manual review; larger requests are reviewed by the admin team first.
+* **Payout** — after you transfer permission, the payout is sent once the request is funded: from system liquidity, by a provider, or by a buyer.
+* **Not funded after 24 hours** — the order is listed on the [Unstake Market](unstake-market.md), where buyers can fund it.
 
 ## Need help?
 
