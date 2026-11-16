@@ -100,6 +100,7 @@
 * [Early Unstake](guides/unstake/README.md)
   * [Register Unstake](guides/unstake/register-unstake.md)
   * [Unstake Market](guides/unstake/unstake-market.md)
+  * [Grant Permissions via Multisig Wallet](guides/unstake/grant-permissions-via-multisig-wallet.md)
 * [Tools](guides/tools/README.md)
   * [Bulk Send Token](guides/tools/bulk-send-token.md)
   * [Bulk Buy Resource](guides/tools/bulk-buy-resource.md)
