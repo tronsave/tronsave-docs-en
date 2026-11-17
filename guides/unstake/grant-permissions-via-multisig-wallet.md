@@ -55,9 +55,7 @@ Under **Active Permission**, keep only **one Active Permission** for TronSave.
 {% endtab %}
 
 {% tab title="TronLink Extension" %}
-
-
-#### Step 1: Open the Authorized Wallet on TRONSCAN
+#### Step 1: Open the Authorized Wallet on TronLink Extension
 
 1. Log in to the **TronLink Extension** with **Wallet B** – the wallet that was granted Owner Permission by your unstaking wallet (Wallet A).
 2. Choose "**More**" > "**Account Permissions**" to enter the corresponding webpage.
