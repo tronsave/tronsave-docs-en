@@ -1,18 +1,20 @@
 ---
-description: Legacy v0 flow for buying Energy with a signed TRON transaction — estimate TRX, generate a signed transfer, and create the order.
+description: >-
+  Legacy v0 flow for buying Energy with a signed TRON transaction — estimate
+  TRX, generate a signed transfer, and create the order.
 ---
 
-# Buy with Signed Transaction (v0)
+# Buy — Signed Transaction
 
 {% hint style="warning" %}
-**Legacy API.** This page documents the v0 signed-transaction flow under the `/v0/` base path. New integrations should use the current API. See [Buy with Signed Transaction (v2)](../../api-reference/buy-resources/signed-tx/README.md).
+**Legacy API.** This page documents the v0 signed-transaction flow under the `/v0/` base path. New integrations should use the current API. See [Buy with Signed Transaction (v2)](../../api-reference/buy-resources/signed-tx/).
 {% endhint %}
 
 The signed-transaction flow lets you buy Energy by paying TRX directly from your own wallet — no API key required, since the TRX transfer is signed with your private key. There are three steps:
 
-1. [Estimate TRX](#step-1-estimate-trx) — calculate the TRX needed for the desired amount and rental duration.
-2. [Get a signed transaction](#step-2-get-a-signed-transaction) — sign a TRX transfer to the TronSave fund address, either yourself or via the API.
-3. [Create an order](#step-3-create-an-order) — submit the signed transaction to place the buy order.
+1. [Estimate TRX](signed-tx.md#step-1-estimate-trx) — calculate the TRX needed for the desired amount and rental duration.
+2. [Get a signed transaction](signed-tx.md#step-2-get-a-signed-transaction) — sign a TRX transfer to the TronSave fund address, either yourself or via the API.
+3. [Create an order](signed-tx.md#step-3-create-an-order) — submit the signed transaction to place the buy order.
 
 {% hint style="info" %}
 **Before you start:** make sure you have the wallet's private key and that the wallet holds enough TRX to cover the estimated cost.
@@ -20,13 +22,13 @@ The signed-transaction flow lets you buy Energy by paying TRX directly from your
 
 The mainnet base URL is `https://api.tronsave.io`. For testing on the TRON Nile testnet, use `https://api-dev.tronsave.io`. See [Environments](../../environments.md).
 
-| Step | Method | Mainnet | Testnet (Nile) |
-| --- | --- | --- | --- |
-| Estimate TRX | `POST` | `https://api.tronsave.io/v0/estimate-trx` | `https://api-dev.tronsave.io/v0/estimate-trx` |
-| Get Signed Transaction | `POST` | `https://api.tronsave.io/v0/signed-tx` | `https://api-dev.tronsave.io/v0/signed-tx` |
-| Create Order | `POST` | `https://api.tronsave.io/v0/buy-energy` | `https://api-dev.tronsave.io/v0/buy-energy` |
+| Step                   | Method | Mainnet                                   | Testnet (Nile)                                |
+| ---------------------- | ------ | ----------------------------------------- | --------------------------------------------- |
+| Estimate TRX           | `POST` | `https://api.tronsave.io/v0/estimate-trx` | `https://api-dev.tronsave.io/v0/estimate-trx` |
+| Get Signed Transaction | `POST` | `https://api.tronsave.io/v0/signed-tx`    | `https://api-dev.tronsave.io/v0/signed-tx`    |
+| Create Order           | `POST` | `https://api.tronsave.io/v0/buy-energy`   | `https://api-dev.tronsave.io/v0/buy-energy`   |
 
----
+***
 
 ## Step 1: Estimate TRX
 
@@ -40,13 +42,13 @@ Calculate the TRX needed for a given resource amount and rental duration. The re
 
 ### Headers
 
-| Header | Value | Required |
-| --- | --- | --- |
-| `Content-Type` | `application/json` | Yes |
+| Header         | Value              | Required |
+| -------------- | ------------------ | -------- |
+| `Content-Type` | `application/json` | Yes      |
 
 ### Request params
 
-<table><thead><tr><th width="174">Field</th><th width="94">Position</th><th width="92">Type</th><th width="100">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>amount</code></td><td>body</td><td>number</td><td>true</td><td>The number of resources</td></tr><tr><td><code>buy_energy_type</code></td><td>body</td><td>string, number</td><td>true</td><td><p>"FAST", "MEDIUM", "SLOW" or number:</p><p><br>-"FAST": If market ready to fill = 100%, FAST = MEDIUM. If the market ready to fill &#x3C; 100%, FAST = MEDIUM + 10. If market ready to fill = 0%, FAST = SLOW + 20.</p><p></p><p>-"MEDIUM": The lowest price for the maximum market fill for this order. If market ready to fill = 0%, MEDIUM = SLOW + 10.</p><p></p><p>-"SLOW": The lowest price that can be set for this order.</p><p></p><p>-If the price is a number, the price unit is equal to SUN</p></td></tr><tr><td><code>duration_millisec</code></td><td>body</td><td>number</td><td>true</td><td>The duration of the bought resource, time unit is equal to millisecond.</td></tr><tr><td><code>request_address</code></td><td>body</td><td>string</td><td>false</td><td>The address of requester.</td></tr><tr><td><code>target_address</code></td><td>body</td><td>string</td><td>false</td><td>The address of receiver resource.</td></tr><tr><td><code>is_partial</code></td><td>body</td><td>boolean</td><td>false</td><td>Allow the order to be filled partially or not.</td></tr></tbody></table>
+<table><thead><tr><th width="174">Field</th><th width="94">Position</th><th width="92">Type</th><th width="100">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>amount</code></td><td>body</td><td>number</td><td>true</td><td>The number of resources</td></tr><tr><td><code>buy_energy_type</code></td><td>body</td><td>string, number</td><td>true</td><td><p>"FAST", "MEDIUM", "SLOW" or number:</p><p><br>-"FAST": If market ready to fill = 100%, FAST = MEDIUM. If the market ready to fill &#x3C; 100%, FAST = MEDIUM + 10. If market ready to fill = 0%, FAST = SLOW + 20.</p><p>-"MEDIUM": The lowest price for the maximum market fill for this order. If market ready to fill = 0%, MEDIUM = SLOW + 10.</p><p>-"SLOW": The lowest price that can be set for this order.</p><p>-If the price is a number, the price unit is equal to SUN</p></td></tr><tr><td><code>duration_millisec</code></td><td>body</td><td>number</td><td>true</td><td>The duration of the bought resource, time unit is equal to millisecond.</td></tr><tr><td><code>request_address</code></td><td>body</td><td>string</td><td>false</td><td>The address of requester.</td></tr><tr><td><code>target_address</code></td><td>body</td><td>string</td><td>false</td><td>The address of receiver resource.</td></tr><tr><td><code>is_partial</code></td><td>body</td><td>boolean</td><td>false</td><td>Allow the order to be filled partially or not.</td></tr></tbody></table>
 
 ### Request body example
 
@@ -88,7 +90,7 @@ This endpoint does not require an `apikey` header — the signed-transaction flo
 }
 ```
 
----
+***
 
 ## Step 2: Get a signed transaction
 
@@ -114,7 +116,7 @@ TATT1UzHRikft98bRFqApFTsaSw73ycfoS
 {% endtab %}
 {% endtabs %}
 
-### Option 1: Write your own function
+### Write your own function
 
 Using `tronWeb`, build a `sendTrx` transfer for `estimate_trx` (from Step 1) and sign it with the buyer's private key:
 
@@ -129,80 +131,7 @@ const signed_tx = await tronWeb.trx.sign(dataSendTrx, 'PRIVATE_KEY');
 * `TRONSAVE_FUND_ADDRESS` is the TronSave fund address shown above.
 {% endhint %}
 
-### Option 2: Use the Get Signed Transaction API
-
-<mark style="color:orange;">**`POST`**</mark> **`https://api.tronsave.io/v0/signed-tx`**
-
-{% hint style="info" %}
-**Rate limit:** 15 requests per 1 second.
-{% endhint %}
-
-#### Headers
-
-| Header | Value | Required |
-| --- | --- | --- |
-| `Content-Type` | `application/json` | Yes |
-
-#### Request params
-
-<table><thead><tr><th width="166">Field</th><th width="112">Position</th><th width="110">Type</th><th width="101">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>address</code></td><td>body</td><td>string</td><td>true</td><td>The buyer's public address</td></tr><tr><td><code>private_key</code></td><td>body</td><td>string</td><td>true</td><td>The buyer's private key</td></tr><tr><td><code>estimate_trx</code></td><td>body</td><td>number</td><td>true</td><td>The amount of TRX to be paid is calculated in SUN. (<code>estimate_trx</code> from <a href="#step-1-estimate-trx">Step 1</a>)</td></tr></tbody></table>
-
-#### Request body example
-
-```json
-{
-    "address": "TM6ZeEgpefyGWeMLuzSbfqTGkPv8Z65432",
-    "private_key": "{{yourprivateKey}}",
-    "estimate_trx": 13500000
-}
-```
-
-#### Responses
-
-##### Success
-
-```json
-{
-    "visible": false,
-    "txID": "446eed36e31249b98b201db2e81a3825b185f1a3d8b2fea348b24fc021e58e0d",
-    "raw_data": {
-        "contract": [
-            {
-                "parameter": {
-                    "value": {
-                        "amount": 13500000,
-                        "owner_address": "417a0d868d1418c9038584af1252f85d486502eec0",
-                        "to_address": "41055756f33f419278d9ea059bd2b21120e6add748"
-                    },
-                    "type_url": "type.googleapis.com/protocol.TransferContract"
-                },
-                "type": "TransferContract"
-            }
-        ],
-        "ref_block_bytes": "0713",
-        "ref_block_hash": "6c5f7686f4176139",
-        "expiration": 1691465106000,
-        "timestamp": 1691465046758
-    },
-    "raw_data_hex": "0a02071322086c5f7686f417613940d084b5999d315a68080112640a2d747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e5472616e73666572436f6e747261637412330a15417a0d868d1418c9038584af1252f85d486502eec0121541055756f33f419278d9ea059bd2b21120e6add74818e0fcb70670e6b5b1999d31",
-    "signature": ["xxxxxxxxx"]
-}
-```
-
-##### Error
-
-No `apikey` header is required for this endpoint. A request with a missing or invalid field returns a `400 Bad Request` whose `message` names the offending field:
-
-```json
-{
-    "statusCode": 400,
-    "code": "FST_ERR_VALIDATION",
-    "error": "Bad Request",
-    "message": "body must have required property 'estimate_trx'"
-}
-```
-
----
+***
 
 ## Step 3: Create an order
 
@@ -216,9 +145,9 @@ Submit the signed transaction (from Step 2) together with the order parameters t
 
 ### Headers
 
-| Header | Value | Required |
-| --- | --- | --- |
-| `Content-Type` | `application/json` | Yes |
+| Header         | Value              | Required |
+| -------------- | ------------------ | -------- |
+| `Content-Type` | `application/json` | Yes      |
 
 {% hint style="info" %}
 This endpoint authenticates through the `signed_tx` you submit — the TRX payment is signed by your own wallet — so an `apikey` header is not required.
@@ -226,7 +155,7 @@ This endpoint authenticates through the `signed_tx` you submit — the TRX payme
 
 ### Request params
 
-<table><thead><tr><th width="221">Field</th><th width="105">Type</th><th width="91">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>resource_type</code></td><td>string</td><td>true</td><td>"ENERGY"</td></tr><tr><td><code>unit_price</code></td><td>number</td><td>true</td><td>Price unit is equal to SUN.</td></tr><tr><td><code>allow_partial_fill</code></td><td>boolean</td><td>true</td><td>Allow the order to be filled partially or not</td></tr><tr><td><code>target_address</code></td><td>string</td><td>true</td><td>Resource receiving address</td></tr><tr><td><code>duration_millisec</code></td><td>number</td><td>true</td><td>The duration of the bought resource, time unit is equal to millisec.</td></tr><tr><td><code>tx_id</code></td><td>string</td><td>true</td><td>Transaction ID</td></tr><tr><td><code>signed_tx</code></td><td>SignedTransaction</td><td>true</td><td>Signed transaction, note that it is a JSON object (the <code>signed_tx</code> from <a href="#step-2-get-a-signed-transaction">Step 2</a>)</td></tr><tr><td><code>only_create_when_fulfilled</code></td><td>Boolean</td><td>false</td><td><p>[true] =&#x3E; order only create when it can be fulfilled</p><p>[false] =&#x3E; order will create even it can not be fulfilled</p><p>Default value: false</p></td></tr><tr><td><code>max_price_accepted</code></td><td>Number</td><td>false</td><td>Only create order when the estimate price less than this value.</td></tr><tr><td><code>add_order_incomplete</code></td><td>Boolean</td><td>false</td><td><p>[true] =&#x3E; order only create when there has no same parameters order is not complete in order list</p><p>[false] =&#x3E; order will create even there has no same parameters order is not complete in order list</p><p>Default value: false</p></td></tr></tbody></table>
+<table><thead><tr><th width="221">Field</th><th width="105">Type</th><th width="91">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>resource_type</code></td><td>string</td><td>true</td><td>"ENERGY"</td></tr><tr><td><code>unit_price</code></td><td>number</td><td>true</td><td>Price unit is equal to SUN.</td></tr><tr><td><code>allow_partial_fill</code></td><td>boolean</td><td>true</td><td>Allow the order to be filled partially or not</td></tr><tr><td><code>target_address</code></td><td>string</td><td>true</td><td>Resource receiving address</td></tr><tr><td><code>duration_millisec</code></td><td>number</td><td>true</td><td>The duration of the bought resource, time unit is equal to millisec.</td></tr><tr><td><code>tx_id</code></td><td>string</td><td>true</td><td>Transaction ID</td></tr><tr><td><code>signed_tx</code></td><td>SignedTransaction</td><td>true</td><td>Signed transaction, note that it is a JSON object (the <code>signed_tx</code> from <a href="signed-tx.md#step-2-get-a-signed-transaction">Step 2</a>)</td></tr><tr><td><code>only_create_when_fulfilled</code></td><td>Boolean</td><td>false</td><td><p>[true] => order only create when it can be fulfilled</p><p>[false] => order will create even it can not be fulfilled</p><p>Default value: false</p></td></tr><tr><td><code>max_price_accepted</code></td><td>Number</td><td>false</td><td>Only create order when the estimate price less than this value.</td></tr><tr><td><code>add_order_incomplete</code></td><td>Boolean</td><td>false</td><td><p>[true] => order only create when there has no same parameters order is not complete in order list</p><p>[false] => order will create even there has no same parameters order is not complete in order list</p><p>Default value: false</p></td></tr></tbody></table>
 
 ### Request body example
 
@@ -294,9 +223,7 @@ This endpoint authenticates through the submitted `signed_tx`, so no `apikey` he
 }
 ```
 
-<!-- [NEEDS CONFIRMATION: business-logic 400 messages specific to the buy-energy order (e.g. insufficient TRX in the signed transfer, or order cannot be fulfilled) were not captured live] -->
-
----
+***
 
 ## Request examples
 
@@ -629,6 +556,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 ## Next steps
 
-* Migrate to the current API: [Buy with Signed Transaction (v2)](../../api-reference/buy-resources/signed-tx/README.md).
+* Migrate to the current API: [Buy with Signed Transaction (v2)](../../api-reference/buy-resources/signed-tx/).
 * [Authentication](../../authentication.md) and [Environments](../../environments.md).
 * [Glossary](../../../concepts/glossary.md) for Energy, Bandwidth, TRX, and SUN definitions.
