@@ -90,7 +90,7 @@ If liquidity remains unavailable after 24 hours of processing, your unstake orde
 * All Early Unstake transactions are **fully verifiable on the TRON blockchain**.
 * Always verify the **official TronSave address** before granting permissions. For higher safety, contact TronSave support first to confirm authenticity.
 * Any **unstake request exceeding the auto-approve threshold** is sent to the admin team for manual review and payout approval.
-* After permission transfer, you will **no longer be able to use that wallet** directly. This step is necessary for TronSave to complete the unstake on your behalf.
+* After the permission transfer, you will **permanently lose control of this wallet and will no longer be able to access or use it directly**. This step is necessary for TronSave to complete the unstake on your behalf.
 
 ## 3. Commitment & support
 
