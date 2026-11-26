@@ -56,6 +56,8 @@ You can change an order's target (receiving) address if the order is **not fully
 
 ## Update the price
 
+You can only change an order's price **at least 15 minutes after it has been created.**
+
 1. Click the **Edit** button.
 
 <figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
